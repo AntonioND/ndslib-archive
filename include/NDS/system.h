@@ -67,7 +67,7 @@ inline void powerOFF(int off) { POWER_CR &= off;}
 #define POWER_2D_SUB     (1<<9)
 #define POWER_SWAP_LCDS  (1<<15)
 #define POWER_ALL_2D     (POWER_LCD_TOP|POWER_LCD_BOTTOM|POWER_2D|POWER_2D_SUB)
-#define POWER_ALL		 0x3F
+#define POWER_ALL		 (POWER_ALL_2D | POWER_3D_CORE | POWER_MATRIX)
 
 inline void lcdSwap(void) { POWER_CR ^= POWER_SWAP_LCDS; }
 #endif

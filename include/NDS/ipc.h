@@ -50,11 +50,11 @@ typedef struct sTransferRegion {
   uint8 curtime[8];         // current time response from RTC
 
   // Don't rely on these below, will change or be removed in the future
-  vuint32 tweakAddr;
-  vuint32 tweakData;
-  vuint32 readData;
-  volatile bool wantToTweak;
-  volatile bool tweakReading;
+  vuint32 mailAddr;
+  vuint32 mailData;
+  vuint8 mailRead;
+  vuint8 mailBusy;
+  vuint8 mailSize;
 } TransferRegion, * pTransferRegion;
 
 //////////////////////////////////////////////////////////////////////

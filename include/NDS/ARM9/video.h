@@ -217,10 +217,7 @@ typedef enum
 #define SUB_BG2_CR     (*(vuint16*)0x0400100C)
 #define SUB_BG3_CR     (*(vuint16*)0x0400100E)
 
-#define SUB_BG0_CR     (*(vuint16*)0x04001008)
-#define SUB_BG1_CR     (*(vuint16*)0x0400100A)
-#define SUB_BG2_CR     (*(vuint16*)0x0400100C)
-#define SUB_BG3_CR     (*(vuint16*)0x0400100E)
+
 
 //////////////////////////////////////////////////////////////////////
 

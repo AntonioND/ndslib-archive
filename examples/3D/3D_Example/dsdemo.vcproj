@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="dsdemo"
+	ProjectGUID="{303E7F3B-FF27-4674-9ADD-E12844AA1357}"
+	Keyword="MakeFileProj"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="ViaPassthrough|Win32"
+			IntermediateDirectory="."
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="make"
+				ReBuildCommandLine="make all"
+				CleanCommandLine="make clean"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Boot"
+			>
+			<File
+				RelativePath="boot\Makefile"
+				>
+			</File>
+			<Filter
+				Name="Source Files"
+				Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;s"
+				>
+				<File
+					RelativePath="boot\captureARM9.s"
+					>
+				</File>
+				<File
+					RelativePath="boot\main.cpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Header Files"
+				Filter="h;hpp;hxx;hm;inl;inc"
+				>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Build Scripts"
+			>
+			<File
+				RelativePath="CommonMakefile.in"
+				>
+			</File>
+			<File
+				RelativePath="Makefile"
+				>
+			</File>
+			<File
+				RelativePath="MakeResources.in"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="ARM7"
+			>
+			<File
+				RelativePath="arm7\Makefile"
+				>
+			</File>
+			<Filter
+				Name="Source Files"
+				Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;s"
+				>
+				<File
+					RelativePath="arm7\main.cpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Header Files"
+				Filter="h;hpp;hxx;hm;inl;inc"
+				>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="ARM9"
+			>
+			<File
+				RelativePath="arm9\Makefile"
+				>
+			</File>
+			<Filter
+				Name="Source Files"
+				Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;s"
+				>
+				<File
+					RelativePath="arm9\main.cpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Header Files"
+				Filter="h;hpp;hxx;hm;inl;inc"
+				>
+			</Filter>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>
