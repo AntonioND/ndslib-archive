@@ -37,6 +37,8 @@
 #define LUT_SIZE (512)
 #define LUT_MASK (0x1FF)
 
+
+#ifdef NO_GL_INLINE
 //////////////////////////////////////////////////////////////////////
 
   void glBegin(int mode)
@@ -249,6 +251,8 @@ void glMaterialShinnyness(void)
 {
   GFX_POLY_FORMAT = alpha;
 }
+
+#endif  //endif #no inline
 //////////////////////////////////////////////////////////////////////
 
 

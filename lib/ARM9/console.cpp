@@ -74,7 +74,7 @@ u16 fontPal;
 //		map: pointer to the map you will be printing to.
 //		pal: specifies the 16 color palette to use, if > 15 it will change all non-zero
 //			entries in the font to use palette index 255
-void consoleInit(u16* font, u16* charBase, u16 numCharacters, u8 charStart, u16* map, u8 pal)
+void consoleInit(u16* font, u16* charBase, u16 numCharacters, u8 charStart, u16* map, u8 pal, u8 bitDepth)
 {
 	int i;
 
@@ -86,38 +86,61 @@ void consoleInit(u16* font, u16* charBase, u16 numCharacters, u8 charStart, u16*
 
 	fontMap = map;
 
-	if(pal < 16)
+	if(bitDepth == 16)
 	{
-		fontPal = pal << 12;
+		if(pal < 16)
+		{
+			fontPal = pal << 12;
 
-		for (i = 0; i < numCharacters * 16; i++)
-			charBase[i] = font[i];
-	}
+			for (i = 0; i < numCharacters * 16; i++)
+				charBase[i] = font[i];
+		}
+		else
+		{
+			fontPal = 15 << 12;
+
+			for (i = 0; i < numCharacters * 16; i++)
+			{
+				u16 temp = 0;
+
+				if(font[i] & 0xF)
+					temp |= 0xF;
+				if(font[i] & 0xF0)
+					temp |= 0xF0;
+				if(font[i] & 0xF00)
+					temp |= 0xF00;
+				if(font[i] & 0xF000)
+					temp |= 0xF000;
+	
+				charBase[i] = temp;
+			}	
+		}
+	}//end if bitdepth
 	else
 	{
-		fontPal = 15 << 12;
-
-		for (i = 0; i < numCharacters * 16; i++)
+		fontPal = 0;
+		for(i = 0; i < numCharacters * 16; i++)
 		{
-			u16 temp = 0;
+			u32 temp = 0;
 
 			if(font[i] & 0xF)
-				temp |= 0xF;
+				temp = 255;
 			if(font[i] & 0xF0)
-				temp |= 0xF0;
+				temp |= 255 << 8;
 			if(font[i] & 0xF00)
-				temp |= 0xF00;
+				temp |= 255 << 16;
 			if(font[i] & 0xF000)
-				temp |= 0xF000;
+				temp |= 255 << 24;
 
-			charBase[i] = temp;
-		}	
+			((u32*)charBase)[i] = temp;
+
+		}
 	}
 }
 
-void consoleInitDefault(u16* map, u16* charBase)
+void consoleInitDefault(u16* map, u16* charBase, u8 bitDepth)
 {
-	consoleInit(default_font, charBase, 256, 0, map, CONSOLE_USE_COLOR255); 	
+	consoleInit(default_font, charBase, 256, 0, map, CONSOLE_USE_COLOR255, bitDepth); 	
 }
 
 void consolePrintSet(int x, int y)
