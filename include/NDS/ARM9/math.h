@@ -151,9 +151,9 @@ inline int32 div64(int64 num, int32 den)
 
 ///////////////////////////////////////
 //  Integer square root
-//  takes a 23 bit integer and returns 
+//  takes a 32 bit integer and returns 
 //	32 bit result
-inline int32 sqrt(int a)
+inline int32 sqrt32(int a)
 {
 	SQRT_CR = SQRT_32;
 

@@ -61,6 +61,9 @@ typedef struct sTransferRegion {
 
 #define IPC ((TransferRegion volatile *)0x02000000)
 
+#define IPC_PEN_DOWN BIT(6)
+#define IPC_X BIT(0)
+#define IPC_Y BIT(1)
 //////////////////////////////////////////////////////////////////////
 
 // Synchronization register (name *will* change!)
