@@ -18,7 +18,7 @@ int main(void)
 	BG_PALETTE_SUB[255] = RGB15(31,31,31);//by default font will be rendered with color 255
 	
 	//consoleInit() is a lot more flexible but this gets you up and running quick
-	consoleInitDefault((u16*)SCREEN_BASE_BLOCK_SUB(31), (u16*)CHAR_BASE_BLOCK_SUB(0));
+	consoleInitDefault((u16*)SCREEN_BASE_BLOCK_SUB(31), (u16*)CHAR_BASE_BLOCK_SUB(0), 16);
 
 	consolePrintf("\n\n\tHello DS devers\n");
 	consolePrintf("\twww.drunkencoders.com");
