@@ -210,11 +210,13 @@ typedef enum
 
 //////////////////////////////////////////////////////////////////////
 
+#define BG_CR		    ((vuint16*)0x04000008)
 #define BG0_CR         (*(vuint16*)0x04000008)
 #define BG1_CR         (*(vuint16*)0x0400000A)
 #define BG2_CR         (*(vuint16*)0x0400000C)
 #define BG3_CR         (*(vuint16*)0x0400000E)
 
+#define SUB_BG_CR		((vuint16*)0x04001008)
 #define SUB_BG0_CR     (*(vuint16*)0x04001008)
 #define SUB_BG1_CR     (*(vuint16*)0x0400100A)
 #define SUB_BG2_CR     (*(vuint16*)0x0400100C)
