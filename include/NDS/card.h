@@ -41,6 +41,7 @@
 
 #define CARD_CR1       (*(vuint32*)0x040001A0)
 #define CARD_CR1H      (*(vuint8*)0x040001A1)
+#define CARD_EEPDATA   (*(vuint8*)0x040001A2)
 #define CARD_CR2       (*(vuint32*)0x040001A4)
 #define CARD_COMMAND   ((vuint8*)0x040001A8)
 
@@ -93,6 +94,8 @@ uint32 cardWriteAndRead(uint8 * command, uint32 flags);
 void cardRead00(uint32 address, uint32 * destination, uint32 length, uint32 flags);
 void cardReadHeader(uint8 * header);
 int cardReadID(uint32 flags);
+void cardReadEeprom(uint32 address, uint8 *data, uint32 length, uint32 addrtype = 2);
+void cardWriteEeprom(uint32 address, uint8 *data, uint32 length, uint32 addrtype = 2);
 
 //////////////////////////////////////////////////////////////////////
 

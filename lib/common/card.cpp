@@ -109,3 +109,48 @@ int cardReadID(uint32 flags) {
 }
 
 //////////////////////////////////////////////////////////////////////
+
+#define EepromWaitBusy()	while (CARD_CR1 & /*BUSY*/0x80);
+
+void cardReadEeprom(uint32 address, uint8 *data, uint32 length, uint32 addrtype) {
+	CARD_CR1 = /*E*/0x8000 | /*SEL*/0x2000 | /*MODE*/0x40;
+	CARD_EEPDATA = 0x03 | ((addrtype == 1) ? address>>8<<3 : 0); EepromWaitBusy();
+	if (addrtype > 1) { CARD_EEPDATA = address >> 8; EepromWaitBusy(); }
+	CARD_EEPDATA = address & 0xFF; EepromWaitBusy();
+	while (length > 0)
+	{
+		CARD_EEPDATA = 0; EepromWaitBusy();
+		*data++ = CARD_EEPDATA;
+	}
+	CARD_CR1 = /*MODE*/0x40;
+}
+
+//////////////////////////////////////////////////////////////////////
+
+// NOTE: does not work for small EEPROMs
+void cardWriteEeprom(uint32 address, uint8 *data, uint32 length, uint32 addrtype) {
+	uint32 address_end = address + length;
+	while (address < address_end)
+	{
+		// set WEL (Write Enable Latch)
+		CARD_CR1 = /*E*/0x8000 | /*SEL*/0x2000 | /*MODE*/0x40;
+		CARD_EEPDATA = 0x06; EepromWaitBusy();
+		CARD_CR1 = /*MODE*/0x40;
+
+		// program maximum of 32 bytes
+		CARD_CR1 = /*E*/0x8000 | /*SEL*/0x2000 | /*MODE*/0x40;
+		CARD_EEPDATA = 0x02 | ((addrtype == 1) ? address>>8<<3 : 0); EepromWaitBusy();
+		if (addrtype > 1) { CARD_EEPDATA = address >> 8; EepromWaitBusy(); }
+		CARD_EEPDATA = address & 0xFF; EepromWaitBusy();
+		for (int i=0; address<address_end && i<32; i++, address++) { CARD_EEPDATA = *data++; EepromWaitBusy(); }
+		CARD_CR1 = /*MODE*/0x40;
+
+		// wait programming to finish
+		CARD_CR1 = /*E*/0x8000 | /*SEL*/0x2000 | /*MODE*/0x40;
+		CARD_EEPDATA = 0x05; EepromWaitBusy();
+		do { CARD_EEPDATA = 0; EepromWaitBusy(); } while (CARD_EEPDATA & 0x01);	// WIP (Write In Progress) ?
+		CARD_CR1 = /*MODE*/0x40;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////
