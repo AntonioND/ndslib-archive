@@ -49,11 +49,15 @@
 extern "C" {
 #endif
 
+	
 //////////////////////////////////////////////////////////////////////
 
 // macro creates a 15 bit color from 3x5 bit components
 #define RGB15(r,g,b)  ((r)|((g)<<5)|((b)<<10))
 
+
+#define SCREEN_HEIGHT 192
+#define SCREEN_WIDTH  256
 //////////////////////////////////////////////////////////////////////
 //	Vram Control
 #define VRAM_CR			(*(vuint32*)0x04000240)
@@ -194,8 +198,8 @@ typedef enum
 
 #define FORCED_BLANK  (1<<7)
 
-inline void videoSetMode(uint32 mode) { DISPLAY_CR = mode; }
-inline void videoSetModeSub(uint32 mode) { SUB_DISPLAY_CR = mode; }
+#define videoSetMode(mode)  (DISPLAY_CR = (mode))
+#define videoSetModeSub(mode)  (SUB_DISPLAY_CR = (mode))
 //////////////////////////////////////////////////////////////////////
 
 #define BRIGHTNESS     (*(vuint16*)0x0400006C)
@@ -207,6 +211,11 @@ inline void videoSetModeSub(uint32 mode) { SUB_DISPLAY_CR = mode; }
 #define BG1_CR         (*(vuint16*)0x0400000A)
 #define BG2_CR         (*(vuint16*)0x0400000C)
 #define BG3_CR         (*(vuint16*)0x0400000E)
+
+#define SUB_BG0_CR     (*(vuint16*)0x04001008)
+#define SUB_BG1_CR     (*(vuint16*)0x0400100A)
+#define SUB_BG2_CR     (*(vuint16*)0x0400100C)
+#define SUB_BG3_CR     (*(vuint16*)0x0400100E)
 
 #define SUB_BG0_CR     (*(vuint16*)0x04001008)
 #define SUB_BG1_CR     (*(vuint16*)0x0400100A)

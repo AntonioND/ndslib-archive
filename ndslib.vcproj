@@ -77,6 +77,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\lib\ARM9\rand.cpp"
+				>
+			</File>
+			<File
 				RelativePath="lib\ARM7\touch.cpp"
 				>
 			</File>
@@ -166,7 +170,7 @@
 				>
 			</File>
 			<File
-				RelativePath="lib\ARM9\video.cpp"
+				RelativePath=".\lib\ARM9\video.cpp"
 				>
 			</File>
 			<File
@@ -236,10 +240,6 @@
 		</File>
 		<File
 			RelativePath="include\NDS\jtypes.h"
-			>
-		</File>
-		<File
-			RelativePath="include\NDS\keys.h"
 			>
 		</File>
 		<File

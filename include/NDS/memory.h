@@ -62,6 +62,17 @@
 #define PALETTE       ((uint16*)0x05000000)
 #define PALETTE_SUB   ((uint16*)0x05000400)
 
+#define BG_PALETTE       ((uint16*)0x05000000)
+#define BG_PALETTE_SUB   ((uint16*)0x05000400)
+
+#define SPRITE_PALETTE ((uint16*)0x05000200)
+#define SPRITE_PALETTE_SUB ((uint16*)0x05000600)
+
+#define BG_GFX			((uint16*)0x6000000)
+#define BG_GFX_SUB		((uint16*)0x6200000)
+#define SPRITE_GFX			((uint16*)0x6400000)
+#define SPRITE_GFX_SUB		((uint16*)0x6600000)
+
 #define VRAM_0        ((uint16*)0x6000000)
 #define VRAM          ((uint16*)0x6800000)
 #define VRAM_A        ((uint16*)0x6800000)
