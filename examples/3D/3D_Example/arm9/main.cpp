@@ -164,8 +164,9 @@ int main()
 		glPopMatrix(1);
 			
 		glFlush();
-	
-		swiWaitForVBlank();
+
+		//swi seems to be broken, will let you know when i get this POS figured out	
+		//swiWaitForVBlank();
 	}
 
 	return 0;
