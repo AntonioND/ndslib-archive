@@ -90,8 +90,8 @@ extern "C" {
 void cardWriteCommand(uint8 * command);
 
 //fix me DARKFADER!!!!
-//void cardPolledTransfer(uint32 * command, uint32 * destination, uint32 length, uint32 flags);
-//void cardStartTransfer(uint32 * command, uint32 * destination, int channel, uint32 flags);
+void cardPolledTransfer(uint32 flags, uint32 * destination, uint32 length, uint8 * command);
+void cardStartTransfer(uint8 * command, uint32 * destination, int channel, uint32 flags);
 uint32 cardWriteAndRead(uint8 * command, uint32 flags);
 void cardRead00(uint32 address, uint32 * destination, uint32 length, uint32 flags);
 void cardReadHeader(uint8 * header);
