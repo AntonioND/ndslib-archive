@@ -64,6 +64,7 @@ typedef struct sTransferRegion {
 #define IPC_PEN_DOWN BIT(6)
 #define IPC_X BIT(0)
 #define IPC_Y BIT(1)
+#define IPC_LID_CLOSED BIT(7)
 //////////////////////////////////////////////////////////////////////
 
 // Synchronization register (name *will* change!)
