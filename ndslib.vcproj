@@ -166,6 +166,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\lib\ARM9\interrupts.cpp"
+				>
+			</File>
+			<File
 				RelativePath="lib\ARM9\Makefile"
 				>
 			</File>

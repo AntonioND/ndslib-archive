@@ -2,10 +2,13 @@ SET DEVDIR=C:\devkitARM
 
 @echo off
 echo building the library
+make clean
+
 make
 
 echo building devkit arm update and copying files
 cd startup
+make clean
 
 make
 

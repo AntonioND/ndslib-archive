@@ -8,8 +8,8 @@ all:
 ######################################################################
 
 clean:
-	make clean -C lib/arm7
-	make clean -C lib/arm9
+	make clean -C lib/ARM7
+	make clean -C lib/ARM9
 	make clean -C startup
 
  
