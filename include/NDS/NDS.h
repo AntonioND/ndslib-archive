@@ -51,6 +51,9 @@ extern "C" {
 #include <NDS/ARM9/video.h>
 #include <NDS/ARM9/CP15.h>
 #include <NDS/ARM9/BIOS.h>
+#include <NDS/ARM9/trig_lut.h>
+#include <NDS/ARM9/math.h>
+#include <NDS/ARM9/irq.h>
 #endif
 
 #ifdef ARM7

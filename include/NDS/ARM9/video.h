@@ -25,6 +25,8 @@
 //
 // Changelog:
 //   0.1: First version
+//	 0.2: Fixed sprite mapping bug.  1D mapping should work now.  
+//			Changed some register defines for consistency.
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -99,8 +101,8 @@ extern "C" {
 // Display control registers
 //////////////////////////////////////////////////////////////////////
 
-#define DISPLAY_CONTROL       (*(vuint32*)0x04000000)
-#define SUB_DISPLAY_CONTROL   (*(vuint32*)0x04001000)
+#define DISPLAY_CR       (*(vuint32*)0x04000000)
+#define SUB_DISPLAY_CR   (*(vuint32*)0x04001000)
 
 #define MODE_0_2D      0x10000
 #define MODE_1_2D      0x10001
@@ -114,23 +116,6 @@ extern "C" {
 
 #define ENABLE_3D    (1<<3)
 
-// Main display only
-#define MODE_0_3D    (MODE_0_2D | BG0_ACTIVE | ENABLE_3D) 
-#define MODE_1_3D    (MODE_1_2D | BG0_ACTIVE | ENABLE_3D)
-#define MODE_2_3D    (MODE_2_2D | BG0_ACTIVE | ENABLE_3D)
-#define MODE_3_3D    (MODE_3_2D | BG0_ACTIVE | ENABLE_3D)
-#define MODE_4_3D    (MODE_4_2D | BG0_ACTIVE | ENABLE_3D)
-#define MODE_5_3D    (MODE_5_2D | BG0_ACTIVE | ENABLE_3D)
-#define MODE_6_3D    (MODE_6_2D | BG0_ACTIVE | ENABLE_3D)
-
-#define MODE_FB0    (0x00020000)
-#define MODE_FB1    (0x00020000|0x00040000)
-
-#define DISPLAY_FB_TOGGLE     (1 << 4)
-#define DISPLAY_OAM_ACCESS    (1 << 5)
-#define DISPLAY_SPR_1D_LAYOUT (1 << 6)
-#define DISPLAY_SCREEN_OFF    (1 << 7)
-
 #define DISPLAY_BG0_ACTIVE    (1 << 8)
 #define DISPLAY_BG1_ACTIVE    (1 << 9)
 #define DISPLAY_BG2_ACTIVE    (1 << 10)
@@ -140,15 +125,34 @@ extern "C" {
 #define DISPLAY_WIN1_ON       (1 << 14)
 #define DISPLAY_SPR_WIN_ON    (1 << 15)
 
+
+// Main display only
+#define MODE_0_3D    (MODE_0_2D | DISPLAY_BG0_ACTIVE | ENABLE_3D) 
+#define MODE_1_3D    (MODE_1_2D | DISPLAY_BG0_ACTIVE | ENABLE_3D)
+#define MODE_2_3D    (MODE_2_2D | DISPLAY_BG0_ACTIVE | ENABLE_3D)
+#define MODE_3_3D    (MODE_3_2D | DISPLAY_BG0_ACTIVE | ENABLE_3D)
+#define MODE_4_3D    (MODE_4_2D | DISPLAY_BG0_ACTIVE | ENABLE_3D)
+#define MODE_5_3D    (MODE_5_2D | DISPLAY_BG0_ACTIVE | ENABLE_3D)
+#define MODE_6_3D    (MODE_6_2D | DISPLAY_BG0_ACTIVE | ENABLE_3D)
+
+#define MODE_FB0    (0x00020000)
+#define MODE_FB1    (0x00020000|0x00040000)
+
+//#define DISPLAY_FB_TOGGLE     (1 << 4)
+#define DISPLAY_OAM_ACCESS    (1 << 5)
+#define DISPLAY_SPR_1D_LAYOUT (1 << 4)
+#define DISPLAY_SCREEN_OFF    (1 << 7)
+
+
 #define H_BLANK_OAM    (1<<5)
 
-#define OBJ_MAP_2D    (0<<6)
-#define OBJ_MAP_1D    (1<<6)
+#define OBJ_MAP_2D    (0<<4)
+#define OBJ_MAP_1D    (1<<4)
 
 #define FORCED_BLANK  (1<<7)
 
-inline void videoSetMode(uint32 mode) { DISPLAY_CONTROL = mode; }
-
+inline void videoSetMode(uint32 mode) { DISPLAY_CR = mode; }
+inline void videoSetModeSub(uint32 mode) { SUB_DISPLAY_CR = mode; }
 //////////////////////////////////////////////////////////////////////
 
 #define BRIGHTNESS     (*(vuint16*)0x0400006C)

@@ -46,9 +46,9 @@ define bin2o
 	--redefine-sym _binary_$*_tmp_end=$*_end\
 	--redefine-sym _binary_$*_tmp_size=$*_size\
 	$(*).tmp $(@)
-	echo "extern const uint32" $(*)"_end[];" >> $(*).h
-	echo "extern const uint8" $(*)"[];" >> $(*).h
-	echo "extern const uint32" $(*)_size[]";" >> $(*).h
+#	echo "extern const uint32" $(*)"_end[];" >> $(*).h
+#	echo "extern const uint8" $(*)"[];" >> $(*).h
+#	echo "extern const uint32" $(*)_size[]";" >> $(*).h
 	rm $(*).tmp
 endef
 
@@ -76,7 +76,7 @@ ARCH	:=	-mthumb-interwork
 # note: arm9tdmi isn't the correct CPU arch, but anything newer and LD
 # *insists* it has a FPU or VFP, and it won't take no for an answer!
 CFLAGS	:=	-g -Wall -O0\
- 			-mcpu=arm9tdmi -mtune=arm9tdmi -fomit-frame-pointer\
+ 			-mcpu=arm9 -mtune=arm9 -fomit-frame-pointer\
 			-ffast-math \
 			$(ARCH)
 
@@ -110,10 +110,9 @@ CFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.c)))
 CPPFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
 SFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.s)))
 SSFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.S)))
-#export BINFILES	:=	$(wildcard $(RESOURCEDIR)/*.*)
-#BINOBJECTS	:=	$(notdir $(addsuffix .o,$(basename $(BINFILES))))
-#$(BINOBJECTS)
-export OFILES	:=	$(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(SFILES:.s=.o) $(SSFILES:.S=.o)
+BINFILES	:=  $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.bin)))
+
+export OFILES	:=	$(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(SFILES:.s=.o) $(SSFILES:.S=.o) $(BINFILES:.bin=.o)
 
 #---------------------------------------------------------------------------------
 # build a list of include paths
@@ -194,9 +193,9 @@ libnds9.a	:	$(OFILES)
 
 #---------------------------------------------------------------------------------
 
-#$(BINOBJECTS): %.o: $(BINFILES)
-#	@echo $(notdir $<)
-#	@$(bin2o)
+%.o : %.bin
+	@echo $(notdir $<)
+	@$(bin2o)
 
 #---------------------------------------------------------------------------------
 

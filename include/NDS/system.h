@@ -25,6 +25,7 @@
 //
 // Changelog:
 //   0.1: First version
+//	 0.2
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -60,6 +61,7 @@
 #define POWER_2D_SUB     (1<<9)
 #define POWER_SWAP_LCDS  (1<<15)
 #define POWER_ALL_2D     (POWER_LCD_TOP|POWER_LCD_BOTTOM|POWER_2D|POWER_2D_SUB)
+#define POWER_ALL		 0x3F
 #endif
 
 #ifdef ARM7

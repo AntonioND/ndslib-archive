@@ -25,6 +25,9 @@
 //
 // Changelog:
 //   0.1: First version
+//	 
+//   0.2: Added gluFrustrum, gluPerspective, and gluLookAt
+//			Converted all floating point math to fixed point
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -44,23 +47,24 @@
 
 //////////////////////////////////////////////////////////////////////
 
-typedef int f32;             // 20.12 fixed point for matricies
+typedef int f32;             // 1.19.12 fixed point for matricies
 #define intof32(n)           ((n) << 12)
 #define f32toint(n)          ((n) >> 12)
 #define floatof32(n)         ((f32)((n) * (1 << 12)))
+#define f32tofloat(n)        (((float)(n)) / (float)(1<<12))
 
-typedef short int t16;       // text coordinate 12.4 fixed point
+typedef short int t16;       // text coordinate 1.11.4 fixed point
 #define intot16(n)           ((n) << 4)
 #define t16toint(n)          ((n) >> 4)
 #define floatot16(n)         ((t16)((n) * (1 << 4)))
 #define TEXTURE_PACK(u,v)    ((intot16(u)<<16) | intot16(v))
 
-typedef short int v16;       // vertex 4.12 fixed format
+typedef short int v16;       // vertex 1.3.12 fixed format
 #define intov16(n)           ((n) << 12)
 #define v16toint(n)          ((n) >> 12)
 #define floatov16(n)         ((v16)((n) * (1 << 12)))
 
-typedef short int v10;       // vertex 4.6 fixed point
+typedef short int v10;       // vertex 1.0.9 fixed point
 #define intov10(n)           ((n) << 9)
 #define v10toint(n)          ((n) >> 9)
 #define floatov10(n)         ((v10)((n) * (1 << 9)))
@@ -132,35 +136,7 @@ typedef struct {
 #ifdef __cplusplus
 extern "C" {
 #endif
-/*
-void glBegin(int mode);
-void glEnd(void);
-void glClearColor(uint8 red, uint8 green, uint8 blue);
-void glClearDepth(uint16 depth);
-void glColor3b(uint8 red, uint8 green, uint8 blue);
-void glColor(rgb color);
-void glTextCoord2t16(t16 u, t16 v);
-void glVertex3v16(v16 x, v16 y, v16 z);
-void glVertex2v16(int yx,  v16 z);
-void glFlush(void);
-void glReset(void);
-void glMaterialf(int mode, rgb color);
-void glLight(int id, rgb color, v10 x, v10 y, v10 z);
-void glNormal(uint32 normal);
-void glViewPort(uint8 x1, uint8 y1, uint8 x2, uint8 y2);
-void glResetMatrixStack(void);
-void glPushMatrix(void);
-void glPopMatrix(int32 index);
-void glRestoreMatrix(int32 index);
-void glStoreMatrix(int32 index);
-void glScalev(vector* v);
-void glTranslatev(vector* v);
-void glTranslate3f32(f32 x, f32 y, f32 z);
-void glScalef32(f32 s);
-void glTranslatef32(f32 delta);
-void glIdentity(void);
-void glMatrixMode(int mode);
-*/
+
 
 //////////////////////////////////////////////////////////////////////
 
@@ -169,10 +145,18 @@ void glLoadMatrix4x3(m4x3 * m);
 void glMultMatrix4x4(m4x4 * m);
 void glMultMatrix4x3(m4x3 * m);
 void glMultMatrix3x3(m3x3 * m);
+void glRotateXi(int angle);
+void glRotateYi(int angle);
+void glRotateZi(int angle);
 void glRotateX(float angle);
 void glRotateY(float angle);
 void glRotateZ(float angle);
-
+void gluLookAtf32(f32 eyex, f32 eyey, f32 eyez, f32 lookAtx, f32 lookAty, f32 lookAtz, f32 upx, f32 upy, f32 upz);
+void gluLookAt(float eyex, float eyey, float eyez, float lookAtx, float lookAty, float lookAtz, float upx, float upy, float upz);
+void gluFrustumf32(f32 left, f32 right, f32 bottom, f32 top, f32 near, f32 far);
+void gluFrustum(float left, float right, float bottom, float top, float near, float far);
+void gluPerspectivef32(int fovy, f32 aspect, f32 zNear, f32 zFar);
+void gluPerspective(float fovy, float aspect, float zNear, float zFar);
 //////////////////////////////////////////////////////////////////////
 
 #ifdef __cplusplus
@@ -428,6 +412,9 @@ inline extern void glReset(void)
   GFX_CONTROL |= ((1<<12) | (1<<13)) | 3;
   glResetMatrixStack();
 
+  GFX_TEX_FORMAT = 0;
+  GFX_POLY_FORMAT = 0;
+  
   glMatrixMode(GL_PROJECTION);
   glIdentity();
 
