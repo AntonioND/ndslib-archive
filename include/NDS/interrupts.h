@@ -86,8 +86,8 @@
 #ifdef ARM9
 
 #include <NDS/ARM9/CP15.h>
-#define VBLANK_INTR_WAIT_FLAGS  (*(vuint32*)((CP15_GetDTCM() & ~0xFFF) | 0x3FF8))
-#define IRQ_HANDLER             (*(VoidFunctionPointer *)((CP15_GetDTCM() & ~0xFFF) | 0x3FFC))
+#define VBLANK_INTR_WAIT_FLAGS  (*(vuint32*)((CP15_GetDTCM() & ~0xFFF) + 0x3FF8))
+#define IRQ_HANDLER             (*(VoidFunctionPointer *)((CP15_GetDTCM() & ~0xFFF) + 0x3FFC))
 #endif
 
 //////////////////////////////////////////////////////////////////////

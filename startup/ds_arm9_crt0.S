@@ -8,8 +8,17 @@
 
 _start:
 		mov	r0, #0x04000000			@ IME = 0;
-		add	r0, r0, #208
+		add	r0, r0, #0x208
 		strh	r0, [r0]
+
+		ldr	r1, =0x00002078			@ disable DTCM and protection unit
+		mcr	p15, 0, r1, c1, c0
+
+		ldr	r0, =0x0080000A
+		mcr	p15, 0, r0, c9, c1		@ TCM base = 0x00800*4096, size = 16 KB
+		mrc	p15, 0, r0, c1, c0		@ throw-away read of cp15.c1
+		orr	r1, r1, #0x10000
+		mcr	p15, 0, r1, c1, c0		@ cp15.c1 = 0x00012078;
 
 		mov	r0, #0x12			@ Switch to IRQ Mode
 		msr	cpsr, r0

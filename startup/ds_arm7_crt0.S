@@ -8,7 +8,7 @@
 
 _start:
 		mov	r0, #0x04000000			@ IME = 0;
-		add	r0, r0, #208
+		add	r0, r0, #0x208
 		strh	r0, [r0]
 
 		mov	r0, #0x12			@ Switch to IRQ Mode
