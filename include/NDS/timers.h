@@ -57,11 +57,11 @@ extern "C" {
 #define TIMER_DATA(n)  (*(vuint16*)(0x04000100+(n<<2)))
 
 // Timer control registers
-#define TIMER0_CONTROL   (*(vuint16*)0x04000102)
-#define TIMER1_CONTROL   (*(vuint16*)0x04000106)
-#define TIMER2_CONTROL   (*(vuint16*)0x0400010A)
-#define TIMER3_CONTROL   (*(vuint16*)0x0400010E)
-#define TIMER_CONTROL(n) (*(vuint16*)(0x04000102+(n<<2)))
+#define TIMER0_CR   (*(vuint16*)0x04000102)
+#define TIMER1_CR   (*(vuint16*)0x04000106)
+#define TIMER2_CR   (*(vuint16*)0x0400010A)
+#define TIMER3_CR   (*(vuint16*)0x0400010E)
+#define TIMER_CR(n) (*(vuint16*)(0x04000102+(n<<2)))
 
 // Timer control register contents
 #define TIMER_ENABLE    (1<<7)

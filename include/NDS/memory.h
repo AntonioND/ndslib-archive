@@ -100,7 +100,7 @@ extern "C" {
 
 // Copies floor(size/4) words from source to dest (i.e. size in bytes)
 // Utilizes DMA channel 3
-void dmaCopy(void * source, void * dest, uint32 size);
+
 
 //////////////////////////////////////////////////////////////////////
 

@@ -36,7 +36,7 @@
 //////////////////////////////////////////////////////////////////////
 
 #ifndef ARM9
-#error Video is only available on the ARM7
+#error Video is only available on the ARM9
 #endif
 
 //////////////////////////////////////////////////////////////////////
@@ -217,8 +217,11 @@ typedef enum
 #define SUB_BG2_CR     (*(vuint16*)0x0400100C)
 #define SUB_BG3_CR     (*(vuint16*)0x0400100E)
 
+<<<<<<< video.h
+=======
 
 
+>>>>>>> 1.7
 //////////////////////////////////////////////////////////////////////
 
 #define BG_256_COLOR   (1 << 7)
@@ -235,8 +238,9 @@ typedef enum
 #define BG_MAP_BASE(base)  ((base) << 8)
 
 #define BG_MAP_RAM(base)  (((base)*0x800) + 0x06000000)
-#define BG_MAP_RAM2(base) (((base)*0x800) + 0x06200000)
+#define BG_MAP_RAM_SUB(base) (((base)*0x800) + 0x06200000)
 #define BG_TILE_RAM(base) (((base)*0x4000) + 0x06000000)
+#define BG_TILE_RAM_SUB(base) (((base)*0x4000) + 0x06200000)
 
 #define BG_WRAP_OFF    (0)
 #define BG_WRAP_ON     (1 << 13)
@@ -250,6 +254,12 @@ typedef enum
 #define BG_RS_32x32    (1 << 14)
 #define BG_RS_64x64    (2 << 14)
 #define BG_RS_128x128  (3 << 14)
+
+#define BG_E_128x128 (BG_RS_16x16 | BG_256_COLOR)
+#define BG_E_256x256 (BG_RS_32x32 | BG_256_COLOR)
+#define BG_E_512x256 (BG_RS_64x64 | BG_256_COLOR)
+#define BG_E_512x512 (BG_RS_128x128 | BG_256_COLOR)
+
 
 //////////////////////////////////////////////////////////////////////
 
@@ -287,17 +297,17 @@ typedef enum
 #define SUB_BG3_X0     (*(vuint16*)0x0400101C)
 #define SUB_BG3_Y0     (*(vuint16*)0x0400101E)
 
-#define SUB_BG2_HDX    (*(vuint16*)0x04001020)
-#define SUB_BG2_HDY    (*(vuint16*)0x04001022)
-#define SUB_BG2_VDX    (*(vuint16*)0x04001024)
-#define SUB_BG2_VDY    (*(vuint16*)0x04001026)
+#define SUB_BG2_XDX    (*(vuint16*)0x04001020)
+#define SUB_BG2_XDY    (*(vuint16*)0x04001022)
+#define SUB_BG2_YDX    (*(vuint16*)0x04001024)
+#define SUB_BG2_YDY    (*(vuint16*)0x04001026)
 #define SUB_BG2_CX     (*(vuint32*)0x04001028)
 #define SUB_BG2_CY     (*(vuint32*)0x0400102C)
 
-#define SUB_BG3_HDX    (*(vuint16*)0x04001030)
-#define SUB_BG3_HDY    (*(vuint16*)0x04001032)
-#define SUB_BG3_VDX    (*(vuint16*)0x04001034)
-#define SUB_BG3_VDY    (*(vuint16*)0x04001036)
+#define SUB_BG3_XDX    (*(vuint16*)0x04001030)
+#define SUB_BG3_XDY    (*(vuint16*)0x04001032)
+#define SUB_BG3_YDX    (*(vuint16*)0x04001034)
+#define SUB_BG3_YDY    (*(vuint16*)0x04001036)
 #define SUB_BG3_CX     (*(vuint32*)0x04001038)
 #define SUB_BG3_CY     (*(vuint32*)0x0400103C)
 

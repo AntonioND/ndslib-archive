@@ -29,7 +29,7 @@ int main(void)
 	{
 		//move the cursor
 		consolePrintSet(0,10);
-		consolePrintf("Touch x = %04X\n", IPC->touchX);
+		consolePrintf("Touch x = %04X %x\n", IPC->touchX, 7);
 		consolePrintf("Touch y = %04X\n", IPC->touchY);		
 	
 	}

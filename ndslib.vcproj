@@ -162,6 +162,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\lib\ARM9\console.cpp"
+				>
+			</File>
+			<File
 				RelativePath="lib\ARM9\CP15.S"
 				>
 			</File>
@@ -186,6 +190,10 @@
 				>
 				<File
 					RelativePath="include\NDS\ARM9\BIOS.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\NDS\ARM9\console.h"
 					>
 				</File>
 				<File
