@@ -49,8 +49,8 @@ extern "C" {
 
 #ifdef ARM9
 #include <NDS/ARM9/video.h>
-#include <NDS/ARM9/cp15.h>
-#include <NDS/ARM9/bios.h>
+#include <NDS/ARM9/CP15.h>
+#include <NDS/ARM9/BIOS.h>
 #include <NDS/ARM9/trig_lut.h>
 #include <NDS/ARM9/math.h>
 
@@ -58,7 +58,7 @@ extern "C" {
 
 #ifdef ARM7
 #include <NDS/ARM7/touch.h>
-#include <NDS/ARM7/bios.h>
+#include <NDS/ARM7/BIOS.h>
 #include <NDS/ARM7/clock.h>
 #include <NDS/ARM7/audio.h>
 #include <NDS/ARM7/wifi.h>
@@ -68,7 +68,7 @@ extern "C" {
 #include <NDS/card.h>
 
 #include <NDS/memory.h>
-#include <NDS/dma.h>
+#include <NDS/DMA.h>
 #include <NDS/timers.h>
 #include <NDS/system.h>
 #include <NDS/interrupts.h>

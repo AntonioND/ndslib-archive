@@ -24,7 +24,7 @@ echo (must be done manualy if not)
 
 set /p choice=yes or no?
 
-if not %choice%==yes exit
+if not (%choice%==yes or %choice%==y)exit
 
 copy *.o %DEVDIR%\arm-elf\lib\
 copy *.ld %DEVDIR%\arm-elf\lib\

@@ -30,6 +30,7 @@
 
 #include <NDS/NDS.h>
 
+
 void irqDummy(void)
 {
 	IF = IF;
@@ -82,8 +83,8 @@ void irqDefaultHandler(void)
 	{
 		if(IF & (1 << i) )irqTable[i]();
 	}
-
-	VBLANK_INTR_WAIT_FLAGS = IF | IE;
+	
+//	VBLANK_INTR_WAIT_FLAGS = IF | IE;
 }
 
 void irqInitHandler(VoidFunctionPointer handler)

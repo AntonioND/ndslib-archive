@@ -102,7 +102,7 @@ typedef enum
 	VRAM_C_LCD = 0,
 	VRAM_C_MAIN_BG  = 1 | (2<<2),
 	VRAM_C_MAIN_SPRITE = 2,
-	VRAM_C_SUB_BG  = 1,
+	VRAM_C_SUB_BG  = 4,
 	VRAM_C_TEXTURE = 3 | (2<<2)
 
 }VRAM_C_TYPE;
@@ -112,7 +112,7 @@ typedef enum
 	VRAM_D_LCD = 0,
 	VRAM_D_MAIN_BG  = 1 | (3<<2),
 	VRAM_D_MAIN_SPRITE = 2,
-	VRAM_D_SUB_SPRITE = 2,
+	VRAM_D_SUB_SPRITE = 4,
 	VRAM_D_TEXTURE = 3 | (3<<2)
 
 }VRAM_D_TYPE;
