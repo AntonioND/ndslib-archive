@@ -1,4 +1,5 @@
-<html xmlns:o="urn:schemas-microsoft-com:office:office"
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
 xmlns:w="urn:schemas-microsoft-com:office:word"
 xmlns="http://www.w3.org/TR/REC-html40">
 
@@ -13,17 +14,17 @@ xmlns="http://www.w3.org/TR/REC-html40">
  <o:DocumentProperties>
   <o:Author>Janee' Orr</o:Author>
   <o:LastAuthor>jason</o:LastAuthor>
-  <o:Revision>3</o:Revision>
-  <o:TotalTime>988</o:TotalTime>
+  <o:Revision>4</o:Revision>
+  <o:TotalTime>990</o:TotalTime>
   <o:Created>2005-03-31T17:51:00Z</o:Created>
-  <o:LastSaved>2005-03-31T18:00:00Z</o:LastSaved>
+  <o:LastSaved>2005-03-31T20:00:00Z</o:LastSaved>
   <o:Pages>15</o:Pages>
-  <o:Words>4686</o:Words>
-  <o:Characters>26713</o:Characters>
+  <o:Words>4739</o:Words>
+  <o:Characters>27016</o:Characters>
   <o:Company>Home</o:Company>
-  <o:Lines>222</o:Lines>
-  <o:Paragraphs>53</o:Paragraphs>
-  <o:CharactersWithSpaces>32805</o:CharactersWithSpaces>
+  <o:Lines>225</o:Lines>
+  <o:Paragraphs>54</o:Paragraphs>
+  <o:CharactersWithSpaces>33177</o:CharactersWithSpaces>
   <o:Version>9.2720</o:Version>
  </o:DocumentProperties>
 </xml><![endif]-->
@@ -90,6 +91,12 @@ div.Section1
 	{page:Section1;}
 -->
 </style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
 </head>
 
 <body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
@@ -535,8 +542,8 @@ href="#_2D_Main">Registers</a></p>
 
 <p class=MsoNormal><span style='mso-tab-count:1'>            </span>The main 2D
 core can operate in any one of 8 modes that differ in number and types of
-backgrounds that can be displayed.<span style="mso-spacerun: yes">  </span>In
-all modes but frame buffer background 0 can be used as a 3D layer.</p>
+backgrounds that can be displayed.<span style="mso-spacerun: yes">  </span>In all
+modes but frame buffer background 0 can be used as a 3D layer.</p>
 
 <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
 
@@ -578,8 +585,8 @@ all modes but frame buffer background 0 can be used as a 3D layer.</p>
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Backgrounds 0, 1
-  and 2 are text. Background 3 is a rotation background.<o:p></o:p></b></p>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Backgrounds 0, 1 and
+  2 are text. Background 3 is a rotation background.<o:p></o:p></b></p>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Background 0 can be
   used as 3D.<o:p></o:p></b></p>
   </td>
@@ -874,10 +881,10 @@ Backgrounds:<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:.5in'><span style='mso-bidi-font-weight:
 bold'>These have the same 16 bit index found in text backgrounds but can only
-be 256 color.<span style="mso-spacerun: yes">  </span>The palette index is used,
-instead, to reference an extended palette that can be stored in VRAM E, F, or
-G.<span style="mso-spacerun: yes">  </span>Background rotation registers must be
-used to control these backgrounds.<o:p></o:p></span></p>
+be 256 color.<span style="mso-spacerun: yes">  </span>The palette index is
+used, instead, to reference an extended palette that can be stored in VRAM E,
+F, or G.<span style="mso-spacerun: yes">  </span>Background rotation registers
+must be used to control these backgrounds.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'><span
 style='mso-tab-count:1'>            </span><o:p></o:p></span></p>
@@ -895,8 +902,10 @@ act as a 256 color bitmap with the following available sizes:<o:p></o:p></span><
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'>512x512<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'><span
-style='mso-tab-count:1'>            </span>There is also a direct color bitmap
-mode according to some but this has not been figured out yet.<o:p></o:p></span></p>
+style='mso-tab-count:1'>            </span>If the 256 color bit and bit 2 are
+set the background becomes a 16 bit background (yes 16 bit meaning high bit is
+the alpha bit).<span style="mso-spacerun: yes">  </span>The sizes remain the
+same.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
 
@@ -1095,8 +1104,8 @@ style="mso-spacerun: yes">  </span>More to come on this.</p>
 
 <p class=MsoNormal>Vertex (v16)</p>
 
-<p class=MsoNormal><span style='mso-tab-count:1'>            </span>1.3.12
-fixed point number (1 bit sign, 3 bits number, 12 bits fraction)</p>
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span>1.3.12 fixed
+point number (1 bit sign, 3 bits number, 12 bits fraction)</p>
 
 <p class=MsoNormal>UV (t16)</p>
 
@@ -1280,8 +1289,8 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>Used to restore banks to a
   prior state.<span style="mso-spacerun: yes">  </span>Sometimes (in the case
-  of texture memory especialy) you can only write to vram when it is set to a
-  certain mode.<o:p></o:p></span></p>
+  of texture memory especialy) you can only write to vram when it is set to a certain
+  mode.<o:p></o:p></span></p>
   </td>
  </tr>
 </table>
@@ -1317,9 +1326,9 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
   style="mso-spacerun: yes">  </span>The ascii value of the first character
   (would be 0 if you have a full set)<o:p></o:p></span></p>
   <p class=MsoNormal><span style='font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
-  <p class=MsoNormal><span style='font-family:"Courier New"'>map: The background
-  map that will be rendered into.<span style="mso-spacerun: yes">  </span>You
-  will have to set up the background your self.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-family:"Courier New"'>map: The
+  background map that will be rendered into.<span style="mso-spacerun: yes"> 
+  </span>You will have to set up the background your self.<o:p></o:p></span></p>
   <p class=MsoNormal><span style='font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal><span style='font-family:"Courier New"'>pal: The 16 color
   palette you want the font to use.<span style="mso-spacerun: yes">  </span>If
@@ -1552,8 +1561,8 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
   border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal>Normal integer versions of the math functions.<span
   style="mso-spacerun: yes">  </span>Hardware divide and sqrt are
-  utilized.<span style="mso-spacerun: yes">  </span>These calls do not return
-  until the result is valid.</p>
+  utilized.<span style="mso-spacerun: yes">  </span>These calls do not return until
+  the result is valid.</p>
   </td>
  </tr>
 </table>
@@ -1567,8 +1576,8 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><b><span style='mso-bidi-font-size:10.0pt;color:blue'>static</span></b><a
   name="_ARM9"></a><b><span style='mso-bidi-font-size:10.0pt'> <span
-  style='color:blue'>inline</span> <span style='color:blue'>void</span> crossf32(f32
-  *a, f32 *b, f32 *result)<o:p></o:p></span></b></p>
+  style='color:blue'>inline</span> <span style='color:blue'>void</span>
+  crossf32(f32 *a, f32 *b, f32 *result)<o:p></o:p></span></b></p>
   <p class=MsoNormal><b><span style='mso-bidi-font-size:10.0pt;color:blue'>static</span></b><b><span
   style='mso-bidi-font-size:10.0pt'> <span style='color:blue'>inline</span> f32
   dotf32(f32 *a, f32 *b)<o:p></o:p></span></b></p>
@@ -1702,8 +1711,8 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
   style='mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
   style='mso-bidi-font-size:10.0pt;color:blue'>void</span></b><b><span
-  style='mso-bidi-font-size:10.0pt'> gluFrustumf32(f32 left, f32 right, f32
-  bottom, f32 top, f32 near, f32 far);<o:p></o:p></span></b></p>
+  style='mso-bidi-font-size:10.0pt'> gluFrustumf32(f32 left, f32 right, f32 bottom,
+  f32 top, f32 near, f32 far);<o:p></o:p></span></b></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
   style='mso-bidi-font-size:10.0pt;color:blue'>void</span></b><b><span
   style='mso-bidi-font-size:10.0pt'> gluFrustum(<span style='color:blue'>float</span>
@@ -1826,8 +1835,8 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
  <tr>
   <td width=590 valign=top style='width:6.15in;border:solid windowtext .5pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal>This sets the material types.<span style="mso-spacerun:
-  yes">  </span>The modes are:</p>
+  <p class=MsoNormal>This sets the material types. <span style="mso-spacerun:
+  yes"> </span>The modes are:</p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> GL_AMBIENT<span
@@ -2360,9 +2369,8 @@ style="mso-spacerun: yes">         </span>(*(vuint16*)0x04000048)<o:p></o:p></sp
 
 <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New";
 color:blue'>#define</span><span style='font-size:10.0pt;font-family:"Courier New"'>
-WIN_OUT<span style="mso-spacerun: yes">     </span><span style="mso-spacerun:
-yes">   </span>(*(vuint16*)0x0400004A)</span><b style='mso-bidi-font-weight:
-normal'><o:p></o:p></b></p>
+WIN_OUT<span style="mso-spacerun: yes">        </span>(*(vuint16*)0x0400004A)</span><b
+style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
 
@@ -2455,8 +2463,7 @@ style="mso-spacerun: yes">    </span>(*(vuint16*)0x04001020)<o:p></o:p></span></
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
 style='font-size:10.0pt;font-family:"Courier New"'> SUB_BG2_XDY<span
-style="mso-spacerun: yes">   </span><span style="mso-spacerun:
-yes"> </span>(*(vuint16*)0x04001022)<o:p></o:p></span></p>
+style="mso-spacerun: yes">    </span>(*(vuint16*)0x04001022)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
@@ -2483,8 +2490,8 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-style='font-size:10.0pt;font-family:"Courier New"'> SUB_BG3_XDX<span
-style="mso-spacerun: yes">    </span>(*(vuint16*)0x04001030)<o:p></o:p></span></p>
+style='font-size:10.0pt;font-family:"Courier New"'> SUB_BG3_XDX <span
+style="mso-spacerun: yes">   </span>(*(vuint16*)0x04001030)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
@@ -2545,7 +2552,8 @@ style='font-size:10.0pt;font-family:"Courier New";color:green'>// Window 1<o:p><
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
 style='font-size:10.0pt;font-family:"Courier New"'> SUB_WIN1_X0<span
-style="mso-spacerun: yes">    </span>(*(vuint8*)0x04001042)<o:p></o:p></span></p>
+style="mso-spacerun: yes">   </span><span style="mso-spacerun:
+yes"> </span>(*(vuint8*)0x04001042)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
@@ -2607,7 +2615,8 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
 style='font-size:10.0pt;font-family:"Courier New"'> GFX_VERTEX16<span
-style="mso-spacerun: yes">          </span>(*(vuint32*) 0x0400048C)<o:p></o:p></span></p>
+style="mso-spacerun: yes">       </span><span style="mso-spacerun:
+yes">   </span>(*(vuint32*) 0x0400048C)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
@@ -2660,14 +2669,13 @@ style="mso-spacerun: yes">   </span>(*(vuint32*) 0x040004C0)<o:p></o:p></span></
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-style='font-size:10.0pt;font-family:"Courier New"'> GFX_SPECULAR_EMISSION
-(*(vuint32*) 0x040004C4)<o:p></o:p></span></p>
+style='font-size:10.0pt;font-family:"Courier New"'> GFX_SPECULAR_EMISSION (*(vuint32*)
+0x040004C4)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
 style='font-size:10.0pt;font-family:"Courier New"'> GFX_SHININESS<span
-style="mso-spacerun: yes">     </span><span style="mso-spacerun:
-yes">    </span>(*(vuint32*) 0x040004D0)<o:p></o:p></span></p>
+style="mso-spacerun: yes">         </span>(*(vuint32*) 0x040004D0)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
@@ -2881,7 +2889,8 @@ style="mso-spacerun: yes">      </span>(*(vuint32*)0x040000C0)<o:p></o:p></span>
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
 style='font-size:10.0pt;font-family:"Courier New"'> DMA1_COUNT<span
-style="mso-spacerun: yes">     </span>(*(vuint16*)0x040000C4)<o:p></o:p></span></p>
+style="mso-spacerun: yes">    </span><span style="mso-spacerun:
+yes"> </span>(*(vuint16*)0x040000C4)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
@@ -3048,7 +3057,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DISPLAY_WIN1_ON<span
-  style="mso-spacerun: yes">       </span>(1 &lt;&lt; 14)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">     </span><span style="mso-spacerun:
+  yes">  </span>(1 &lt;&lt; 14)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DISPLAY_SPR_WIN_ON<span
@@ -3235,7 +3245,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> ATTR1_SIZE_64<span
-  style="mso-spacerun: yes">         </span>(3&lt;&lt;14)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">      </span><span style="mso-spacerun:
+  yes">   </span>(3&lt;&lt;14)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -3350,8 +3361,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   | BG_256_COLOR)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-  style='font-size:10.0pt;font-family:"Courier New"'> BG_E_512x512 (BG_RS_128x128
-  | BG_256_COLOR)<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'> BG_E_512x512
+  (BG_RS_128x128 | BG_256_COLOR)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
   <p class=MsoNormal>Macros</p>
   <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New";
@@ -3363,8 +3374,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   Control<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-  style='font-size:10.0pt;font-family:"Courier New"'> BG_TILE_BASE(base)
-  ((base) &lt;&lt; 2)<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'> BG_TILE_BASE(base) ((base)
+  &lt;&lt; 2)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> BG_MAP_BASE(base)<span
@@ -3442,8 +3453,7 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> GL_MODELVIEW<span
-  style="mso-spacerun: yes">    </span><span style="mso-spacerun:
-  yes">   </span>2<o:p></o:p></span></p>
+  style="mso-spacerun: yes">       </span>2<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> GL_PROJECTION<span
@@ -3461,7 +3471,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> GL_DIFFUSE<span
-  style="mso-spacerun: yes">              </span>2<o:p></o:p></span></p>
+  style="mso-spacerun: yes">       </span><span style="mso-spacerun:
+  yes">       </span>2<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'>
@@ -3477,8 +3488,7 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> GL_EMISSION<span
-  style="mso-spacerun: yes">   </span><span style="mso-spacerun:
-  yes">          </span>0x10<o:p></o:p></span></p>
+  style="mso-spacerun: yes">             </span>0x10<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -3830,8 +3840,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#ifdef</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> ARM7<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New";color:gray'>#define DMA_START_VBL<span
-  style="mso-spacerun: yes">   </span>(1&lt;&lt;12)<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>#define
+  DMA_START_VBL<span style="mso-spacerun: yes">   </span>(1&lt;&lt;12)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#endif<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
