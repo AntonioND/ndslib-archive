@@ -76,6 +76,7 @@ extern "C" {
 #define VRAM_CORE_A   (0)
 #define VRAM_ARM9     (1)
 #define VRAM_ARM7     (2)
+#define VRAM_OFFSET(n)  ((n)<<3)
 // 3?
 #define VRAM_CORE_B   (4)
 // 5..7?
@@ -91,29 +92,29 @@ typedef enum
 typedef enum
 {
 	VRAM_B_LCD = 0,
-	VRAM_B_MAIN_BG  = 1 | (1<<2),
+	VRAM_B_MAIN_BG  = 1 | VRAM_OFFSET(1),
 	VRAM_B_MAIN_SPRITE = 2,
-	VRAM_B_TEXTURE = 3 | (1<<2)
+	VRAM_B_TEXTURE = 3 | VRAM_OFFSET(1)
 
 }VRAM_B_TYPE;	
 
 typedef enum
 {
 	VRAM_C_LCD = 0,
-	VRAM_C_MAIN_BG  = 1 | (2<<2),
+	VRAM_C_MAIN_BG  = 1 | VRAM_OFFSET(2),
 	VRAM_C_MAIN_SPRITE = 2,
 	VRAM_C_SUB_BG  = 4,
-	VRAM_C_TEXTURE = 3 | (2<<2)
+	VRAM_C_TEXTURE = 3 | VRAM_OFFSET(2)
 
 }VRAM_C_TYPE;
 
 typedef enum
 {
 	VRAM_D_LCD = 0,
-	VRAM_D_MAIN_BG  = 1 | (3<<2),
+	VRAM_D_MAIN_BG  = 1 | VRAM_OFFSET(3),
 	VRAM_D_MAIN_SPRITE = 2,
 	VRAM_D_SUB_SPRITE = 4,
-	VRAM_D_TEXTURE = 3 | (3<<2)
+	VRAM_D_TEXTURE = 3 | VRAM_OFFSET(3)
 
 }VRAM_D_TYPE;
 
