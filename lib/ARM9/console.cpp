@@ -177,12 +177,14 @@ void consolePrintChar(char c)
 	
 }
 
+
 void printX(int w, unsigned d)
 {
 	int loop = 0;
 	int i = 0;
 	
 	char buf[20] = {0};
+
 
 	while(d > 0)
 	{
@@ -192,7 +194,7 @@ void printX(int w, unsigned d)
 	
 	for (i = 7; i >= 0; i--)
 	{
-		if(buf[i])
+		if(buf[i] || i == 0)
 		{
 			if(buf[i] < 10)
 				consolePrintChar(buf[i] + '0');
@@ -219,7 +221,7 @@ void printx(int w, unsigned int d)
 	
 	for (i = 7; i >= 0; i--)
 	{
-		if(buf[i])
+		if(buf[i] || i == 0)
 		{
 			if(buf[i] < 10)
 				consolePrintChar(buf[i] + '0');
@@ -247,12 +249,12 @@ void printInt(int w, int d)
 	while(d > 0)
 	{
 		buf[loop++] =  d % 10;
-		d = div32(d, 10); 
+		d /= 10; 
 	}
 	
 	for (i = 7; i >= 0; i--)
 	{
-		if(buf[i])
+		if(buf[i] || i == 0)
 			consolePrintChar(buf[i] + '0');
 		else if(i < w)
 			consolePrintChar(' ');
@@ -270,7 +272,7 @@ void printBin(int w, int d)
 			first = 1;
 			consolePrintChar('1');
 		}
-		else if (first)
+		else if (first  || i == 0)
 			consolePrintChar('0');
 		else if (i < w)
 			consolePrintChar(' ');
@@ -293,7 +295,7 @@ void print0X(int w, unsigned d)
 	
 	for (i = 7; i >= 0; i--)
 	{
-		if(buf[i] || i < w)
+		if(buf[i] || i < w  || i == 0)
 		{
 			if(buf[i] < 10)
 				consolePrintChar(buf[i] + '0');
@@ -319,7 +321,7 @@ void print0x(int w, unsigned int d)
 	
 	for (i = 7; i >= 0; i--)
 	{
-		if(buf[i] || i < w)
+		if(buf[i] || i < w  || i == 0)
 		{
 			if(buf[i] < 10)
 				consolePrintChar(buf[i] + '0');
@@ -345,11 +347,11 @@ void print0Int(int w, int d)
 	while(d > 0)
 	{
 		buf[loop++] =  d % 10;
-		d = div32(d, 10); 
+		d /= 10;  
 	}
 	
 	for (i = 15; i >= 0; i--)
-		if(buf[i] || i < w)
+		if(buf[i] || i < w  || i == 0)
 			consolePrintChar(buf[i] + '0');
 
 }
@@ -365,15 +367,50 @@ void print0Bin(int w, int d)
 			first = 1;
 			consolePrintChar('1');
 		}
-		else if (first)
+		else if (first  || i == 0)
 			consolePrintChar('0');
 		else if (i < w)
 			consolePrintChar('0');
 	}
 }
+
 void print(const char* s)
 {
 	for(; *s; s++) consolePrintChar(*s);
+}
+
+void printF(int w, float f)
+{
+	unsigned int* t = (unsigned int*)&f;
+	unsigned int fraction = (*t) & 0x007FFFFF;
+	int exp = ((*t) >> 23) & 0xFF;
+
+	if(*t & BIT(31))
+		consolePrintChar('-');
+	
+
+	print0Bin(32, fraction);
+	
+	printInt(1, fraction);
+	consolePrintChar('e');
+	printInt(1, exp - 127);
+	
+	/*
+	if(exp == 0 && fraction == 0)
+	{
+		printInt(1,0);
+	}
+	else if(exp == 0xFF && fraction == 0)
+	{
+		print("Inifinite");
+	}
+	else
+	{
+		printInt(w,fraction);
+		consolePrintChar('e');
+		printInt(1,exp - 127);
+	}
+	*/
 }
 
 void consolePrintf(const char* s, ...)
@@ -387,6 +424,9 @@ void consolePrintf(const char* s, ...)
 
 	while(*s)
 	{
+		w = 1;
+		z = 0;
+
 		switch(*s)
 		{
 		case '%':
@@ -429,7 +469,11 @@ void consolePrintf(const char* s, ...)
 				else printBin(w, va_arg(argp, int));
 				s++;
 				break;
-		
+			case 'f':
+			case 'F':
+				printF(w,va_arg(argp, double));
+				s++;
+				break;
 			case 's':
 			case 'S':
 				print(va_arg(argp, char*));
