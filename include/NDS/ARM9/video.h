@@ -188,11 +188,10 @@ typedef enum
 #define MODE_FB3	(0x000E0000)
 
 
-//#define DISPLAY_FB_TOGGLE     (1 << 4)
 #define DISPLAY_OAM_ACCESS    (1 << 5)
 #define DISPLAY_SPR_1D_LAYOUT (1 << 4)
 #define DISPLAY_SCREEN_OFF    (1 << 7)
-
+#define DISPLAY_BG_EXT_PALETTE	BIT(30)
 
 #define H_BLANK_OAM    (1<<5)
 

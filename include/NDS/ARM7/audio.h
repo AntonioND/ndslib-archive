@@ -47,17 +47,29 @@ extern "C" {
 // Sound (ARM7 only)
 //////////////////////////////////////////////////////////////////////
 
-#define SCHANNEL_CR(n)    (*(vuint32*)(0x04000400 + ((n)<<4)))
-#define SCHANNEL_W4(n)    (*(vuint32*)(0x04000404 + ((n)<<4)))
-#define SCHANNEL_TIMER(n) (*(vuint16*)(0x04000408 + ((n)<<4)))
-#define SCHANNEL_HWA(n)   (*(vuint16*)(0x0400040A + ((n)<<4)))
-#define SCHANNEL_WC(n)    (*(vuint32*)(0x0400040C + ((n)<<4)))
+#define SOUND_VOL(n)	(n)
+#define SOUND_FREQ(n)	(0x10000 - (0x1000000 / (n)))
+#define SOUND_ENABLE	BIT(31)
+#define SOUND_REPEAT    (0)
+
+#define SCHANNEL_ENABLE BIT(15)
+
+//registers
+#define SCHANNEL_CR(n)				(*(vuint32*)(0x04000400 + ((n)<<4)))
+#define SCHANNEL_SOURCE(n)			(*(vuint32*)(0x04000404 + ((n)<<4)))
+#define SCHANNEL_TIMER(n)			(*(vuint16*)(0x04000408 + ((n)<<4)))
+#define SCHANNEL_REPEAT_POINT(n)	(*(vuint16*)(0x0400040A + ((n)<<4)))
+#define SCHANNEL_LENGTH(n)			(*(vuint32*)(0x0400040C + ((n)<<4)))
 
 #define SOUND_CR          (*(vuint16*)0x04000500)
+
+//not sure on the following
 #define SOUND_BIAS        (*(vuint16*)0x04000504)
 #define SOUND508          (*(vuint16*)0x04000508)
 #define SOUND510          (*(vuint16*)0x04000510)
+#define SOUND514		  (*(vuint16*)0x04000514)
 #define SOUND518          (*(vuint16*)0x04000518)
+#define SOUND51C          (*(vuint16*)0x0400051C)
 
 //////////////////////////////////////////////////////////////////////
 

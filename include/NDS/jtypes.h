@@ -94,9 +94,6 @@ typedef signed short int        s16;
 typedef signed int              s32;
 typedef signed long long int    s64;
 
-typedef float                   float32;
-typedef double                  float64;
-
 typedef volatile u8          vu8;
 typedef volatile u16         vu16;
 typedef volatile u32         vu32;
