@@ -527,7 +527,7 @@ void consoleClear(void)
 	int i = 0;
 	consolePrintSet(0,0);
 
-	while(i < CONSOLE_HEIGHT * CONSOLE_WIDTH)
+	while(i++ < CONSOLE_HEIGHT * CONSOLE_WIDTH)
 		consolePrintChar(' ');
 
 	consolePrintSet(0,0);
