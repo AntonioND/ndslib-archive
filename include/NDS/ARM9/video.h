@@ -156,10 +156,10 @@ inline void videoSetMode(uint32 mode) { DISPLAY_CONTROL = mode; }
 
 //////////////////////////////////////////////////////////////////////
 
-#define BG0_CR1        (*(vuint16*)0x04000008)
-#define BG1_CR1        (*(vuint16*)0x0400000A)
-#define BG2_CR1        (*(vuint16*)0x0400000C)
-#define BG3_CR1        (*(vuint16*)0x0400000E)
+#define BG0_CR         (*(vuint16*)0x04000008)
+#define BG1_CR         (*(vuint16*)0x0400000A)
+#define BG2_CR         (*(vuint16*)0x0400000C)
+#define BG3_CR         (*(vuint16*)0x0400000E)
 
 #define SUB_BG0_CR     (*(vuint16*)0x04001008)
 #define SUB_BG1_CR     (*(vuint16*)0x0400100A)
@@ -168,8 +168,8 @@ inline void videoSetMode(uint32 mode) { DISPLAY_CONTROL = mode; }
 
 //////////////////////////////////////////////////////////////////////
 
-#define BG_256COLOR    (1 << 7)
-#define BG_16COLOR     (0)
+#define BG_256_COLOR   (1 << 7)
+#define BG_16_COLOR    (0)
 #define BG_MOSAIC_ON   (1 << 6)
 #define BG_MOSAIC_OFF  (0)
 
