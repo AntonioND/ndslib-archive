@@ -27,7 +27,7 @@ copy *.o %DEVDIR%\arm-elf\lib\
 copy *.ld %DEVDIR%\arm-elf\lib\
 copy *.specs %DEVDIR%\arm-elf\lib\
 copy thumb\*.o %DEVDIR%\arm-elf\lib\thumb\
-copy interwork\*.0 %DEVDIR%\arm-elf\lib\interwork\
+copy interwork\*.o %DEVDIR%\arm-elf\lib\interwork\
 copy thumb\interwork\*.o %DEVDIR%\arm-elf\lib\thumb\interwork\
 
 pause
