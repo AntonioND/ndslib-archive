@@ -1,4 +1,4 @@
-//////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
 //
 // videoGL.h -- Video API vaguely similar to OpenGL
 //
@@ -121,15 +121,34 @@ typedef struct {
 #define POLY_FORMAT_LIGHT3      0x8
 
 //////////////////////////////////////////////////////////////////////
+#define MAX_TEXTURES 2048  //this should be enough ! but feel free to change
 
 #define TEXTURE_SIZE_8     0
-#define TEXTURE_SIZE_16    1
+#define TEXTURE_SIZE_16    1 
 #define TEXTURE_SIZE_32    2
 #define TEXTURE_SIZE_64    3
 #define TEXTURE_SIZE_128   4
 #define TEXTURE_SIZE_256   5
 #define TEXTURE_SIZE_512   6
 #define TEXTURE_SIZE_1024  7 
+
+//////////////////////////////////////////////////////////////////////
+
+#define GL_TEXTURE_WRAP_S (1 << 16)
+#define GL_TEXTURE_WRAP_T (1 << 17)
+#define GL_TEXTURE_FLIP_S (1 << 18)
+#define GL_TEXTURE_FLIP_T (1 << 19)
+
+#define GL_TEXTURE_2D		1
+
+//////////////////////////////////////////////////////////////////////
+
+#define GL_RGB		8
+#define GL_RGBA		7	//15 bit color + alpha bit
+#define GL_RGB4		2	//4 color palette
+#define GL_RGB256	3	//256 color palette
+#define GL_RGB16	4	//16 color palette
+#define GL_COMPRESSED	5 //compressed texture
 
 //////////////////////////////////////////////////////////////////////
 
@@ -157,279 +176,139 @@ void gluFrustumf32(f32 left, f32 right, f32 bottom, f32 top, f32 near, f32 far);
 void gluFrustum(float left, float right, float bottom, float top, float near, float far);
 void gluPerspectivef32(int fovy, f32 aspect, f32 zNear, f32 zFar);
 void gluPerspective(float fovy, float aspect, float zNear, float zFar);
+int glTexImage2D(int target, int empty1, int type, int sizeX, int sizeY, int empty2, int param, uint8* texture);
+void glBindTexture(int target, int name);
+int glGenTextures(int n, int *names);
+void glResetTextures(void);
+void glMaterialf(int mode, rgb color);
+void glResetMatrixStack(void);
+void glReset(void);
 //////////////////////////////////////////////////////////////////////
 
+
+
+//////////////////////////////////////////////////////////////////////
+
+  void glBegin(int mode);
+
+
+//////////////////////////////////////////////////////////////////////
+
+  void glEnd( void);
+
+//////////////////////////////////////////////////////////////////////
+
+  void glClearColor(uint8 red, uint8 green, uint8 blue);
+
+//////////////////////////////////////////////////////////////////////
+
+  void glClearDepth(uint16 depth);
+
+
+//////////////////////////////////////////////////////////////////////
+
+  void glColor3b(uint8 red, uint8 green, uint8 blue);
+
+
+//////////////////////////////////////////////////////////////////////
+
+  void glColor(rgb color);
+
+//////////////////////////////////////////////////////////////////////
+
+  void glVertex3v16(v16 x, v16 y, v16 z);
+
+
+//////////////////////////////////////////////////////////////////////
+
+  void glVertex2v16(int yx, v16 z);
+
+//////////////////////////////////////////////////////////////////////
+
+  void glTexCoord2t16(t16 u, t16 v);
+
+
+//////////////////////////////////////////////////////////////////////
+
+  void glTexCoord1i(uint32 uv);
+
+//////////////////////////////////////////////////////////////////////
+
+  void glPushMatrix(void);
+
+
+//////////////////////////////////////////////////////////////////////
+
+  void glPopMatrix(int32 index);
+
+
+//////////////////////////////////////////////////////////////////////
+
+  void glRestoreMatrix(int32 index);
+
+//////////////////////////////////////////////////////////////////////
+
+  void glStoreMatrix(int32 index);
+
+
+//////////////////////////////////////////////////////////////////////
+
+  void glScalev(vector* v);
+
+
+//////////////////////////////////////////////////////////////////////
+
+  void glTranslatev(vector* v);
+
+
+//////////////////////////////////////////////////////////////////////
+
+  void glTranslate3f32(f32 x, f32 y, f32 z);
+
+//////////////////////////////////////////////////////////////////////
+
+  void glScalef32(f32 factor);
+
+
+//////////////////////////////////////////////////////////////////////
+
+  void glTranslatef32(f32 delta);
+
+//////////////////////////////////////////////////////////////////////
+
+  void glLight(int id, rgb color, v10 x, v10 y, v10 z);
+
+//////////////////////////////////////////////////////////////////////
+
+  void glNormal(uint32 normal);
+
+//////////////////////////////////////////////////////////////////////
+
+  void glIdentity(void);
+
+
+//////////////////////////////////////////////////////////////////////
+
+  void glMatrixMode(int mode);
+
+//////////////////////////////////////////////////////////////////////
+
+  void glViewPort(uint8 x1, uint8 y1, uint8 x2, uint8 y2);
+/////////////////////////////////////////////////////////////////////
+
+  void glFlush(void);
+
+//////////////////////////////////////////////////////////////////////
+void glMaterialShinnyness(void);
+
+//////////////////////////////////////////////////////////////////////
+
+  void glPolyFmt(int alpha); 
+
+//////////////////////////////////////////////////////////////////////
 #ifdef __cplusplus
 }
 #endif
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glBegin(int mode)
-{
-  GFX_BEGIN = mode;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glEnd( void)
-{
-  GFX_END = 0;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glClearColor(uint8 red, uint8 green, uint8 blue)
-{
-  GFX_CLEAR_COLOR = RGB15(red, green, blue);
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glClearDepth(uint16 depth)
-{
-  GFX_CLEAR_DEPTH = depth;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glColor3ub(uint8 red, uint8 green, uint8 blue)
-{
-  GFX_COLOR = (vuint32)RGB15(red, green, blue);
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glColor(rgb color)
-{
-  GFX_COLOR = (vuint32)color;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glVertex3v16(v16 x, v16 y, v16 z)
-{
-  GFX_VERTEX16 = (y << 16) | (x & 0xFFFF);
-  GFX_VERTEX16 = ((uint32)(uint16)z);
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glVertex2v16(int yx, v16 z)
-{
-  GFX_VERTEX16 = yx;
-  GFX_VERTEX16 = (z);
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glTexCoord2t16(t16 u, t16 v)
-{
-  GFX_TEX_COORD = (u << 16) + v;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glTexCoord1i(uint32 uv)
-{
-  GFX_TEX_COORD = uv;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glPushMatrix(void)
-{
-  MATRIX_PUSH = 0;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glPopMatrix(int32 index)
-{
-  MATRIX_POP = index;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glRestoreMatrix(int32 index)
-{
-  MATRIX_RESTORE = index;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glStoreMatrix(int32 index)
-{
-  MATRIX_STORE = index;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glScalev(vector* v)
-{
-  MATRIX_SCALE = v->x;
-  MATRIX_SCALE = v->y;
-  MATRIX_SCALE = v->z;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glTranslatev(vector* v)
-{
-  MATRIX_TRANSLATE = v->x;
-  MATRIX_TRANSLATE = v->y;
-  MATRIX_TRANSLATE = v->z;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glTranslate3f32(f32 x, f32 y, f32 z)
-{
-  MATRIX_TRANSLATE = x;
-  MATRIX_TRANSLATE = y;
-  MATRIX_TRANSLATE = z;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glScalef32(f32 factor)
-{
-  MATRIX_SCALE = factor;
-  MATRIX_SCALE = factor;
-  MATRIX_SCALE = factor;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glTranslatef32(f32 delta)
-{
-  MATRIX_TRANSLATE = delta;
-  MATRIX_TRANSLATE = delta;
-  MATRIX_TRANSLATE = delta;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glLight(int id, rgb color, v10 x, v10 y, v10 z)
-{
-  id = (id & 3) << 30;
-  GFX_LIGHT_VECTOR = id | ((z & 0x3FF) << 20) | ((y & 0x3FF) << 10) | (x & 0x3FF);
-  GFX_LIGHT_COLOR = id | color;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glNormal(uint32 normal)
-{
-  GFX_NORMAL = normal;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glIdentity(void)
-{
-  MATRIX_IDENTITY = 0;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glMatrixMode(int mode)
-{
-  MATRIX_CONTROL = mode;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glViewPort(uint8 x1, uint8 y1, uint8 x2, uint8 y2)
-{
-  GFX_VIEWPORT = (x1) + (y1 << 8) + (x2 << 16) + (y2 << 24);
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glFlush(void)
-{
-  GFX_FLUSH = 2;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glMaterialf(int mode, rgb color)
-{
-  static uint32 diffuse_ambient = 0;
-  static uint32 specular_emission = 0;
-
-  switch(mode) {
-    case GL_AMBIENT:
-      diffuse_ambient = (color << 16) | (diffuse_ambient & 0xFFFF);
-      break;
-    case GL_DIFFUSE:
-      diffuse_ambient = color | (diffuse_ambient & 0xFFFF0000);
-      break;
-    case GL_AMBIENT_AND_DIFFUSE:
-      diffuse_ambient= color + (color << 16);
-      break;
-    case GL_SPECULAR:
-      specular_emission = color | (specular_emission & 0xFFFF0000);
-      break;
-    case GL_SHININESS:
-      break;
-    case GL_EMISSION:
-      specular_emission = (color << 16) | (specular_emission & 0xFFFF);
-      break;
-  }
-  
-  GFX_DIFFUSE_AMBIENT = diffuse_ambient;
-  GFX_SPECULAR_EMISSION = specular_emission;
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glResetMatrixStack(void)
-{
-  // stack overflow ack ?
-  GFX_STATUS |= 1 << 15;
-
-  // pop the stacks to the top...seems projection stack is only 1 deep??
-  glMatrixMode(GL_PROJECTION);
-  glPopMatrix(GFX_STATUS & (1<<13));
-  
-  // 31 deep modelview matrix
-  glMatrixMode(GL_MODELVIEW);
-  glPopMatrix(GFX_STATUS & (0x1F << 8));
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glReset(void)
-{
-  while (GFX_STATUS & (1<<27)); // wait till gfx engine is not busy
-  
-  // Clear the FIFO
-  GFX_STATUS |= (1<<29);
-
-  // Clear overflows for list memory
-  GFX_CONTROL |= ((1<<12) | (1<<13)) | 3;
-  glResetMatrixStack();
-
-  GFX_TEX_FORMAT = 0;
-  GFX_POLY_FORMAT = 0;
-  
-  glMatrixMode(GL_PROJECTION);
-  glIdentity();
-
-  glMatrixMode(GL_MODELVIEW);
-  glIdentity();
-}
-
-//////////////////////////////////////////////////////////////////////
-
-inline extern void glPolyFmt(int alpha) // obviously more to this
-{
-  GFX_POLY_FORMAT = alpha;// << 16;
-}
-
-//////////////////////////////////////////////////////////////////////
 
 #endif
 

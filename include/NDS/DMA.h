@@ -65,6 +65,7 @@
 // DMA control register contents
 // The defaults are 16-bit, increment source/dest addresses, no irq
 #define DMA_ENABLE      (1<<15)
+#define DMA_BUSY	    (1<<15)
 #define DMA_IRQ_REQ     (1<<14)
 
 #define DMA_START_NOW   (0<<12)
@@ -83,6 +84,7 @@
 #define DMA_16_BIT      (0<<10)
 #define DMA_32_BIT      (1<<10)
 
+
 #define DMA_REPEAT      (1<<9)
 
 #define DMA_SRC_INC     (0<<7)
@@ -97,6 +99,23 @@
 #define DMA_COPY_WORDS     (DMA_ENABLE | DMA_32_BIT | DMA_START_NOW)
 #define DMA_COPY_HALFWORDS (DMA_ENABLE | DMA_16_BIT | DMA_START_NOW)
 
+inline void dmaCopyWords(uint8 channel, uint32* src, uint32* dest, uint32 size)
+{
+	DMA_SRC(channel) = (uint32)src;
+	DMA_DEST(channel) = (uint32)dest;
+	DMA_COUNT(channel) = (uint16)(size>>2);
+	DMA_CR(channel) = DMA_COPY_WORDS;
+	while(DMA_CR(channel) & DMA_BUSY);
+}
+/*
+inline int dmaBusy(uint8 channel)
+{
+	if (DMA_CR(channel) & DMA_BUSY) 
+		return 1;
+	else
+		return 0;
+}
+*/
 //////////////////////////////////////////////////////////////////////
 
 #endif

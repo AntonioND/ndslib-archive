@@ -56,6 +56,11 @@ void irqSet(int irq, VoidFunctionPointer handler)
 		for (i = 0; i < 32; i++)
 			if(irq & (1 << i) )irqTable[i] = handler;
 	
+	if(irq & IRQ_VBLANK)
+		DISP_SR |= DISP_VBLANK_IRQ ;
+	if(irq & IRQ_HBLANK)
+		DISP_SR |= DISP_HBLANK_IRQ ;
+
 	IE |= irq;
 }
 void irqClear(int irq)
@@ -84,7 +89,9 @@ void irqDefaultHandler(void)
 void irqInitHandler(VoidFunctionPointer handler)
 {
 	IME = 0;
-	
+	IE = 0;
+	IF = ~0;
+
 	IRQ_HANDLER = handler;
 	
 	IME = 1;

@@ -55,29 +55,8 @@ extern "C" {
 #define RGB15(r,g,b)  ((r)|((g)<<5)|((b)<<10))
 
 //////////////////////////////////////////////////////////////////////
-
-// VRAM control
-#define VRAM_CR0       (*(vuint32*)0x04000240)
-#define VRAM_CR1       (*(vuint32*)0x04000244)
-#define VRAM_CR2       (*(vuint32*)0x04000248)
-
-/* VRAM Bank Control */
-#define VRAM_ALL_ENABLE    BIT7
-
-//do not combine these defines (other than offset for main display)
-#define VRAM_ALL_LCD       0
-#define VRAM_ABCD_BG       1
-#define VRAM_ABCD_OBJ      2
-#define VRAM_ABCD_TEXTURE  3
-
-//valid 0-3 for textures and backgrounds, 0-1 for objects and only for main display
-#define VRAM_ABCD_OFFSET(n)    ((n) << 2) //memory offset + n * 0x20000
-
-#define VRAM_C_SUB_BG      (1<<3)
-#define VRAM_D_SUB_OBJ     (1<<4)
-
-#define VRAM_E_TEXTURE_PALETTE  3
-
+//	Vram Control
+#define VRAM_CR			(*(vuint32*)0x04000240)
 #define VRAM_A_CR       (*(vuint8*)0x04000240)
 #define VRAM_B_CR       (*(vuint8*)0x04000241)
 #define VRAM_C_CR       (*(vuint8*)0x04000242)
@@ -89,14 +68,78 @@ extern "C" {
 #define VRAM_I_CR       (*(vuint8*)0x04000248)
 
 #define VRAM_ENABLE   (1<<7)
+
 #define VRAM_CORE_A   (0)
 #define VRAM_ARM9     (1)
 #define VRAM_ARM7     (2)
 // 3?
 #define VRAM_CORE_B   (4)
 // 5..7?
+typedef enum
+{
+	VRAM_A_LCD = 0,
+	VRAM_A_MAIN_BG  = 1,
+	VRAM_A_MAIN_SPRITE = 2,
+	VRAM_A_TEXTURE = 3
 
-  
+}VRAM_A_TYPE;
+
+typedef enum
+{
+	VRAM_B_LCD = 0,
+	VRAM_B_MAIN_BG  = 1 | (1<<2),
+	VRAM_B_MAIN_SPRITE = 2,
+	VRAM_B_TEXTURE = 3 | (1<<2)
+
+}VRAM_B_TYPE;	
+
+typedef enum
+{
+	VRAM_C_LCD = 0,
+	VRAM_C_MAIN_BG  = 1 | (2<<2),
+	VRAM_C_MAIN_SPRITE = 2,
+	VRAM_C_SUB_BG  = 1,
+	VRAM_C_TEXTURE = 3 | (2<<2)
+
+}VRAM_C_TYPE;
+
+typedef enum
+{
+	VRAM_D_LCD = 0,
+	VRAM_D_MAIN_BG  = 1 | (3<<2),
+	VRAM_D_MAIN_SPRITE = 2,
+	VRAM_D_SUB_SPRITE = 2,
+	VRAM_D_TEXTURE = 3 | (3<<2)
+
+}VRAM_D_TYPE;
+
+typedef enum
+{
+	VRAM_E_LCD			=0,
+	VRAM_E_TEX_PALETTE = 3
+}VRAM_E_TYPE;
+
+//////////////////////////////////////////////////
+  uint32 vramSetMainBanks(VRAM_A_TYPE a, VRAM_B_TYPE b, VRAM_C_TYPE c, VRAM_D_TYPE d);
+
+
+  void vramRestorMainBanks(uint32 vramTemp);
+
+//////////////////////////////////////////////////
+  void vramSetBankA(VRAM_A_TYPE a);
+
+//////////////////////////////////////////////////
+  void vramSetBankB(VRAM_B_TYPE b);
+
+//////////////////////////////////////////////////
+  void vramSetBankC(VRAM_C_TYPE c);
+
+///////////////////////////////////////////////////
+  void vramSetBankD(VRAM_D_TYPE d);
+
+////////////////////////////////////////////////////
+  void vramSetBankE(VRAM_E_TYPE e);
+
 //////////////////////////////////////////////////////////////////////
 // Display control registers
 //////////////////////////////////////////////////////////////////////
