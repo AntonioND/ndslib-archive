@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////////
 //
-// NDS.h -- Master include (includes the rest of the library)
+// interrupts.cpp -- Default interrupt handler
 //
 // version 0.1, February 14, 2005
 //
@@ -28,62 +28,76 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#ifndef NDS_INCLUDE
-#define NDS_INCLUDE
+#include <NDS/NDS.h>
 
-//////////////////////////////////////////////////////////////////////
-
-#ifndef ARM7
-#ifndef ARM9
-#error Either ARM7 or ARM9 must be defined
-#endif
-#endif
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-//////////////////////////////////////////////////////////////////////
-
-#include <NDS/jtypes.h>
-
-#ifdef ARM9
-#include <NDS/ARM9/video.h>
-#include <NDS/ARM9/CP15.h>
-#include <NDS/ARM9/BIOS.h>
-#include <NDS/ARM9/trig_lut.h>
-#include <NDS/ARM9/math.h>
-
-#endif
-
-#ifdef ARM7
-#include <NDS/ARM7/touch.h>
-#include <NDS/ARM7/BIOS.h>
-#include <NDS/ARM7/clock.h>
-#include <NDS/ARM7/audio.h>
-#include <NDS/ARM7/wifi.h>
-#include <NDS/ARM7/serial.h>
-#endif
-
-#include <NDS/card.h>
-
-#include <NDS/memory.h>
-#include <NDS/DMA.h>
-#include <NDS/timers.h>
-#include <NDS/system.h>
-#include <NDS/interrupts.h>
-#include <NDS/ipc.h>
-
-
-//////////////////////////////////////////////////////////////////////
-
-#ifdef __cplusplus
+void irqDummy(void)
+{
+	IF = IF;
 }
-#endif
 
-//////////////////////////////////////////////////////////////////////
+VoidFunctionPointer irqTable[32] = 
+{
+	irqDummy, irqDummy, irqDummy, irqDummy,
+	irqDummy, irqDummy, irqDummy, irqDummy,
+	irqDummy, irqDummy, irqDummy, irqDummy,
+	irqDummy, irqDummy, irqDummy, irqDummy,
+	
+	irqDummy, irqDummy, irqDummy, irqDummy,
+	irqDummy, irqDummy, irqDummy, irqDummy,
+	irqDummy, irqDummy, irqDummy, irqDummy,
+	irqDummy, irqDummy, irqDummy, irqDummy
+};
 
-#endif
+void irqSet(int irq, VoidFunctionPointer handler)
+{
+	int i = 0;
+	
+	if(handler)
+		for (i = 0; i < 32; i++)
+			if(irq & (1 << i) )irqTable[i] = handler;
+	
+	IE |= irq;
+}
+void irqClear(int irq)
+{
+	int i = 0;
 
-//////////////////////////////////////////////////////////////////////
+	for (i = 0; i < 32; i++)
+		if(irq & (1 << i) )irqTable[i] = irqDummy;
+	
+
+	IE &= ~irq;
+}
+
+void irqDefaultHandler(void)
+{
+	int i = 0;
+
+	for (i = 0; i < 32; i++)
+	{
+		if(IF & (1 << i) )irqTable[i]();
+	}
+
+	VBLANK_INTR_WAIT_FLAGS = IF | IE;
+}
+
+void irqInitHandler(VoidFunctionPointer handler)
+{
+	IME = 0;
+	
+	IRQ_HANDLER = handler;
+	
+	IME = 1;
+}
+
+void irqEnable(int irq)
+{
+	IE |= irq;
+	IME = 1;
+}
+
+void irqDisable(int irq)
+{
+	IE &= ~irq;
+}
 

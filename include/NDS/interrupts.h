@@ -25,6 +25,7 @@
 //
 // Changelog:
 //   0.1: First version
+//	 0.2: Added a simple slow default irq handler and support functions
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -53,6 +54,8 @@
 
 #define IRQ_CARD       (1 << 19)
 #define IRQ_CARD_LINE  (1 << 20)
+
+#define IRQ_ALL			(~0)
 
 //////////////////////////////////////////////////////////////////////
 
@@ -89,8 +92,23 @@
 //#define IRQ_HANDLER             (*(VoidFunctionPointer *)((CP15_GetDTCM() & ~0xFFF) + 0x3FFC))
 #define VBLANK_INTR_WAIT_FLAGS  (*(vuint32*)0x00803FF8)
 #define IRQ_HANDLER             (*(VoidFunctionPointer *)0x00803FFC)
+//////////////////////////////////////////////////////////////////////
+#ifdef __cplusplus
+extern "C" {
 #endif
-
+//////////////////////////////////////////////////////////////////////
+void irqSet(int irq, VoidFunctionPointer handler);
+void irqClear(int irq);
+void irqInitHandler(VoidFunctionPointer handler);
+void irqDefaultHandler(void);
+void irqEnable(int irq);
+void irqDisable(int irq);
+//////////////////////////////////////////////////////////////////////
+#ifdef __cplusplus
+}
+#endif
+//////////////////////////////////////////////////////////////////////
+#endif
 //////////////////////////////////////////////////////////////////////
 
 #endif

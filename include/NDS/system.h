@@ -51,6 +51,12 @@
 #define HALT_CR       (*(vuint16*)0x04000300)
 // Writing 0x40 to HALT_CR activates GBA mode, single bit it seems
 
+// arm7, bit 0 = sound power off/on
+#define POWER_CR       (*(vuint16*)0x04000304)
+
+inline void powerON(int on) { POWER_CR |= on;}
+inline void powerOFF(int off) { POWER_CR &= off;}
+
 #ifdef ARM9
 // Power control register (arm9)
 #define POWER_LCD_TOP    (1<<0)
@@ -62,6 +68,8 @@
 #define POWER_SWAP_LCDS  (1<<15)
 #define POWER_ALL_2D     (POWER_LCD_TOP|POWER_LCD_BOTTOM|POWER_2D|POWER_2D_SUB)
 #define POWER_ALL		 0x3F
+
+inline void lcdSwap(void) { POWER_CR ^= POWER_SWAP_LCDS; }
 #endif
 
 #ifdef ARM7
@@ -69,8 +77,6 @@
 #define POWER_UNKNOWN     (1<<1)
 #endif
 
-// arm7, bit 0 = sound power off/on
-#define POWER_CR       (*(vuint16*)0x04000304)
 
 //////////////////////////////////////////////////////////////////////
 // Keyboard //////////////////////////////////////////////////////////
