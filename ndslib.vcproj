@@ -146,6 +146,16 @@
 				</File>
 			</Filter>
 		</Filter>
+		<Filter
+			Name="common"
+			Filter="">
+			<File
+				RelativePath="lib\common\card.cpp">
+			</File>
+			<File
+				RelativePath="lib\common\memory.cpp">
+			</File>
+		</Filter>
 		<File
 			RelativePath="include\NDS\DMA.h">
 		</File>

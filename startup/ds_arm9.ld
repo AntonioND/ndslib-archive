@@ -55,7 +55,7 @@ ENTRY(_start)
 /* The linker script MEMORY directive is not used here due    */
 /* to the fact that __text_start is not always a fixed value. */
 
-__ewram_start		=	0x02000000;
+__ewram_start		=	0x02001000;
 __text_start 		=	0x02004000;
 __eheap_end		=	0x02380000;
 __iwram_start		=	0x00800000;

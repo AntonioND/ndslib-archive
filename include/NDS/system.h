@@ -59,6 +59,7 @@
 #define POWER_LCD_BOTTOM (1<<8)
 #define POWER_2D_SUB     (1<<9)
 #define POWER_SWAP_LCDS  (1<<15)
+#define POWER_ALL_2D     (POWER_LCD_TOP|POWER_LCD_BOTTOM|POWER_2D|POWER_2D_SUB)
 #endif
 
 #ifdef ARM7
