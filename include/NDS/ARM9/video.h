@@ -73,13 +73,9 @@ extern "C" {
 
 #define VRAM_ENABLE   (1<<7)
 
-#define VRAM_CORE_A   (0)
-#define VRAM_ARM9     (1)
-#define VRAM_ARM7     (2)
+
 #define VRAM_OFFSET(n)  ((n)<<3)
-// 3?
-#define VRAM_CORE_B   (4)
-// 5..7?
+
 typedef enum
 {
 	VRAM_A_LCD = 0,

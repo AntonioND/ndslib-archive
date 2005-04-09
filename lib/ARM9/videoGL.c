@@ -41,7 +41,7 @@
 #ifdef NO_GL_INLINE
 //////////////////////////////////////////////////////////////////////
 
-  void glBegin(int mode)
+void glBegin(int mode)
 {
   GFX_BEGIN = mode;
 }
@@ -804,7 +804,7 @@ int glTexImage2D(int target, int empty1, int type, int sizeX, int sizeY, int emp
 	{
 		vramSetBankE(VRAM_E_LCD);
 
-		dmaCopyWords(3, (uint32*)(texture+size), addr, palette);
+		dmaCopyWords(3, (uint32*)(texture+size), (uint32*)(VRAM_E), palette);
 
 		vramSetBankE(VRAM_E_TEX_PALETTE);
 	}

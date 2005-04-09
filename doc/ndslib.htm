@@ -13,18 +13,18 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <!--[if gte mso 9]><xml>
  <o:DocumentProperties>
   <o:Author>Janee' Orr</o:Author>
-  <o:LastAuthor>jason</o:LastAuthor>
-  <o:Revision>4</o:Revision>
-  <o:TotalTime>990</o:TotalTime>
+  <o:LastAuthor>j</o:LastAuthor>
+  <o:Revision>8</o:Revision>
+  <o:TotalTime>1529</o:TotalTime>
   <o:Created>2005-03-31T17:51:00Z</o:Created>
-  <o:LastSaved>2005-03-31T20:00:00Z</o:LastSaved>
-  <o:Pages>15</o:Pages>
-  <o:Words>4739</o:Words>
-  <o:Characters>27016</o:Characters>
+  <o:LastSaved>2005-04-07T17:23:00Z</o:LastSaved>
+  <o:Pages>22</o:Pages>
+  <o:Words>7709</o:Words>
+  <o:Characters>43945</o:Characters>
   <o:Company>Home</o:Company>
-  <o:Lines>225</o:Lines>
-  <o:Paragraphs>54</o:Paragraphs>
-  <o:CharactersWithSpaces>33177</o:CharactersWithSpaces>
+  <o:Lines>366</o:Lines>
+  <o:Paragraphs>87</o:Paragraphs>
+  <o:CharactersWithSpaces>53967</o:CharactersWithSpaces>
   <o:Version>9.2720</o:Version>
  </o:DocumentProperties>
 </xml><![endif]-->
@@ -92,7 +92,7 @@ div.Section1
 -->
 </style>
 <!--[if gte mso 9]><xml>
- <o:shapedefaults v:ext="edit" spidmax="1026"/>
+ <o:shapedefaults v:ext="edit" spidmax="1027"/>
 </xml><![endif]--><!--[if gte mso 9]><xml>
  <o:shapelayout v:ext="edit">
   <o:idmap v:ext="edit" data="1"/>
@@ -103,7 +103,9 @@ div.Section1
 
 <div class=Section1>
 
-<h2>Dovoto’s DS documentation</h2>
+<h2>Dovoto’s DS documentation<span style="mso-spacerun: yes">  </span>Updated:
+April 7, 2005 <span style='font-size:12.0pt;font-family:"Times New Roman";
+font-weight:normal;font-style:normal'><a href="#_Changes:">changes</a></span></h2>
 
 <p class=MsoNormal><a href="#_2D">2D</a></p>
 
@@ -291,12 +293,12 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   style='font-size:10.0pt;font-family:"Courier New"'>VRAM_B_LCD = 0,<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>VRAM_B_MAIN_BG<span
-  style="mso-spacerun: yes">  </span>= 1 | (1&lt;&lt;2),<o:p></o:p></span></p>
+  style="mso-spacerun: yes">  </span>= 1 | (1&lt;&lt;3),<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>VRAM_B_MAIN_SPRITE = 2,<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>VRAM_B_TEXTURE = 3 |
-  (1&lt;&lt;2)<o:p></o:p></span></p>
+  (1&lt;&lt;3)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'>}VRAM_B_TYPE;</span><b
@@ -333,7 +335,7 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   style='font-size:10.0pt;font-family:"Courier New"'>VRAM_C_LCD = 0,<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>VRAM_C_MAIN_BG<span
-  style="mso-spacerun: yes">  </span>= 1 | (2&lt;&lt;2),<o:p></o:p></span></p>
+  style="mso-spacerun: yes">  </span>= 1 | (2&lt;&lt;3),<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>VRAM_C_MAIN_SPRITE = 2,<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -341,7 +343,7 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   style="mso-spacerun: yes">  </span>= 4,<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>VRAM_C_TEXTURE = 3 |
-  (2&lt;&lt;2)<o:p></o:p></span></p>
+  (2&lt;&lt;3)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>}VRAM_C_TYPE;<o:p></o:p></span></p>
   <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><b
@@ -378,14 +380,14 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   style='font-size:10.0pt;font-family:"Courier New"'>VRAM_D_LCD = 0,<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>VRAM_D_MAIN_BG<span
-  style="mso-spacerun: yes">  </span>= 1 | (3&lt;&lt;2),<o:p></o:p></span></p>
+  style="mso-spacerun: yes">  </span>= 1 | (3&lt;&lt;3),<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>VRAM_D_MAIN_SPRITE = 2,<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>VRAM_D_SUB_SPRITE = 4,<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>VRAM_D_TEXTURE = 3 |
-  (3&lt;&lt;2)<o:p></o:p></span></p>
+  (3&lt;&lt;3)<o:p></o:p></span></p>
   <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'>}VRAM_D_TYPE;</span><b
   style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
   </td>
@@ -542,8 +544,8 @@ href="#_2D_Main">Registers</a></p>
 
 <p class=MsoNormal><span style='mso-tab-count:1'>            </span>The main 2D
 core can operate in any one of 8 modes that differ in number and types of
-backgrounds that can be displayed.<span style="mso-spacerun: yes">  </span>In all
-modes but frame buffer background 0 can be used as a 3D layer.</p>
+backgrounds that can be displayed.<span style="mso-spacerun: yes">  </span>In
+all modes but frame buffer background 0 can be used as a 3D layer.</p>
 
 <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
 
@@ -585,8 +587,8 @@ modes but frame buffer background 0 can be used as a 3D layer.</p>
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Backgrounds 0, 1 and
-  2 are text. Background 3 is a rotation background.<o:p></o:p></b></p>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Backgrounds 0, 1
+  and 2 are text. Background 3 is a rotation background.<o:p></o:p></b></p>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Background 0 can be
   used as 3D.<o:p></o:p></b></p>
   </td>
@@ -683,8 +685,8 @@ modes but frame buffer background 0 can be used as a 3D layer.</p>
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Vram banks are
-  rendered directly onto the screen based on mode.<o:p></o:p></b></p>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Vram banks are rendered
+  directly onto the screen based on mode.<o:p></o:p></b></p>
   </td>
  </tr>
 </table>
@@ -704,9 +706,9 @@ modes but frame buffer background 0 can be used as a 3D layer.</p>
 <p class=MsoNormal>Description</p>
 
 <p class=MsoNormal><span style='mso-tab-count:1'>            </span>The sub 2D
-core can operate in any one of 6 modes that differ in number and types of
-backgrounds that can be displayed.<span style="mso-spacerun: yes">  </span>3D
-and frame buffers are not available to the sub display.</p>
+core can operate in any one of 6 modes that differ in number and types of backgrounds
+that can be displayed.<span style="mso-spacerun: yes">  </span>3D and frame
+buffers are not available to the sub display.</p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
 
@@ -801,8 +803,8 @@ and frame buffers are not available to the sub display.</p>
   are text.<o:p></o:p></b></p>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Background 2 is
   rotation.<o:p></o:p></b></p>
-  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Background 3 is an
-  extended rotation background.<o:p></o:p></b></p>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Background 3 is an extended
+  rotation background.<o:p></o:p></b></p>
   <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><b
   style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
   </td>
@@ -858,16 +860,20 @@ and frame buffers are not available to the sub display.</p>
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Background data
 varies depending on type of background. <o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Text Background:<o:p></o:p></span></p>
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Text Background:<o:p></o:p></b></p>
 
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'><span
-style='mso-tab-count:1'>            </span>Appear to work exactly the same as
-GBA text backgrounds.<span style="mso-spacerun: yes">  </span>16 bit tile
-indexes for the map data, 16 or 256 color tiles.<o:p></o:p></span></p>
+style='mso-tab-count:1'>            </span>Appear to work the same as GBA text
+backgrounds.<span style="mso-spacerun: yes">  </span>16 bit tile indexes for
+the map data, 16 or 256 color tiles.<span style="mso-spacerun: yes"> 
+</span>The only difference seems to be that bit 4 and 5 are now character base
+bits allowing selection of base blocks up to base block 16 giving 256 KB of
+accessible memory.<span style="mso-spacerun: yes">  </span>Map base block still
+works the same. Text backgrounds can also access the extended palettes.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Rotation Background:<o:p></o:p></span></p>
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Rotation Background:<o:p></o:p></b></p>
 
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'><span
 style='mso-tab-count:1'>            </span>Also appear to work exactly the same
@@ -876,15 +882,13 @@ only.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Extended Rotation
-Backgrounds:<o:p></o:p></span></p>
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Extended Rotation
+Backgrounds:<o:p></o:p></b></p>
 
 <p class=MsoNormal style='margin-left:.5in'><span style='mso-bidi-font-weight:
 bold'>These have the same 16 bit index found in text backgrounds but can only
-be 256 color.<span style="mso-spacerun: yes">  </span>The palette index is
-used, instead, to reference an extended palette that can be stored in VRAM E,
-F, or G.<span style="mso-spacerun: yes">  </span>Background rotation registers
-must be used to control these backgrounds.<o:p></o:p></span></p>
+be 256 color.<span style="mso-spacerun: yes">  </span>They palette index can
+access the extended palettes for a total of 256x16 colors on screen.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'><span
 style='mso-tab-count:1'>            </span><o:p></o:p></span></p>
@@ -909,8 +913,8 @@ same.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Big Bitmap (mode 6
-main only)<o:p></o:p></span></p>
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Big Bitmap (mode 6
+main only)<o:p></o:p></b></p>
 
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'><span
 style='mso-tab-count:1'>            </span>This is a large linear addressed
@@ -918,8 +922,8 @@ bitmap of size 1024x512 or 512x1024.<span style="mso-spacerun: yes">  </span><o:
 
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Frame Buffer (main
-only)<o:p></o:p></span></p>
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Frame Buffer (main
+only)<o:p></o:p></b></p>
 
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'><span
 style='mso-tab-count:1'>            </span>Access the frame buffer directly to
@@ -927,9 +931,23 @@ display 16 bit video.<span style="mso-spacerun: yes">  </span><o:p></o:p></span>
 
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
 
+<h1>Extended palettes</h1>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='mso-tab-count:1'>            </span></b><span style='mso-bidi-font-weight:
+bold'>When bit 30 of Display control is set on either display, Text and
+rotation backgrounds will access an external palette.<span style="mso-spacerun:
+yes">  </span>These palettes can be stored in VRAM_E, F, G.<span
+style="mso-spacerun: yes">  </span>The palette used is determined by the
+palette index in the map tile attribute (high 4 bits) similar to the way it
+would reference a 16x16 color palette.<span style="mso-spacerun: yes">  </span>There
+are 16 256-color palettes addressable by each background.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
 <h3><a name="_Sprite_Data"></a>Sprite Data</h3>
 
-<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Sprite data is
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Sprite data appears
 exactly the same as the GBA differing only in the fact that there are two
 copies of the OAM and palette.<span style="mso-spacerun: yes">  </span><o:p></o:p></span></p>
 
@@ -952,8 +970,8 @@ copies of the OAM and palette.<span style="mso-spacerun: yes">  </span><o:p></o:
  <tr>
   <td width=174 valign=top style='width:130.5pt;border:solid windowtext .5pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Object (sprite)
-  attribute memory<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Object (sprite) attribute
+  memory<o:p></o:p></span></p>
   </td>
   <td width=190 valign=top style='width:142.15pt;border-top:none;border-left:
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
@@ -1029,8 +1047,8 @@ copies of the OAM and palette.<span style="mso-spacerun: yes">  </span><o:p></o:
  <tr>
   <td width=174 valign=top style='width:130.5pt;border:solid windowtext .5pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><span style='mso-bidi-font-weight:bold'>SUB Object
-  (sprite) palette memory<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-bidi-font-weight:bold'>SUB Object (sprite)
+  palette memory<o:p></o:p></span></p>
   </td>
   <td width=190 valign=top style='width:142.15pt;border-top:none;border-left:
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
@@ -1077,8 +1095,8 @@ href="#_Console_Print_Functions">Functions</a><o:p></o:p></span></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
 
-<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Basic print
-functionality is provided by NDSLIB along with a 256 character 16 color font.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Basic print functionality
+is provided by NDSLIB along with a 256 character 16 color font.<o:p></o:p></span></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
 
@@ -1104,8 +1122,8 @@ style="mso-spacerun: yes">  </span>More to come on this.</p>
 
 <p class=MsoNormal>Vertex (v16)</p>
 
-<p class=MsoNormal><span style='mso-tab-count:1'>            </span>1.3.12 fixed
-point number (1 bit sign, 3 bits number, 12 bits fraction)</p>
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span>1.3.12
+fixed point number (1 bit sign, 3 bits number, 12 bits fraction)</p>
 
 <p class=MsoNormal>UV (t16)</p>
 
@@ -1128,9 +1146,9 @@ name="_FIFO"></a></p>
 
 <h3>FIFO </h3>
 
-<p class=MsoNormal><span style='mso-tab-count:1'>            </span>The fifo
-can be accessed by command followed by data, or you can simply write the data
-to the address of the fifo + command * 4.<span style="mso-spacerun: yes"> 
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span>The fifo can
+be accessed by command followed by data, or you can simply write the data to
+the address of the fifo + command * 4.<span style="mso-spacerun: yes"> 
 </span>Currently ndslib only uses the latter method.<span style="mso-spacerun:
 yes">  </span>Playlists can be DMA’d to the FIFO but no support is currently
 supplied in NDSLIB for playlists.</p>
@@ -1178,14 +1196,87 @@ works yet.<o:p></o:p></span></p>
 
 <h2><a name="_Sound"></a>Sound</h2>
 
-<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Registers<o:p></o:p></span></p>
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'><a href="#_SOUND_1">Registers</a><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Functions<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>No idea how this
-works yet.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>16 Direct sound
+channels are available.<span style="mso-spacerun: yes">  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Here is some sample
+code to play a wave file recorded as 8 bit mono 22.05Khz in windows sound
+recorder on channel ‘c’.<span style="mso-spacerun: yes">  </span>This is not a
+great example as the header is played but you get the gist.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>This code must be
+run on the arm7 processor…it will not work on the arm9.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+yes">  </span>powerON(POWER_SOUND);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+yes">  </span>SOUND_CR = SCHANNEL_ENABLE | SOUND_VOL(0x3F) ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+yes">  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+yes">  </span>SCHANNEL_TIMER(c) = SOUND_FREQ(22050);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+yes">  </span>SCHANNEL_SOURCE(c) = (u32)GETRAW(test_wav);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+yes">  </span>SCHANNEL_LENGTH(c) = GETRAWSIZE(test_wav);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style="mso-spacerun: yes">  </span>SCHANNEL_CR(c) = SOUND_ENABLE |
+SOUND_VOL(0x3F);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'>c
+can be any value from 0 to 15.<span style="mso-spacerun: yes">  </span>Max
+volume is 0x7F.<span style="mso-spacerun: yes">  </span>Playback frequency is
+determined by the timer.<span style="mso-spacerun: yes">  </span>When it
+overflows more data is loaded.<span style="mso-spacerun: yes">  </span>It is 16
+bit and if you write to it that value determines the starting point of the
+timer.<span style="mso-spacerun: yes">  </span>To calculate timer frequency use
+the following:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New";
+color:blue'>#define</span><span style='font-size:10.0pt;font-family:"Courier New"'>
+SOUND_FREQ(n)<span style='mso-tab-count:1'>   </span>(0x10000 - (0x1000000 /
+(n)))<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'>0x10000
+is the max timer value plus 1.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'>0x1000000
+is the timer count rate (16.78Mhz)</span><span style='mso-bidi-font-weight:
+bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Power must be
+enabled then the channel set up.<o:p></o:p></span></p>
 
 <h2><a name="_DMA"></a>DMA</h2>
 
@@ -1204,8 +1295,8 @@ href="#_DMA_Functions">Functions</a></span><b style='mso-bidi-font-weight:normal
   <td width=590 valign=top style='width:6.15in;border:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
-  style='mso-bidi-font-size:10.0pt;font-family:"Courier New"'>uint32
-  vramSetMainBanks(VRAM_A_TYPE a, VRAM_B_TYPE b, VRAM_C_TYPE c, VRAM_D_TYPE d);<o:p></o:p></span></b></p>
+  style='mso-bidi-font-size:10.0pt;font-family:"Courier New"'>uint32 vramSetMainBanks(VRAM_A_TYPE
+  a, VRAM_B_TYPE b, VRAM_C_TYPE c, VRAM_D_TYPE d);<o:p></o:p></span></b></p>
   </td>
  </tr>
  <tr>
@@ -1263,8 +1354,8 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
   <td width=590 valign=top style='width:6.15in;border:solid windowtext .5pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>These functions can be
-  used to set each bank individualy.<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'>These functions can be used
+  to set each bank individualy.<o:p></o:p></span></p>
   </td>
  </tr>
 </table>
@@ -1289,8 +1380,8 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>Used to restore banks to a
   prior state.<span style="mso-spacerun: yes">  </span>Sometimes (in the case
-  of texture memory especialy) you can only write to vram when it is set to a certain
-  mode.<o:p></o:p></span></p>
+  of texture memory especialy) you can only write to vram when it is set to a
+  certain mode.<o:p></o:p></span></p>
   </td>
  </tr>
 </table>
@@ -1316,8 +1407,8 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
   font.<span style="mso-spacerun: yes">  </span>Must map onto the ascii set but
   does not have to be complete nor start at 0.<o:p></o:p></span></p>
   <p class=MsoNormal><span style='font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
-  <p class=MsoNormal><span style='font-family:"Courier New"'>charBase: The
-  location in video memory that the font will be loaded into.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-family:"Courier New"'>charBase: The location
+  in video memory that the font will be loaded into.<o:p></o:p></span></p>
   <p class=MsoNormal><span style='font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal><span style='font-family:"Courier New"'>numCharacters: The
   number of characters in the font<o:p></o:p></span></p>
@@ -2490,8 +2581,9 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-style='font-size:10.0pt;font-family:"Courier New"'> SUB_BG3_XDX <span
-style="mso-spacerun: yes">   </span>(*(vuint16*)0x04001030)<o:p></o:p></span></p>
+style='font-size:10.0pt;font-family:"Courier New"'> SUB_BG3_XDX<span
+style="mso-spacerun: yes">  </span><span style="mso-spacerun:
+yes">  </span>(*(vuint16*)0x04001030)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
@@ -2884,13 +2976,13 @@ style="mso-spacerun: yes">       </span>(*(vuint32*)0x040000BC)<o:p></o:p></span
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
 style='font-size:10.0pt;font-family:"Courier New"'> DMA1_DEST<span
-style="mso-spacerun: yes">      </span>(*(vuint32*)0x040000C0)<o:p></o:p></span></p>
+style="mso-spacerun: yes">  </span><span style="mso-spacerun:
+yes">    </span>(*(vuint32*)0x040000C0)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
 style='font-size:10.0pt;font-family:"Courier New"'> DMA1_COUNT<span
-style="mso-spacerun: yes">    </span><span style="mso-spacerun:
-yes"> </span>(*(vuint16*)0x040000C4)<o:p></o:p></span></p>
+style="mso-spacerun: yes">     </span>(*(vuint16*)0x040000C4)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
@@ -2964,9 +3056,769 @@ style="mso-spacerun: yes">   </span>(*(vuint16*)(0x040000B8+(n*12)))<o:p></o:p><
 <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New";
 color:blue'>#define</span><span style='font-size:10.0pt;font-family:"Courier New"'>
 DMA_CR(n)<span style="mso-spacerun: yes">     
-</span>(*(vuint16*)(0x040000BA+(n*12)))</span></p>
+</span>(*(vuint16*)(0x040000BA+(n*12)))<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
 
 <h3>BIOS</h3>
+
+<table border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=590 valign=top style='width:6.15in;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>typedef</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>struct</span>
+  DecompressionStream {<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+  yes">  </span><span style='color:blue'>int</span> (*getSize)(uint8 * source,
+  uint16 * dest, uint32 r2);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+  yes">  </span><span style='color:blue'>int</span> (*getResult)(uint8 *
+  source); <span style='color:green'>// can be NULL<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+  yes">  </span>uint8 (*readByte)(uint8 * source);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>} PACKED
+  TDecompressionStream;<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>typedef</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>struct</span>
+  UnpackStruct {<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+  yes">  </span>uint16 sourceSize; <span style='color:green'>// in bytes<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+  yes">  </span>uint8 sourceWidth;<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+  yes">  </span>uint8 destWidth;<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+  yes">  </span>uint32 dataOffset;<span style="mso-spacerun: yes">  </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>} PACKED TUnpackStruct, *
+  PUnpackStruct;<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// SoftReset
+  (swi 0x00)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiSoftReset(<span style='color:blue'>void</span>);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// DelayLoop
+  (swi 0x03)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiDelay(uint32 duration);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// IntrWait
+  (swi 0x04)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// waitForSet
+  - 0: Return if the interrupt has already occured<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">              </span>1: Wait until the interrupt
+  has been set since the call<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">      </span>flags - interrupt sensitivity bitmask
+  to wait for<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiIntrWait(<span style='color:blue'>int</span> waitForSet, uint32 flags);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  WaitForVBlank (swi 0x05)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>Identical to calling IntrWait(1, 1)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiWaitForVBlank(<span style='color:blue'>void</span>);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// WaitForIRQ
+  (swi 0x05)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>mov r0, #0<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>MCR p15, 0, r0, c7, c0, 4<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiWaitForIRQ(<span style='color:blue'>void</span>);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  ChangeSound(int enabled, int delay)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>enabled<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">     </span>0: decrement SOUND_BIAS once per delay
+  until it reaches 0x000<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">     </span>1: increment SOUND_BIAS once per delay
+  until it reaches 0x200<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>delay is in the same units of time as
+  swiDelayLoop<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiChangeSoundBias(<span style='color:blue'>int</span> enabled, <span
+  style='color:blue'>int</span> delay);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// swi 0x09:
+  Divide (returns result in r0, remainder in r1)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// int
+  Divide(int numerator, int divisor);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>returns numerator / divisor<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// int
+  Remainder(int numerator, int divisor);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>returns numerator % divisor<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// void
+  DivMod(int numerator, int divisor, int * result, int * remainder);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>sets *result = numerator / divisor and
+  remainder = numerator % divisor<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
+  swiDivide(<span style='color:blue'>int</span> numerator, <span
+  style='color:blue'>int</span> divisor);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
+  swiRemainder(<span style='color:blue'>int</span> numerator, <span
+  style='color:blue'>int</span> divisor);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiDivMod(<span style='color:blue'>int</span> numerator, <span
+  style='color:blue'>int</span> divisor, <span style='color:blue'>int</span> *
+  result, <span style='color:blue'>int</span> * remainder);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Copy (swi
+  0x0B)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// <span
+  style="mso-spacerun: yes"> </span>source = pointer to transfer source<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>dest = pointer to transfer destination<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>flags(26) = transfer width (0: halfwords,
+  1: words)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>flags(24) = transfer mode (0: copy, 1:
+  fill)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>flags(20..0) = tranfer count (always in
+  words)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// FastCopy
+  (swi 0x0B)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>source = pointer to transfer source<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>dest = pointer to transfer destination<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>flags(24) = transfer mode (0: copy, 1:
+  fill)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>flags(20..0) = tranfer count (in words)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Transfers
+  more quickly, but has a higher interrupt latency<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> COPY_MODE_HWORD<span
+  style='mso-tab-count:1'> </span>(0)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> COPY_MODE_WORD<span
+  style='mso-tab-count:1'>  </span>(1&lt;&lt;26)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> COPY_MODE_COPY<span
+  style='mso-tab-count:1'>  </span>(0)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> COPY_MODE_FILL<span
+  style='mso-tab-count:1'>  </span>(1&lt;&lt;24)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiCopy(<span style='color:blue'>void</span> * source, <span
+  style='color:blue'>void</span> * dest, <span style='color:blue'>int</span>
+  flags);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiFastCopy(<span style='color:blue'>void</span> * source, <span
+  style='color:blue'>void</span> * dest, <span style='color:blue'>int</span>
+  flags);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Sqrt (0x0D)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
+  swiSqrt(<span style='color:blue'>int</span> value);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  CRC16(uint16 crc, void * data, uint32 size) (swi 0x0E)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>crc - starting CRC-16<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>data - pointer to data (processed nibble
+  by nibble)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>size - size in bytes<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Returns the
+  CRC-16 after the data has been processed<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiCRC16(uint16 crc, <span style='color:blue'>void</span> * data, uint32
+  size);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// int
+  IsDebugger;<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>Returns 0 if running on a debugger (8 MB
+  of ram instead of 4 MB)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
+  swiIsDebugger(<span style='color:blue'>void</span>);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// UnpackBits
+  (swi 0x10)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>r0 - Source address<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>r1 - destination address (word aligned)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>r2 - Unpack structure<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">       </span>uint16 sourceSize (in bytes)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">       </span>uint8 sourceWidth (1,2,4,8)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">       </span>uint8 destWidth (1,2,4,8,16,32)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">    </span><span style="mso-spacerun:
+  yes">   </span>uint32 dataOffset (bits 0..30 are added to all non-zero<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">                          </span>destination
+  writes, unless b31 is set,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">                          </span>which does it for
+  zeros too)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Unpack data
+  stored multiple elements to a byte into a larger space<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// i.e. 8
+  elements per byte (i.e. b/w font), into 1 element per byte<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiUnpackBits(uint8 * source, uint32 * destination, PUnpackStruct params);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  DecompressLZSSWram (swi 0x11)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r0 - pointer to a header word, followed
+  by compressed data<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">        </span>word(31..8) = size of uncompressed
+  data (in bytes)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">        </span>word(7..0) = ignored<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r1 - destination address<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Writes data
+  a byte at a time<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  DecompressLZSSVram (swi 0x12)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Writes data
+  a halfword at a time<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// See
+  DecompressRLEVram for parameter details<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiDecompressLZSSWram(<span style='color:blue'>void</span> * source, <span
+  style='color:blue'>void</span> * destination);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
+  swiDecompressLZSSVram(<span style='color:blue'>void</span> * source, <span
+  style='color:blue'>void</span> * destination, uint32 toGetSize,
+  TDecompressionStream * stream);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  swiDecompressHuffman (swi 0x13)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// See
+  DecompressRLE for parameter details<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
+  swiDecompressHuffman(<span style='color:blue'>void</span> * source, <span
+  style='color:blue'>void</span> * destination, uint32 toGetSize, TDecompressionStream
+  * stream);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  DecompressRLEWram (swi 0x14)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r0 - pointer to a header word, followed
+  by compressed data<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">        </span>word(31..8) = size of uncompressed
+  data (in bytes)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">        </span>word(7..0) = ignored<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r1 - destination address<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Writes data
+  a byte at a time<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  DecompressRLEVram (swi 0x15)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r0 - pointer to compressed source data,
+  maybe! (always goes through<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">        </span>the function pointers, so could just
+  be an offset)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r1 - pointer to destination (halfword)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r2 - no idea, passed to getSize function<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r3 - pointer to a structure<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Writes data
+  a halfword at a time<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Result of
+  getSize is a word, with the size of decompressed data in<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// bits 31..8,
+  and bits 7..0 are ignored.<span style="mso-spacerun: yes">  </span>This value
+  is also returned<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// by the swi,
+  unless getResult is non-NULL and returns a neg. value<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// getResult
+  is used to provide a result for the swi, given the source<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// pointer
+  after all data has been read (or if getSize &lt; 0).<span
+  style="mso-spacerun: yes">  </span>It can<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// be NULL,
+  unlike getSize and readByte.<span style="mso-spacerun: yes">  </span>Its
+  value is only returned<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// if
+  negative, otherwise the typical result is used, so it is likely<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// some sort
+  of error-checking procedure<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// readByte is
+  used in lieu of directly accessing memory<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// compressed
+  data format:<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>bit(7): 0: uncompressed, 1: compressed<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>bit(6..0) when uncompressed: run length -
+  1, followed by run_length bytes of true data<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>bit(6..0) when compressed: run length -
+  3, followed by one byte of true data, to be repeated<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiDecompressRLEWram(<span style='color:blue'>void</span> * source, <span
+  style='color:blue'>void</span> * destination);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
+  swiDecompressRLEVram(<span style='color:blue'>void</span> * source, <span
+  style='color:blue'>void</span> * destination, uint32 toGetSize, TDecompressionStream
+  * stream);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  DecodeDelta8 (swi 0x16)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r0 - pointer to a header word, followed
+  by encoded data<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">        </span>word(31..8) = size of data (in
+  bytes)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">        </span>word(7..0) = ignored<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r1 - destination address<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Writes data
+  a byte at a time<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  DecodeDelta16 (swi 0x18)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r0 - pointer to a header word, followed
+  by encoded data<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">        </span>word(31..8) = size of data (in
+  bytes)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">        </span>word(7..0) = ignored<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r1 - destination address<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Writes data
+  a halfword at a time<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiDecodeDelta8(<span style='color:blue'>void</span> * source, <span
+  style='color:blue'>void</span> * destination);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiDecodeDelta16(<span style='color:blue'>void</span> * source, <span
+  style='color:blue'>void</span> * destination);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  SetHaltCR(uint32 data) (swi 0x1F)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>Writes data to 0x04000300:32<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiSetHaltCR(uint32 data);<o:p></o:p></span></p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
 
 <h2><a name="_ARM7"></a>ARM7</h2>
 
@@ -2974,7 +3826,821 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
 
 <h3><a name="_Full_Register_List"></a>Full Register List</h3>
 
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3><a name="_SOUND_1"></a>SOUND</h3>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> SCHANNEL_CR(n)<span
+style='mso-tab-count:4'>                    </span>(*(vuint32*)(0x04000400 +
+((n)&lt;&lt;4)))<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> SCHANNEL_SOURCE(n)<span
+style='mso-tab-count:3'>                </span>(*(vuint32*)(0x04000404 +
+((n)&lt;&lt;4)))<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> SCHANNEL_TIMER(n)<span
+style='mso-tab-count:3'>                 </span>(*(vuint16*)(0x04000408 +
+((n)&lt;&lt;4)))<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> SCHANNEL_REPEAT_POINT(n)<span
+style='mso-tab-count:2'>          </span>(*(vuint16*)(0x0400040A +
+((n)&lt;&lt;4)))<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> SCHANNEL_LENGTH(n)<span
+style='mso-tab-count:3'>                </span>(*(vuint32*)(0x0400040C +
+((n)&lt;&lt;4)))<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> SOUND_CR<span
+style="mso-spacerun: yes">          </span>(*(vuint16*)0x04000500)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New";color:green'>//not sure on
+the following<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> SOUND_BIAS<span
+style="mso-spacerun: yes">        </span>(*(vuint16*)0x04000504)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> SOUND508<span
+style="mso-spacerun: yes">          </span>(*(vuint16*)0x04000508)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> SOUND510<span
+style="mso-spacerun: yes">          </span>(*(vuint16*)0x04000510)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> SOUND514<span
+style='mso-tab-count:2'>        </span><span style="mso-spacerun: yes"> 
+</span>(*(vuint16*)0x04000514)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> SOUND518<span
+style="mso-spacerun: yes">          </span>(*(vuint16*)0x04000518)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New";
+color:blue'>#define</span><span style='font-size:10.0pt;font-family:"Courier New"'>
+SOUND51C<span style="mso-spacerun: yes">         
+</span>(*(vuint16*)0x0400051C)<o:p></o:p></span></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
 <h3><a name="_BIOS_1"></a>BIOS</h3>
+
+<table border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=590 valign=top style='width:6.15in;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// SoftReset
+  (swi 0x00)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiSoftReset(<span style='color:blue'>void</span>);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// DelayLoop
+  (swi 0x03)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiDelay(uint32 duration);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// IntrWait
+  (swi 0x04)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// waitForSet
+  - 0: Return if the interrupt has already occured<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">              </span>1: Wait until the interrupt
+  has been set since the call<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">      </span>flags - interrupt sensitivity bitmask
+  to wait for<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiIntrWait(<span style='color:blue'>int</span> waitForSet, uint32 flags);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  WaitForVBlank (swi 0x05)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>Identical to calling IntrWait(1, 1)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiWaitForVBlank(<span style='color:blue'>void</span>);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Halt (swi
+  0x06)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>Identical to calling SetHaltCR(?)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Sleep (swi
+  0x07)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>Identical to calling SetHaltCR(?)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  SetHaltCR(uint32 data) (swi 0x1F)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>Writes data to 0x04000300:32<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiHalt(<span style='color:blue'>void</span>);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiSleep(<span style='color:blue'>void</span>);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiSetHaltCr(uint32 data);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  ChangeSound(int enabled, int delay)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>enabled<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">     </span>0: decrement SOUND_BIAS once per delay
+  until it reaches 0x000<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">     </span>1: increment SOUND_BIAS once per delay
+  until it reaches 0x200<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>delay is in the same units of time as
+  swiDelayLoop<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiChangeSoundBias(<span style='color:blue'>int</span> enabled, <span
+  style='color:blue'>int</span> delay);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// swi 0x09:
+  Divide (returns result in r0, remainder in r1)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// int
+  Divide(int numerator, int divisor);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>returns numerator / divisor<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// int
+  Remainder(int numerator, int divisor);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>returns numerator % divisor<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// void DivMod(int
+  numerator, int divisor, int * result, int * remainder);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>sets *result = numerator / divisor and
+  remainder = numerator % divisor<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
+  swiDivide(<span style='color:blue'>int</span> numerator, <span
+  style='color:blue'>int</span> divisor);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
+  swiRemainder(<span style='color:blue'>int</span> numerator, <span
+  style='color:blue'>int</span> divisor);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiDivMod(<span style='color:blue'>int</span> numerator, <span
+  style='color:blue'>int</span> divisor, <span style='color:blue'>int</span> *
+  result, <span style='color:blue'>int</span> * remainder);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Copy (swi
+  0x0B)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>source = pointer to transfer source<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>dest = pointer to transfer destination<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>flags(26) = transfer width (0: halfwords,
+  1: words)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>flags(24) = transfer mode (0: copy, 1:
+  fill)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>flags(20..0) = tranfer count (always in
+  words)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// FastCopy
+  (swi 0x0B)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>source = pointer to transfer source<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>dest = pointer to transfer destination<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>flags(24) = transfer mode (0: copy, 1:
+  fill)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>flags(20..0) = tranfer count (in words)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Transfers
+  more quickly, but has a higher interrupt latency<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> COPY_MODE_HWORD<span
+  style='mso-tab-count:1'> </span>(0)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> COPY_MODE_WORD<span
+  style='mso-tab-count:1'>  </span>(1&lt;&lt;26)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> COPY_MODE_COPY<span
+  style='mso-tab-count:1'>  </span>(0)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> COPY_MODE_FILL<span
+  style='mso-tab-count:1'>  </span>(1&lt;&lt;24)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiCopy(<span style='color:blue'>void</span> * source, <span
+  style='color:blue'>void</span> * dest, <span style='color:blue'>int</span>
+  flags);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiFastCopy(<span style='color:blue'>void</span> * source, <span
+  style='color:blue'>void</span> * dest, <span style='color:blue'>int</span>
+  flags);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Sqrt (0x0D)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
+  swiSqrt(<span style='color:blue'>int</span> value);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  CRC16(uint16 crc, void * data, uint32 size) (swi 0x0E)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>crc - starting CRC-16<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>data - pointer to data (processed nibble
+  by nibble)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>size - size in bytes<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Returns the
+  CRC-16 after the data has been processed<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> uint16 swiCRC16(uint16
+  crc, <span style='color:blue'>void</span> * data, uint32 size);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// int
+  IsDebugger;<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>Returns 0 if running on a debugger (8 MB
+  of ram instead of 4 MB)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
+  swiIsDebugger(<span style='color:blue'>void</span>);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// UnpackBits
+  (swi 0x10)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>r0 - Source address<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>r1 - destination address (word aligned)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>r2 - Unpack structure<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">       </span>uint16 sourceSize (in bytes)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">       </span>uint8 sourceWidth (1,2,4,8)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">       </span>uint8 destWidth (1,2,4,8,16,32)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">       </span>uint32 dataOffset (bits 0..30 are
+  added to all non-zero<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">                          </span>destination
+  writes, unless b31 is set,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">                          </span>which does it for
+  zeros too)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Unpack data
+  stored multiple elements to a byte into a larger space<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// i.e. 8
+  elements per byte (i.e. b/w font), into 1 element per byte<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiUnpackBits(uint8 * source, uint32 * destination, PUnpackStruct params);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  DecompressLZSSWram (swi 0x11)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r0 - pointer to a header word, followed
+  by compressed data<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">        </span>word(31..8) = size of uncompressed
+  data (in bytes)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">        </span>word(7..0) = ignored<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r1 - destination address<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Writes data
+  a byte at a time<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  DecompressLZSSVram (swi 0x12)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Writes data
+  a halfword at a time<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// See
+  DecompressRLEVram for parameter details<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiDecompressLZSSWram(<span style='color:blue'>void</span> * source, <span
+  style='color:blue'>void</span> * destination);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
+  swiDecompressLZSSVram(<span style='color:blue'>void</span> * source, <span
+  style='color:blue'>void</span> * destination, uint32 toGetSize,
+  TDecompressionStream * stream);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  swiDecompressHuffman (swi 0x13)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// See
+  DecompressRLE for parameter details<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
+  swiDecompressHuffman(<span style='color:blue'>void</span> * source, <span
+  style='color:blue'>void</span> * destination, uint32 toGetSize,
+  TDecompressionStream * stream);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  DecompressRLEWram (swi 0x14)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r0 - pointer to a header word, followed
+  by compressed data<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">        </span>word(31..8) = size of uncompressed
+  data (in bytes)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">        </span>word(7..0) = ignored<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r1 - destination address<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Writes data
+  a byte at a time<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  DecompressRLEVram (swi 0x15)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r0 - pointer to compressed source data, maybe!
+  (always goes through<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">        </span>the function pointers, so could just
+  be an offset)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r1 - pointer to destination (halfword)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r2 - no idea, passed to getSize function<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>r3 - pointer to a structure<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Writes data
+  a halfword at a time<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Result of
+  getSize is a word, with the size of decompressed data in<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// bits 31..8,
+  and bits 7..0 are ignored.<span style="mso-spacerun: yes">  </span>This value
+  is also returned<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// by the swi,
+  unless getResult is non-NULL and returns a neg. value<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// getResult
+  is used to provide a result for the swi, given the source<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// pointer
+  after all data has been read (or if getSize &lt; 0).<span
+  style="mso-spacerun: yes">  </span>It can<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// be NULL,
+  unlike getSize and readByte.<span style="mso-spacerun: yes">  </span>Its
+  value is only returned<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// if
+  negative, otherwise the typical result is used, so it is likely<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// some sort of
+  error-checking procedure<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// readByte is
+  used in lieu of directly accessing memory<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// compressed
+  data format:<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>bit(7): 0: uncompressed, 1: compressed<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>bit(6..0) when uncompressed: run length -
+  1, followed by run_length bytes of true data<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">   </span>bit(6..0) when compressed: run length -
+  3, followed by one byte of true data, to be repeated<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiDecompressRLEWram(<span style='color:blue'>void</span> * source, <span
+  style='color:blue'>void</span> * destination);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
+  swiDecompressRLEVram(<span style='color:blue'>void</span> * source, <span
+  style='color:blue'>void</span> * destination, uint32 toGetSize,
+  TDecompressionStream * stream);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  swiGetSineTable(int index)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>Returns an entry in the sine table (index
+  = 0..63)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>uint16 swiGetSineTable(<span
+  style='color:blue'>int</span> index);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  GetPitchTable(int index)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>Returns an entry in the pitch table (index
+  = 0..767)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> uint16 swiGetPitchTable(<span
+  style='color:blue'>int</span> index);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
+  GetVolumeTable(int index)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
+  style="mso-spacerun: yes">  </span>Returns an entry in the volume table
+  (index = 0..723)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> uint8 swiGetVolumeTable(<span
+  style='color:blue'>int</span> index);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// Unknown
+  (swi 0x1D)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>void</span>
+  swiUnknown(<span style='color:blue'>void</span>);<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
 
 <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
 
@@ -3057,8 +4723,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DISPLAY_WIN1_ON<span
-  style="mso-spacerun: yes">     </span><span style="mso-spacerun:
-  yes">  </span>(1 &lt;&lt; 14)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">   </span><span style="mso-spacerun:
+  yes">    </span>(1 &lt;&lt; 14)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DISPLAY_SPR_WIN_ON<span
@@ -3195,7 +4861,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> ATTR0_COLOR_256<span
-  style="mso-spacerun: yes">       </span>(1&lt;&lt;13)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">    </span><span style="mso-spacerun:
+  yes">   </span>(1&lt;&lt;13)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -3220,8 +4887,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> ATTR1_ROTDATA(n)<span
   style="mso-spacerun: yes">      </span>((n)&lt;&lt;9)<span
-  style="mso-spacerun: yes">  </span><span style='color:green'>note: overlaps
-  with flip flags<o:p></o:p></span></span></p>
+  style="mso-spacerun: yes">  </span><span style='color:green'>note: overlaps with
+  flip flags<o:p></o:p></span></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> ATTR1_FLIP_X<span
@@ -3245,8 +4912,7 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> ATTR1_SIZE_64<span
-  style="mso-spacerun: yes">      </span><span style="mso-spacerun:
-  yes">   </span>(3&lt;&lt;14)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">         </span>(3&lt;&lt;14)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -3374,8 +5040,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   Control<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-  style='font-size:10.0pt;font-family:"Courier New"'> BG_TILE_BASE(base) ((base)
-  &lt;&lt; 2)<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'> BG_TILE_BASE(base)
+  ((base) &lt;&lt; 2)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> BG_MAP_BASE(base)<span
@@ -3400,8 +5066,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   Control Sub<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-  style='font-size:10.0pt;font-family:"Courier New"'> BG_TILE_BASE(base)
-  ((base) &lt;&lt; 2)<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'> BG_TILE_BASE(base) ((base)
+  &lt;&lt; 2)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> BG_MAP_BASE(base)<span
@@ -3471,12 +5137,11 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> GL_DIFFUSE<span
-  style="mso-spacerun: yes">       </span><span style="mso-spacerun:
-  yes">       </span>2<o:p></o:p></span></p>
+  style="mso-spacerun: yes">              </span>2<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-  style='font-size:10.0pt;font-family:"Courier New"'>
-  GL_AMBIENT_AND_DIFFUSE<span style="mso-spacerun: yes">  </span>3<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'> GL_AMBIENT_AND_DIFFUSE<span
+  style="mso-spacerun: yes">  </span>3<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> GL_SPECULAR<span
@@ -3502,7 +5167,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> POLY_CULL_BACK<span
-  style="mso-spacerun: yes">        </span>0x80<o:p></o:p></span></p>
+  style="mso-spacerun: yes">       </span><span style="mso-spacerun:
+  yes"> </span>0x80<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> POLY_CULL_FRONT<span
@@ -3861,8 +5527,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   style='font-size:10.0pt;font-family:"Courier New";color:blue'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-  style='font-size:10.0pt;font-family:"Courier New"'> DMA_16_BIT<span
-  style="mso-spacerun: yes">      </span>(0&lt;&lt;10)<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'> DMA_16_BIT <span
+  style="mso-spacerun: yes">     </span>(0&lt;&lt;10)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_32_BIT<span
@@ -3902,7 +5568,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_DST_FIX<span
-  style="mso-spacerun: yes">     </span>(2&lt;&lt;5)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">  </span><span style="mso-spacerun:
+  yes">   </span>(2&lt;&lt;5)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_DST_RESET<span
@@ -3922,6 +5589,18 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
 </table>
 
 <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3><a name="_Changes:"></a>Changes:</h3>
+
+<p class=MsoNormal>April 7, 2005:<span style="mso-spacerun: yes">  </span></p>
+
+<p class=MsoNormal>-Change log started.</p>
+
+<p class=MsoNormal>-Sound info added</p>
+
+<p class=MsoNormal>-bios info added</p>
+
+<p class=MsoNormal>-some more 2D background info added</p>
 
 </div>
 

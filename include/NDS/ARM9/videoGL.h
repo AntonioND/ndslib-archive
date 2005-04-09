@@ -29,6 +29,8 @@
 //   0.2: Added gluFrustrum, gluPerspective, and gluLookAt
 //			Converted all floating point math to fixed point
 //
+//	 0.3: Display lists added thanks to mike260	
+//
 //////////////////////////////////////////////////////////////////////
 
 
@@ -46,7 +48,7 @@
 
 #include <NDS/jtypes.h>
 #include <NDS/ARM9/video.h>
-
+#include <NDS/DMA.h>
 //////////////////////////////////////////////////////////////////////
 
 typedef int f32;             // 1.19.12 fixed point for matricies
@@ -148,11 +150,42 @@ typedef struct {
 #define GL_RGB		8
 #define GL_RGBA		7	//15 bit color + alpha bit
 #define GL_RGB4		2	//4 color palette
-#define GL_RGB256	3	//256 color palette
-#define GL_RGB16	4	//16 color palette
+#define GL_RGB256	4	//256 color palette
+#define GL_RGB16	3	//16 color palette
 #define GL_COMPRESSED	5 //compressed texture
 
 //////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////
+//Fifo commands
+
+#define REG2ID(r)						(u8)( ( ((u32)r)-0x04000400 ) >> 2 )
+
+#define FIFO_NOP				REG2ID(GFX_FIFO)  
+#define FIFO_STATUS				REG2ID(GFX_STATUS)            
+#define FIFO_COLOR				REG2ID(GFX_COLOR)            
+
+#define FIFO_VERTEX16			REG2ID(GFX_VERTEX16)          
+#define FIFO_TEX_COORD			REG2ID(GFX_TEX_COORD)         
+#define FIFO_TEX_FORMAT			REG2ID(GFX_TEX_FORMAT)        
+
+#define FIFO_CLEAR_COLOR		REG2ID(GFX_CLEAR_COLOR)       
+#define FIFO_CLEAR_DEPTH		REG2ID(GFX_CLEAR_DEPTH)       
+
+#define FIFO_LIGHT_VECTOR		REG2ID(GFX_LIGHT_VECTOR)      
+#define FIFO_LIGHT_COLOR		REG2ID(GFX_LIGHT_COLOR)       
+#define FIFO_NORMAL				REG2ID(GFX_NORMAL)            
+
+#define FIFO_DIFFUSE_AMBIENT	REG2ID(GFX_DIFFUSE_AMBIENT)   
+#define FIFO_SPECULAR_EMISSION	REG2ID(GFX_SPECULAR_EMISSION) 
+#define FIFO_SHININESS			REG2ID(GFX_SHININESS)        
+
+#define FIFO_POLY_FORMAT		REG2ID(GFX_POLY_FORMAT)       
+
+#define FIFO_BEGIN				REG2ID(GFX_BEGIN)             
+#define FIFO_END				REG2ID(GFX_END)               
+#define FIFO_FLUSH				REG2ID(GFX_FLUSH)             
+#define FIFO_VIEWPORT			REG2ID(GFX_VIEWPORT)          
 
 #ifdef __cplusplus
 extern "C" {
@@ -185,6 +218,7 @@ void glResetTextures(void);
 void glMaterialf(int mode, rgb color);
 void glResetMatrixStack(void);
 void glReset(void);
+
 //////////////////////////////////////////////////////////////////////
 
 
@@ -456,9 +490,22 @@ static inline void glMaterialShinnyness(void)
 
 //////////////////////////////////////////////////////////////////////
 
-  static inline void glPolyFmt(int alpha) // obviously more to this
+static inline void glPolyFmt(int alpha) // obviously more to this
 {
   GFX_POLY_FORMAT = alpha;
+}
+
+static inline void glCallList(u32* list)
+{
+	u32 count = *list++;
+
+	while(count--)
+		GFX_FIFO = *list++;
+
+//	DMA_SRC(0) = (uint32)list;
+//	DMA_DEST(0) = (uint32)GFX_FIFO;
+//	DMA_CR(0) = DMA_FIFO | count;
+//	while(DMA_CR(0) & DMA_BUSY);
 }
 
 #endif  //endif #no inline
