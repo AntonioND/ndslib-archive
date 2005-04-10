@@ -217,7 +217,7 @@ void printX(int w, unsigned d)
 	
 	for (i = 7; i >= 0; i--)
 	{
-		if(buf[i] || i == 0)
+		if(buf[i] || i < loop)
 		{
 			if(buf[i] < 10)
 				consolePrintChar(buf[i] + '0');
@@ -244,7 +244,7 @@ void printx(int w, unsigned int d)
 	
 	for (i = 7; i >= 0; i--)
 	{
-		if(buf[i] || i == 0)
+		if(buf[i] || i < loop)
 		{
 			if(buf[i] < 10)
 				consolePrintChar(buf[i] + '0');
@@ -277,7 +277,7 @@ void printInt(int w, int d)
 	
 	for (i = 7; i >= 0; i--)
 	{
-		if(buf[i] || i == 0)
+		if(buf[i] || i < loop)
 			consolePrintChar(buf[i] + '0');
 		else if(i < w)
 			consolePrintChar(' ');
@@ -318,7 +318,7 @@ void print0X(int w, unsigned d)
 	
 	for (i = 7; i >= 0; i--)
 	{
-		if(buf[i] || i < w  || i == 0)
+		if(buf[i] || i < w  || i < loop)
 		{
 			if(buf[i] < 10)
 				consolePrintChar(buf[i] + '0');
@@ -344,7 +344,7 @@ void print0x(int w, unsigned int d)
 	
 	for (i = 7; i >= 0; i--)
 	{
-		if(buf[i] || i < w  || i == 0)
+		if(buf[i] || i < w  || i < loop)
 		{
 			if(buf[i] < 10)
 				consolePrintChar(buf[i] + '0');
@@ -374,7 +374,7 @@ void print0Int(int w, int d)
 	}
 	
 	for (i = 15; i >= 0; i--)
-		if(buf[i] || i < w  || i == 0)
+		if(buf[i] || i < w  || i < loop)
 			consolePrintChar(buf[i] + '0');
 
 }

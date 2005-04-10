@@ -472,6 +472,12 @@ typedef struct sSpriteRotation {
 #define GFX_STATUS            (*(vuint32*) 0x04000600)
 #define GFX_COLOR             (*(vuint32*) 0x04000480)
 
+#define GFX_VERTEX10          (*(vuint32*) 0x04000490)
+#define GFX_VERTEX_XY          (*(vuint32*) 0x04000494)
+#define GFX_VERTEX_XZ          (*(vuint32*) 0x04000498)
+#define GFX_VERTEX_YZ          (*(vuint32*) 0x0400049C)
+#define GFX_VERTEX_DIFF          (*(vuint32*) 0x040004A0)
+
 #define GFX_VERTEX16          (*(vuint32*) 0x0400048C)
 #define GFX_TEX_COORD         (*(vuint32*) 0x04000488)
 #define GFX_TEX_FORMAT        (*(vuint32*) 0x040004A8)

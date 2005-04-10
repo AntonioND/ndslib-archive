@@ -23,8 +23,6 @@ int main(void)
 	consolePrintf("\n\n\tHello DS devers\n");
 	consolePrintf("\twww.drunkencoders.com");
 	
-	
-
 	while(1)
 	{
 		//move the cursor

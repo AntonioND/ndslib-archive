@@ -159,7 +159,7 @@ typedef struct {
 //////////////////////////////////////////////////////////////////////
 //Fifo commands
 
-#define REG2ID(r)						(u8)( ( ((u32)r)-0x04000400 ) >> 2 )
+#define REG2ID(r)						(u8)( ( ((u32)(&(r)))-0x04000400 ) >> 2 )
 
 #define FIFO_NOP				REG2ID(GFX_FIFO)  
 #define FIFO_STATUS				REG2ID(GFX_STATUS)            
@@ -495,15 +495,23 @@ static inline void glPolyFmt(int alpha) // obviously more to this
   GFX_POLY_FORMAT = alpha;
 }
 
+////////////////////////////////////////////////////////////
+//Display lists have issues that need to resolving.
+//There seems to be some issues with list size.
+
 static inline void glCallList(u32* list)
 {
 	u32 count = *list++;
+
+//	while(count--)
+//		GFX_FIFO = *list++;
 
 	DMA_SRC(0) = (uint32)list;
 	DMA_DEST(0) = 0x4000400;
 	DMA_CR(0) = DMA_FIFO | count;
 
 	while(DMA_CR(0) & DMA_BUSY);
+
 }
 
 #endif  //endif #no inline
