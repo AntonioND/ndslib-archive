@@ -503,14 +503,15 @@ static inline void glCallList(u32* list)
 {
 	u32 count = *list++;
 
-//	while(count--)
-//		GFX_FIFO = *list++;
+	while(count--)
+		GFX_FIFO = *list++;
 
-	DMA_SRC(0) = (uint32)list;
-	DMA_DEST(0) = 0x4000400;
-	DMA_CR(0) = DMA_FIFO | count;
-
-	while(DMA_CR(0) & DMA_BUSY);
+	//this works sometimes??
+//	DMA_SRC(0) = (uint32)list;
+//	DMA_DEST(0) = 0x4000400;
+//	DMA_CR(0) = DMA_FIFO | count;
+//
+//	while(DMA_CR(0) & DMA_BUSY);
 
 }
 
