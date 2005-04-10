@@ -55,6 +55,7 @@
 #define IRQ_CARD       (1 << 19)
 #define IRQ_CARD_LINE  (1 << 20)
 
+#define IRQ_FIFO_EMPTY BIT(17)
 #define IRQ_ALL			(~0)
 
 //////////////////////////////////////////////////////////////////////
