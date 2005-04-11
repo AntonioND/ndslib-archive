@@ -37,27 +37,22 @@
 
 #define DMA0_SRC       (*(vuint32*)0x040000B0)
 #define DMA0_DEST      (*(vuint32*)0x040000B4)
-#define DMA0_COUNT     (*(vuint32*)0x040000B8)
 #define DMA0_CR        (*(vuint32*)0x040000B8)
 
 #define DMA1_SRC       (*(vuint32*)0x040000BC)
 #define DMA1_DEST      (*(vuint32*)0x040000C0)
-#define DMA1_COUNT     (*(vuint16*)0x040000C4)
 #define DMA1_CR        (*(vuint32*)0x040000C4)
 
 #define DMA2_SRC       (*(vuint32*)0x040000C8)
 #define DMA2_DEST      (*(vuint32*)0x040000CC)
-#define DMA2_COUNT     (*(vuint16*)0x040000D0)
 #define DMA2_CR        (*(vuint32*)0x040000D0)
 
 #define DMA3_SRC       (*(vuint32*)0x040000D4)
 #define DMA3_DEST      (*(vuint32*)0x040000D8)
-#define DMA3_COUNT     (*(vuint16*)0x040000DC)
 #define DMA3_CR        (*(vuint32*)0x040000DC)
 
 #define DMA_SRC(n)     (*(vuint32*)(0x040000B0+(n*12)))
 #define DMA_DEST(n)    (*(vuint32*)(0x040000B4+(n*12)))
-#define DMA_COUNT(n)   (*(vuint16*)(0x040000B8+(n*12)))
 #define DMA_CR(n)      (*(vuint32*)(0x040000B8+(n*12)))
 
 //////////////////////////////////////////////////////////////////////
@@ -101,21 +96,21 @@
 #define DMA_COPY_HALFWORDS (DMA_ENABLE | DMA_16_BIT | DMA_START_NOW)
 #define DMA_FIFO	(DMA_ENABLE | DMA_32_BIT  | DMA_DST_FIX | DMA_START_FIFO)
 
-static inline void dmaCopyWords(uint8 channel, void* src, void* dest, uint32 size)
+static inline void dmaCopyWords(uint8 channel, const void* src, void* dest, uint32 size)
 {
 	DMA_SRC(channel) = (uint32)src;
 	DMA_DEST(channel) = (uint32)dest;
 	DMA_CR(channel) = DMA_COPY_WORDS | (size>>2);
 	while(DMA_CR(channel) & DMA_BUSY);
 }
-static inline void dmaCopyHalfWords(uint8 channel, void* src, void* dest, uint32 size)
+static inline void dmaCopyHalfWords(uint8 channel, const void* src, void* dest, uint32 size)
 {
 	DMA_SRC(channel) = (uint32)src;
 	DMA_DEST(channel) = (uint32)dest;
 	DMA_CR(channel) = DMA_COPY_HALFWORDS | (size>>1);
 	while(DMA_CR(channel) & DMA_BUSY);
 }
-static inline void dmaCopy(void * source, void * dest, uint32 size)
+static inline void dmaCopy(const void * source, void * dest, uint32 size)
 {
 	DMA_SRC(3) = (uint32)source;
 	DMA_DEST(3) = (uint32)dest;
@@ -123,20 +118,20 @@ static inline void dmaCopy(void * source, void * dest, uint32 size)
 	while(DMA_CR(3) & DMA_BUSY);
 }
 
-static inline void dmaCopyWordsAsynch(uint8 channel, void* src, void* dest, uint32 size)
+static inline void dmaCopyWordsAsynch(uint8 channel, const void* src, void* dest, uint32 size)
 {
 	DMA_SRC(channel) = (uint32)src;
 	DMA_DEST(channel) = (uint32)dest;
 	DMA_CR(channel) = DMA_COPY_WORDS | (size>>2);
 
 }
-static inline void dmaCopyHalfWordsAsynch(uint8 channel, void* src, void* dest, uint32 size)
+static inline void dmaCopyHalfWordsAsynch(uint8 channel, const void* src, void* dest, uint32 size)
 {
 	DMA_SRC(channel) = (uint32)src;
 	DMA_DEST(channel) = (uint32)dest;
 	DMA_CR(channel) = DMA_COPY_HALFWORDS | (size>>1);
 }
-static inline void dmaCopyAsynch(void * source, void * dest, uint32 size)
+static inline void dmaCopyAsynch(const void * source, void * dest, uint32 size)
 {
 	DMA_SRC(3) = (uint32)source;
 	DMA_DEST(3) = (uint32)dest;
