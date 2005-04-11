@@ -66,8 +66,7 @@ void cardStartTransfer(uint8 * command, uint32 * destination, int channel, uint3
   // Set up a DMA channel to transfer a word every time the card makes one
   DMA_SRC(channel) = (uint32)&CARD_DATA_RD;
   DMA_DEST(channel) = (uint32)destination;
-  DMA_COUNT(channel) = 0x0001;
-  DMA_CR(channel) = DMA_ENABLE | DMA_START_CARD | DMA_32_BIT | DMA_REPEAT | DMA_SRC_FIX;
+  DMA_CR(channel) = DMA_ENABLE | DMA_START_CARD | DMA_32_BIT | DMA_REPEAT | DMA_SRC_FIX | 0x0001;;
 
   CARD_CR2 = flags;
 }
