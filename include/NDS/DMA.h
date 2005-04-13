@@ -66,7 +66,7 @@
 #define DMA_START_NOW   BIT(28)
 
 // fixme: is this arm7 only???
-#define DMA_START_CARD  BIT(28)
+#define DMA_START_CARD  0
 #ifdef ARM7
 #define DMA_START_VBL   BIT(27)
 #endif

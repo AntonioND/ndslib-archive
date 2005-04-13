@@ -136,6 +136,11 @@ typedef struct {
 #define TEXTURE_SIZE_512   6
 #define TEXTURE_SIZE_1024  7 
 
+
+#define TEXGEN_OFF			(0<<30)			//unmodified texcoord
+#define TEXGEN_TEXCOORD		(1<<30)			//texcoord * texture-matrix
+#define TEXGEN_NORMAL		(2<<30)			//normal * texture-matrix
+#define TEXGEN_POSITION		(3<<30)			//vertex * texture-matrix
 //////////////////////////////////////////////////////////////////////
 
 #define GL_TEXTURE_WRAP_S (1 << 16)
