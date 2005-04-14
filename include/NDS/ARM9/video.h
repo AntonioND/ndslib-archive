@@ -499,6 +499,8 @@ typedef struct sSpriteRotation {
 #define GFX_END               (*(vuint32*) 0x04000504)
 #define GFX_FLUSH             (*(vuint32*) 0x04000540)
 #define GFX_VIEWPORT          (*(vuint32*) 0x04000580)
+#define GFX_TOON_TABLE		  ((vuint16*)  0x04000380)
+#define GFX_EDGE_TABLE		  ((vuint16*)  0x04000330)
 
 //////////////////////////////////////////////////////////////////////
 // Matrix processor control
