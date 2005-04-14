@@ -74,7 +74,13 @@ extern "C" {
 #include <NDS/interrupts.h>
 #include <NDS/ipc.h>
 
-
+// print a string to dualis's output window
+static inline void dPrint(char *s)
+{
+    // warning! will crash on hardware!
+    asm volatile ("mov r0, %0;" "swi 0xff0000;":
+                  :"r" (s):"r0");
+}
 //////////////////////////////////////////////////////////////////////
 
 #ifdef __cplusplus

@@ -113,9 +113,11 @@ typedef struct {
 //////////////////////////////////////////////////////////////////////
 
 #define POLY_ALPHA(n)  ((n) << 16)
+#define POLY_TOON_SHADING     0x20
 #define POLY_CULL_BACK        0x80
 #define POLY_CULL_FRONT       0x40
 #define POLY_CULL_NONE        0xC0
+#define POLY_ID(n)		((n)<<24)
 
 //////////////////////////////////////////////////////////////////////
 
@@ -149,6 +151,10 @@ typedef struct {
 #define GL_TEXTURE_FLIP_T (1 << 19)
 
 #define GL_TEXTURE_2D		1
+
+#define GL_TOON_HIGHLIGHT	(1<<1)
+#define GL_ANTIALIAS		(1<<4)			//not fully figured out
+#define GL_OUTLINE			(1<<5)
 
 //////////////////////////////////////////////////////////////////////
 
@@ -199,6 +205,8 @@ extern "C" {
 
 //////////////////////////////////////////////////////////////////////
 
+void glEnable(int bits);
+void glDisable(int bits);
 void glLoadMatrix4x4(m4x4 * m);
 void glLoadMatrix4x3(m4x3 * m);
 void glMultMatrix4x4(m4x4 * m);
@@ -222,6 +230,9 @@ int glGenTextures(int n, int *names);
 void glResetTextures(void);
 void glMaterialf(int mode, rgb color);
 void glResetMatrixStack(void);
+void glSetOutlineColor(int id, rgb color);
+void glSetToonTable(uint16 *table);
+void glSetToonTableRange(int start, int end, rgb color);
 void glReset(void);
 
 //////////////////////////////////////////////////////////////////////

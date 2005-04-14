@@ -256,6 +256,24 @@ void glMaterialShinnyness(void)
 //////////////////////////////////////////////////////////////////////
 
 
+static uint16 enable_bits = GL_TEXTURE_2D | (1<<13) | (1<<14);
+
+//////////////////////////////////////////////////////////////////////
+
+void glEnable(int bits)
+{
+	enable_bits |= bits & (GL_TEXTURE_2D|GL_TOON_HIGHLIGHT|GL_OUTLINE|GL_ANTIALIAS);
+	GFX_CONTROL = enable_bits;
+}
+
+//////////////////////////////////////////////////////////////////////
+
+void glDisable(int bits)
+{
+	enable_bits &= ~(bits & (GL_TEXTURE_2D|GL_TOON_HIGHLIGHT|GL_OUTLINE|GL_ANTIALIAS));
+	GFX_CONTROL = enable_bits;
+}
+
 //////////////////////////////////////////////////////////////////////
 
 void glLoadMatrix4x4(m4x4 * m)
@@ -593,6 +611,31 @@ void glResetMatrixStack(void)
 
 //////////////////////////////////////////////////////////////////////
 
+void glSetOutlineColor(int id, rgb color)
+{
+	GFX_EDGE_TABLE[id] = color;
+}
+
+//////////////////////////////////////////////////////////////////////
+
+void glSetToonTable(uint16 *table)
+{
+	int i;
+	for( i = 0; i < 32; i++ )
+		GFX_TOON_TABLE[i] = table[i];
+}
+
+//////////////////////////////////////////////////////////////////////
+
+void glSetToonTableRange(int start, int end, rgb color)
+{
+	int i;
+	for( i = start; i <= end; i++ )
+		GFX_TOON_TABLE[i] = color;
+}
+
+//////////////////////////////////////////////////////////////////////
+
 void glReset(void)
 {
   while (GFX_STATUS & (1<<27)); // wait till gfx engine is not busy
@@ -601,7 +644,7 @@ void glReset(void)
   GFX_STATUS |= (1<<29);
 
   // Clear overflows for list memory
-  GFX_CONTROL |= ((1<<12) | (1<<13)) | 3;
+  GFX_CONTROL = enable_bits = ((1<<12) | (1<<13)) | GL_TEXTURE_2D;
   glResetMatrixStack();
 
   GFX_TEX_FORMAT = 0;
@@ -622,6 +665,7 @@ void glReset(void)
 uint32 textures[MAX_TEXTURES];
 
 uint32 activeTexture = 0;
+
 
 uint32* nextBlock = (uint32*)0x06800000;
 ////////////////////////////////////
