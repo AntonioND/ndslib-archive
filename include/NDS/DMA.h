@@ -63,7 +63,7 @@
 #define DMA_BUSY	    BIT(31)
 #define DMA_IRQ_REQ     BIT(30)
 
-#define DMA_START_NOW   BIT(28)
+#define DMA_START_NOW   0
 
 // fixme: is this arm7 only???
 #define DMA_START_CARD  0
