@@ -33,20 +33,20 @@ u8 CubeFaces[] = {
 u32 uv[] =
 {
 	
-	TEXTURE_PACK(128, 0),
-	TEXTURE_PACK(128,128),
-	TEXTURE_PACK(0, 128),
+	TEXTURE_PACK(intot16(128), 0),
+	TEXTURE_PACK(intot16(128),intot16(128)),
+	TEXTURE_PACK(0, intot16(128)),
 	TEXTURE_PACK(0,0)
 };
 
 u32 normals[] =
 {
-	NORMAL_PACK(0,-1,0),
-	NORMAL_PACK(0,1,0),
-	NORMAL_PACK(1,0,0),
-	NORMAL_PACK(0,0,-1),
-	NORMAL_PACK(-1,0,0),
-	NORMAL_PACK(0,1,0)
+	NORMAL_PACK(0,intov10(-1),0),
+	NORMAL_PACK(0,intov10(1),0),
+	NORMAL_PACK(intov10(1),0,0),
+	NORMAL_PACK(0,0,intov10(-1)),
+	NORMAL_PACK(intov10(-1),0,0),
+	NORMAL_PACK(0,intov10(1),0)
 
 };
 
