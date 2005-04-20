@@ -61,7 +61,7 @@ typedef short int t16;       // text coordinate 1.11.4 fixed point
 #define intot16(n)           ((n) << 4)
 #define t16toint(n)          ((n) >> 4)
 #define floatot16(n)         ((t16)((n) * (1 << 4)))
-#define TEXTURE_PACK(u,v)    ((intot16(u)<<16) | intot16(v))
+#define TEXTURE_PACK(u,v)    (((u)<<16) | (v & 0xFFFF))
 
 typedef short int v16;       // vertex 1.3.12 fixed format
 #define intov16(n)           ((n) << 12)
@@ -169,6 +169,8 @@ typedef struct {
 
 //////////////////////////////////////////////////////////////////////
 //Fifo commands
+
+#define FIFO_COMMAND_PACK(c1,c2,c3,c4) (((c1) << 24) | ((c2) << 16) | ((c3) << 8) | (c4))
 
 #define REG2ID(r)						(u8)( ( ((u32)(&(r)))-0x04000400 ) >> 2 )
 
@@ -360,7 +362,7 @@ void glMaterialShinnyness(void);
 
   static inline void glTexCoord2t16(t16 u, t16 v)
 {
-  GFX_TEX_COORD = (u << 16) + v;
+  GFX_TEX_COORD = TEXTURE_PACK(u,v);
 }
 
 //////////////////////////////////////////////////////////////////////
