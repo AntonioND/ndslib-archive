@@ -61,18 +61,19 @@ typedef short int t16;       // text coordinate 1.11.4 fixed point
 #define intot16(n)           ((n) << 4)
 #define t16toint(n)          ((n) >> 4)
 #define floatot16(n)         ((t16)((n) * (1 << 4)))
-#define TEXTURE_PACK(u,v)    (((u)<<16) | (v & 0xFFFF))
+#define TEXTURE_PACK(u,v)    (((u) << 16) | (v & 0xFFFF))
 
 typedef short int v16;       // vertex 1.3.12 fixed format
 #define intov16(n)           ((n) << 12)
 #define v16toint(n)          ((n) >> 12)
 #define floatov16(n)         ((v16)((n) * (1 << 12)))
+#define VERTEX_PACK(x, y)	 ((y) << 16) | ((x) & 0xFFFF)
 
 typedef short int v10;       // vertex 1.0.9 fixed point
 #define intov10(n)           ((n) << 9)
 #define v10toint(n)          ((n) >> 9)
 #define floatov10(n)         ((v10)((n) * (1 << 9)))
-#define NORMAL_PACK(x,y,z)   (intov10(x) | (intov10(y) << 10) | (intov10(z) << 20))
+#define NORMAL_PACK(x,y,z)   (((x) & 0x3FF) | (((y) & 0x3FF) << 10) | ((z) << 20))
 
 typedef unsigned short rgb;
 

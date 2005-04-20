@@ -13,18 +13,18 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <!--[if gte mso 9]><xml>
  <o:DocumentProperties>
   <o:Author>Janee' Orr</o:Author>
-  <o:LastAuthor>j</o:LastAuthor>
-  <o:Revision>8</o:Revision>
-  <o:TotalTime>1529</o:TotalTime>
+  <o:LastAuthor>jason</o:LastAuthor>
+  <o:Revision>9</o:Revision>
+  <o:TotalTime>2802</o:TotalTime>
   <o:Created>2005-03-31T17:51:00Z</o:Created>
-  <o:LastSaved>2005-04-07T17:23:00Z</o:LastSaved>
-  <o:Pages>22</o:Pages>
-  <o:Words>7709</o:Words>
-  <o:Characters>43945</o:Characters>
+  <o:LastSaved>2005-04-20T18:53:00Z</o:LastSaved>
+  <o:Pages>23</o:Pages>
+  <o:Words>8141</o:Words>
+  <o:Characters>46404</o:Characters>
   <o:Company>Home</o:Company>
-  <o:Lines>366</o:Lines>
-  <o:Paragraphs>87</o:Paragraphs>
-  <o:CharactersWithSpaces>53967</o:CharactersWithSpaces>
+  <o:Lines>386</o:Lines>
+  <o:Paragraphs>92</o:Paragraphs>
+  <o:CharactersWithSpaces>56987</o:CharactersWithSpaces>
   <o:Version>9.2720</o:Version>
  </o:DocumentProperties>
 </xml><![endif]-->
@@ -217,7 +217,7 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Size<o:p></o:p></b></p>
   </td>
-  <td width=259 valign=top style='width:194.1pt;border:solid windowtext .5pt;
+  <td width=496 valign=top style='width:371.9pt;border:solid windowtext .5pt;
   border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Defines<o:p></o:p></b></p>
   </td>
@@ -239,7 +239,7 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>128KB<o:p></o:p></b></p>
   </td>
-  <td width=259 valign=top style='width:194.1pt;border-top:none;border-left:
+  <td width=496 valign=top style='width:371.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
@@ -249,14 +249,45 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>{<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_A_LCD = 0,<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_A_LCD = 0,<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_A_MAIN_BG<span
-  style="mso-spacerun: yes">  </span>= 1,<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_A_MAIN_BG<span style="mso-spacerun: yes">  </span>= 1,<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_A_MAIN_SPRITE = 2,<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_A_MAIN_BG_0x6000000<span style="mso-spacerun: yes"> 
+  </span>= 1 | VRAM_OFFSET(0),<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_A_TEXTURE = 3<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_A_MAIN_BG_0x6020000<span style="mso-spacerun: yes"> 
+  </span>= 1 | VRAM_OFFSET(1),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_A_MAIN_BG_0x6040000<span style="mso-spacerun: yes"> 
+  </span>= 1 | VRAM_OFFSET(2),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_A_MAIN_BG_0x6060000<span style="mso-spacerun: yes"> 
+  </span>= 1 | VRAM_OFFSET(3),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_A_MAIN_SPRITE = 2,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_A_TEXTURE = 3,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_A_TEXTURE_SLOT0 = 3 | VRAM_OFFSET(0),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_A_TEXTURE_SLOT1 = 3 | VRAM_OFFSET(1),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_A_TEXTURE_SLOT2 = 3 | VRAM_OFFSET(2),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_A_TEXTURE_SLOT3 = 3 | VRAM_OFFSET(3)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'>}VRAM_A_TYPE;</span><b
@@ -280,7 +311,7 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>128KB<o:p></o:p></b></p>
   </td>
-  <td width=259 valign=top style='width:194.1pt;border-top:none;border-left:
+  <td width=496 valign=top style='width:371.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
@@ -290,15 +321,46 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>{<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_B_LCD = 0,<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_B_LCD = 0,<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_B_MAIN_BG<span
-  style="mso-spacerun: yes">  </span>= 1 | (1&lt;&lt;3),<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_B_MAIN_BG<span style="mso-spacerun: yes">  </span>= 1 |
+  VRAM_OFFSET(1),<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_B_MAIN_SPRITE = 2,<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_B_MAIN_BG_0x6000000<span style="mso-spacerun: yes"> 
+  </span>= 1 | VRAM_OFFSET(0),<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_B_TEXTURE = 3 |
-  (1&lt;&lt;3)<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_B_MAIN_BG_0x6020000<span style="mso-spacerun: yes"> 
+  </span>= 1 | VRAM_OFFSET(1),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_B_MAIN_BG_0x6040000<span style="mso-spacerun: yes"> 
+  </span>= 1 | VRAM_OFFSET(2),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_B_MAIN_BG_0x6060000<span style="mso-spacerun: yes"> 
+  </span>= 1 | VRAM_OFFSET(3),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_B_MAIN_SPRITE = 2,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_B_TEXTURE = 3 | VRAM_OFFSET(1),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_B_TEXTURE_SLOT0 = 3 | VRAM_OFFSET(0),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_B_TEXTURE_SLOT1 = 3 | VRAM_OFFSET(1),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_B_TEXTURE_SLOT2 = 3 | VRAM_OFFSET(2),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_B_TEXTURE_SLOT3 = 3 | VRAM_OFFSET(3)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'>}VRAM_B_TYPE;</span><b
@@ -322,7 +384,7 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>128KB<o:p></o:p></b></p>
   </td>
-  <td width=259 valign=top style='width:194.1pt;border-top:none;border-left:
+  <td width=496 valign=top style='width:371.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
@@ -332,21 +394,68 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>{<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_C_LCD = 0,<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_LCD = 0,<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_C_MAIN_BG<span
-  style="mso-spacerun: yes">  </span>= 1 | (2&lt;&lt;3),<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_MAIN_BG<span style="mso-spacerun: yes">  </span>= 1 |
+  VRAM_OFFSET(2),<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_C_MAIN_SPRITE = 2,<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_MAIN_BG_0x6000000<span style="mso-spacerun: yes"> 
+  </span>= 1 | VRAM_OFFSET(0),<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_C_SUB_BG<span
-  style="mso-spacerun: yes">  </span>= 4,<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_MAIN_BG_0x6020000<span style="mso-spacerun: yes"> 
+  </span>= 1 | VRAM_OFFSET(1),<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_C_TEXTURE = 3 |
-  (2&lt;&lt;3)<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_MAIN_BG_0x6040000<span style="mso-spacerun: yes"> 
+  </span>= 1 | VRAM_OFFSET(2),<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>}VRAM_C_TYPE;<o:p></o:p></span></p>
-  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><b
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_MAIN_BG_0x6060000<span style="mso-spacerun: yes"> 
+  </span>= 1 | VRAM_OFFSET(3),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_ARM7 = 2,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_SUB_BG<span style="mso-spacerun: yes">  </span>= 4,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_SUB_BG_0x6200000<span style="mso-spacerun: yes"> 
+  </span>= 4 | VRAM_OFFSET(0),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_SUB_BG_0x6220000<span style="mso-spacerun: yes"> 
+  </span>= 4 | VRAM_OFFSET(1),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_SUB_BG_0x6240000<span style="mso-spacerun: yes"> 
+  </span>= 4 | VRAM_OFFSET(2),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_SUB_BG_0x6260000 <span style="mso-spacerun:
+  yes"> </span>= 4 | VRAM_OFFSET(3),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_TEXTURE = 3 | VRAM_OFFSET(2),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_TEXTURE_SLOT0 = 3 | VRAM_OFFSET(0),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_TEXTURE_SLOT1 = 3 | VRAM_OFFSET(1),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_TEXTURE_SLOT2 = 3 | VRAM_OFFSET(2),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_C_TEXTURE_SLOT3 = 3 | VRAM_OFFSET(3)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'>}VRAM_C_TYPE;</span><b
   style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
   </td>
  </tr>
@@ -367,7 +476,7 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>128KB<o:p></o:p></b></p>
   </td>
-  <td width=259 valign=top style='width:194.1pt;border-top:none;border-left:
+  <td width=496 valign=top style='width:371.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
@@ -375,19 +484,53 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>typedef</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>enum<o:p></o:p></span></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>{<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'>{<span style='mso-tab-count:
+  1'>     </span><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_D_LCD = 0,<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_D_LCD = 0,<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_D_MAIN_BG<span
-  style="mso-spacerun: yes">  </span>= 1 | (3&lt;&lt;3),<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_D_MAIN_BG<span style="mso-spacerun: yes">  </span>= 1 |
+  VRAM_OFFSET(3),<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_D_MAIN_SPRITE = 2,<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_D_MAIN_BG_0x6000000<span style="mso-spacerun: yes"> 
+  </span>= 1 | VRAM_OFFSET(0),<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_D_SUB_SPRITE = 4,<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_D_MAIN_BG_0x6020000<span style="mso-spacerun: yes"> 
+  </span>= 1 | VRAM_OFFSET(1),<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_D_TEXTURE = 3 |
-  (3&lt;&lt;3)<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_D_MAIN_BG_0x6040000<span style="mso-spacerun: yes"> 
+  </span>= 1 | VRAM_OFFSET(2),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_D_MAIN_BG_0x6060000<span style="mso-spacerun: yes"> 
+  </span>= 1 | VRAM_OFFSET(3),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_D_ARM7 = 2,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_D_SUB_SPRITE<span style="mso-spacerun: yes">  </span>=
+  4,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_D_TEXTURE = 3 | VRAM_OFFSET(3),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_D_TEXTURE_SLOT0 = 3 | VRAM_OFFSET(0),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_D_TEXTURE_SLOT1 = 3 | VRAM_OFFSET(1),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_D_TEXTURE_SLOT2 = 3 | VRAM_OFFSET(2),<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_D_TEXTURE_SLOT3 = 3 | VRAM_OFFSET(3)<o:p></o:p></span></p>
   <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'>}VRAM_D_TYPE;</span><b
   style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
   </td>
@@ -409,7 +552,7 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>64KB<o:p></o:p></b></p>
   </td>
-  <td width=259 valign=top style='width:194.1pt;border-top:none;border-left:
+  <td width=496 valign=top style='width:371.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
@@ -419,10 +562,22 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>{<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_E_LCD<span
-  style='mso-tab-count:3'>              </span>=0,<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_E_LCD<span style='mso-tab-count:3'>              </span>=0,<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>VRAM_E_TEX_PALETTE = 3<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_E_MAIN_SPRITE = 2,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_E_TEX_PALETTE = 3,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_E_BG_EXT_PALETTE = 4,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_E_OBJ_EXT_PALETTE = 5,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'>}VRAM_E_TYPE;</span><b
   style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
   </td>
@@ -444,11 +599,33 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>16KB<o:p></o:p></b></p>
   </td>
-  <td width=259 valign=top style='width:194.1pt;border-top:none;border-left:
+  <td width=496 valign=top style='width:371.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><b
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>typedef</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>enum<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>{<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_F_LCD<span style='mso-tab-count:3'>              </span>=0,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_F_MAIN_SPRITE = 2,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_F_TEX_PALETTE = 3,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_F_BG_EXT_PALETTE = 4,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_F_OBJ_EXT_PALETTE = 5,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'>}VRAM_F_TYPE;</span><b
   style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
   </td>
  </tr>
@@ -469,11 +646,33 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>16KB<o:p></o:p></b></p>
   </td>
-  <td width=259 valign=top style='width:194.1pt;border-top:none;border-left:
+  <td width=496 valign=top style='width:371.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><b
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>typedef</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>enum<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>{<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_G_LCD<span style='mso-tab-count:3'>              </span>=0,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_G_MAIN_SPRITE = 2,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_G_TEX_PALETTE = 3,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_G_BG_EXT_PALETTE = 4,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_G_OBJ_EXT_PALETTE = 5,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'>}VRAM_G_TYPE;</span><b
   style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
   </td>
  </tr>
@@ -494,11 +693,27 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>32KB<o:p></o:p></b></p>
   </td>
-  <td width=259 valign=top style='width:194.1pt;border-top:none;border-left:
+  <td width=496 valign=top style='width:371.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><b
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>typedef</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>enum<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>{<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_H_LCD<span style='mso-tab-count:3'>              </span>=0,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_H_SUB_BG = 1,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_H_SUB_BG_EXT_PALETTE = 5,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'>}VRAM_H_TYPE;</span><b
   style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
   </td>
  </tr>
@@ -517,13 +732,32 @@ VRAM, which starts at 0x0600:0000.<o:p></o:p></span></p>
   border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>32KB<o:p></o:p></b></p>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>16KB<o:p></o:p></b></p>
   </td>
-  <td width=259 valign=top style='width:194.1pt;border-top:none;border-left:
+  <td width=496 valign=top style='width:371.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><b
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>typedef</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>enum<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>{<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_I_LCD<span style='mso-tab-count:3'>              </span>=0,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_I_SUB_BG<span style='mso-tab-count:1'>     </span>= 1,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_I_SUB_SPRITE = 2;<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+  1'>      </span>VRAM_I_SUB_SPRITE_EXT_PALETTE = 3,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'>}VRAM_I_TYPE;</span><b
   style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
   </td>
  </tr>
@@ -685,8 +919,8 @@ all modes but frame buffer background 0 can be used as a 3D layer.</p>
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Vram banks are rendered
-  directly onto the screen based on mode.<o:p></o:p></b></p>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Vram banks are
+  rendered directly onto the screen based on mode.<o:p></o:p></b></p>
   </td>
  </tr>
 </table>
@@ -706,9 +940,9 @@ all modes but frame buffer background 0 can be used as a 3D layer.</p>
 <p class=MsoNormal>Description</p>
 
 <p class=MsoNormal><span style='mso-tab-count:1'>            </span>The sub 2D
-core can operate in any one of 6 modes that differ in number and types of backgrounds
-that can be displayed.<span style="mso-spacerun: yes">  </span>3D and frame
-buffers are not available to the sub display.</p>
+core can operate in any one of 6 modes that differ in number and types of
+backgrounds that can be displayed.<span style="mso-spacerun: yes">  </span>3D
+and frame buffers are not available to the sub display.</p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
 
@@ -803,8 +1037,8 @@ buffers are not available to the sub display.</p>
   are text.<o:p></o:p></b></p>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Background 2 is
   rotation.<o:p></o:p></b></p>
-  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Background 3 is an extended
-  rotation background.<o:p></o:p></b></p>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Background 3 is an
+  extended rotation background.<o:p></o:p></b></p>
   <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><b
   style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
   </td>
@@ -940,8 +1174,8 @@ rotation backgrounds will access an external palette.<span style="mso-spacerun:
 yes">  </span>These palettes can be stored in VRAM_E, F, G.<span
 style="mso-spacerun: yes">  </span>The palette used is determined by the
 palette index in the map tile attribute (high 4 bits) similar to the way it
-would reference a 16x16 color palette.<span style="mso-spacerun: yes">  </span>There
-are 16 256-color palettes addressable by each background.<o:p></o:p></span></p>
+would reference a 16x16 color palette.<span style="mso-spacerun: yes"> 
+</span>There are 16 256-color palettes addressable by each background.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-bidi-font-weight:bold'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
 
@@ -970,8 +1204,8 @@ copies of the OAM and palette.<span style="mso-spacerun: yes">  </span><o:p></o:
  <tr>
   <td width=174 valign=top style='width:130.5pt;border:solid windowtext .5pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Object (sprite) attribute
-  memory<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Object (sprite)
+  attribute memory<o:p></o:p></span></p>
   </td>
   <td width=190 valign=top style='width:142.15pt;border-top:none;border-left:
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
@@ -1028,8 +1262,8 @@ copies of the OAM and palette.<span style="mso-spacerun: yes">  </span><o:p></o:
  <tr>
   <td width=174 valign=top style='width:130.5pt;border:solid windowtext .5pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><span style='mso-bidi-font-weight:bold'>SUB Object
-  (sprite) attribute memory <o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-bidi-font-weight:bold'>SUB Object (sprite)
+  attribute memory <o:p></o:p></span></p>
   </td>
   <td width=190 valign=top style='width:142.15pt;border-top:none;border-left:
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
@@ -1047,8 +1281,8 @@ copies of the OAM and palette.<span style="mso-spacerun: yes">  </span><o:p></o:
  <tr>
   <td width=174 valign=top style='width:130.5pt;border:solid windowtext .5pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><span style='mso-bidi-font-weight:bold'>SUB Object (sprite)
-  palette memory<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-bidi-font-weight:bold'>SUB Object
+  (sprite) palette memory<o:p></o:p></span></p>
   </td>
   <td width=190 valign=top style='width:142.15pt;border-top:none;border-left:
   none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
@@ -1095,8 +1329,8 @@ href="#_Console_Print_Functions">Functions</a><o:p></o:p></span></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
 
-<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Basic print functionality
-is provided by NDSLIB along with a 256 character 16 color font.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='mso-bidi-font-weight:bold'>Basic print
+functionality is provided by NDSLIB along with a 256 character 16 color font.<o:p></o:p></span></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
 
@@ -1105,6 +1339,8 @@ is provided by NDSLIB along with a 256 character 16 color font.<o:p></o:p></span
 <p class=MsoNormal><a href="#_3D_1">Registers</a><a name="_GL_Port"></a></p>
 
 <p class=MsoNormal><a href="#_GL_Functions">Functions</a></p>
+
+<p class=MsoNormal><a href="#_3D_and_GL">Defines and Macros</a></p>
 
 <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
 
@@ -1116,7 +1352,32 @@ available.</p>
 Formats</h3>
 
 <p class=MsoNormal>The DS supports many texture formats.<span
-style="mso-spacerun: yes">  </span>More to come on this.</p>
+style="mso-spacerun: yes">  </span></p>
+
+<p class=MsoNormal>Only textures currently supported by NDSLIB are 16 bit BGR,
+and 256 color paletted textures.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span>16 bit:</p>
+
+<p class=MsoNormal><span style='mso-tab-count:2'>                        </span>Same
+format as 15-bit BGR with the high bit as alpha.<span style="mso-spacerun:
+yes">  </span>Be sure your textures conversion utilities take this into
+account.</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span>8 bit:</p>
+
+<p class=MsoNormal><span style='mso-tab-count:2'>                        </span>To
+use 8 bit palettes NDSLIB expects the palette to immediately follow the pixel
+data.<span style="mso-spacerun: yes">  </span>You can also manually load the
+palette into the appropriate VRAM bank.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>If GL_RGB is specified as a texture format to the texture
+manager the high bit of each pixel will be set when copied into the texture
+bank and the internal texture mode will be set to GL_RGBA.</p>
 
 <h3><a name="_Number_Formats"></a>Number Formats</h3>
 
@@ -1146,12 +1407,27 @@ name="_FIFO"></a></p>
 
 <h3>FIFO </h3>
 
-<p class=MsoNormal><span style='mso-tab-count:1'>            </span>The fifo can
-be accessed by command followed by data, or you can simply write the data to
-the address of the fifo + command * 4.<span style="mso-spacerun: yes"> 
-</span>Currently ndslib only uses the latter method.<span style="mso-spacerun:
-yes">  </span>Playlists can be DMA’d to the FIFO but no support is currently
-supplied in NDSLIB for playlists.</p>
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span>The fifo
+can either be accessed via display lists copied directly to it or by sending
+the data to the fifo plus an offset that represents the command.<span
+style="mso-spacerun: yes">  </span>In other words if you wish to send vertex
+data to the fifo simply write to (FIFO + (VERTEX_COMMAND * 4)).<span
+style="mso-spacerun: yes">  </span>Most of the GL port in NDSLIB writes in this
+manner and has registers defined for each command.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span>To send
+commands they must first be packed.<span style="mso-spacerun: yes"> 
+</span>Each write to the fifo represents four commands which must then be
+followed by the data needed for these commands.<span style="mso-spacerun:
+yes">  </span>The first command goes into the high byte followed by the next
+command in the next byte.<span style="mso-spacerun: yes">  </span>A command of
+zero will be interpreted as a NOP with no data required.<span
+style="mso-spacerun: yes">  </span>NDSLIB expects the first 32 bit value in the
+list to be the number of words in the list.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
 
 <h2><a name="_Touch_Pad"></a>Touch Pad</h2>
 
@@ -1295,8 +1571,8 @@ href="#_DMA_Functions">Functions</a></span><b style='mso-bidi-font-weight:normal
   <td width=590 valign=top style='width:6.15in;border:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
-  style='mso-bidi-font-size:10.0pt;font-family:"Courier New"'>uint32 vramSetMainBanks(VRAM_A_TYPE
-  a, VRAM_B_TYPE b, VRAM_C_TYPE c, VRAM_D_TYPE d);<o:p></o:p></span></b></p>
+  style='mso-bidi-font-size:10.0pt;font-family:"Courier New"'>uint32
+  vramSetMainBanks(VRAM_A_TYPE a, VRAM_B_TYPE b, VRAM_C_TYPE c, VRAM_D_TYPE d);<o:p></o:p></span></b></p>
   </td>
  </tr>
  <tr>
@@ -1313,8 +1589,7 @@ href="#_DMA_Functions">Functions</a></span><b style='mso-bidi-font-weight:normal
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'>Returns the previous state
-  of the four registers as a single 32 bit value for use with
-  vramRestorMainBanks<o:p></o:p></span></p>
+  of the four registers as a single 32 bit value for use with vramRestorMainBanks<o:p></o:p></span></p>
   </td>
  </tr>
 </table>
@@ -1354,8 +1629,8 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
   <td width=590 valign=top style='width:6.15in;border:solid windowtext .5pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>These functions can be used
-  to set each bank individualy.<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'>These functions can be
+  used to set each bank individualy.<o:p></o:p></span></p>
   </td>
  </tr>
 </table>
@@ -1407,8 +1682,8 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
   font.<span style="mso-spacerun: yes">  </span>Must map onto the ascii set but
   does not have to be complete nor start at 0.<o:p></o:p></span></p>
   <p class=MsoNormal><span style='font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
-  <p class=MsoNormal><span style='font-family:"Courier New"'>charBase: The location
-  in video memory that the font will be loaded into.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-family:"Courier New"'>charBase: The
+  location in video memory that the font will be loaded into.<o:p></o:p></span></p>
   <p class=MsoNormal><span style='font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal><span style='font-family:"Courier New"'>numCharacters: The
   number of characters in the font<o:p></o:p></span></p>
@@ -1652,8 +1927,8 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
   border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal>Normal integer versions of the math functions.<span
   style="mso-spacerun: yes">  </span>Hardware divide and sqrt are
-  utilized.<span style="mso-spacerun: yes">  </span>These calls do not return until
-  the result is valid.</p>
+  utilized.<span style="mso-spacerun: yes">  </span>These calls do not return
+  until the result is valid.</p>
   </td>
  </tr>
 </table>
@@ -1802,8 +2077,8 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
   style='mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
   style='mso-bidi-font-size:10.0pt;color:blue'>void</span></b><b><span
-  style='mso-bidi-font-size:10.0pt'> gluFrustumf32(f32 left, f32 right, f32 bottom,
-  f32 top, f32 near, f32 far);<o:p></o:p></span></b></p>
+  style='mso-bidi-font-size:10.0pt'> gluFrustumf32(f32 left, f32 right, f32
+  bottom, f32 top, f32 near, f32 far);<o:p></o:p></span></b></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
   style='mso-bidi-font-size:10.0pt;color:blue'>void</span></b><b><span
   style='mso-bidi-font-size:10.0pt'> gluFrustum(<span style='color:blue'>float</span>
@@ -2080,6 +2355,58 @@ style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nb
 
 <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
 
+<table border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=590 valign=top style='width:6.15in;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+  style='mso-bidi-font-size:10.0pt;color:blue'>void</span></b><b><span
+  style='mso-bidi-font-size:10.0pt'> glSetOutlineColor(<span style='color:blue'>int</span>
+  id, rgb color);<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+  style='mso-bidi-font-size:10.0pt;color:blue'>void</span></b><b><span
+  style='mso-bidi-font-size:10.0pt'> glSetToonTable(uint16 *table);<o:p></o:p></span></b></p>
+  <p class=MsoNormal><b><span style='mso-bidi-font-size:10.0pt;color:blue'>void</span></b><b><span
+  style='mso-bidi-font-size:10.0pt'> glSetToonTableRange(<span
+  style='color:blue'>int</span> start, <span style='color:blue'>int</span> end,
+  rgb color);</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=590 valign=top style='width:6.15in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'>These
+  Functions set up toon tables.<span style="mso-spacerun: yes">  </span>See 3D
+  description for toon shading and the examples for implementation.<b><span
+  style='mso-bidi-font-size:10.0pt;color:blue'><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<table border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=590 valign=top style='width:6.15in;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='mso-bidi-font-size:10.0pt;color:blue'>static</span></b><b><span
+  style='mso-bidi-font-size:10.0pt'> <span style='color:blue'>inline</span> <span
+  style='color:blue'>void</span> glCallList(u32* list);</span><o:p></o:p></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=590 valign=top style='width:6.15in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>See 3D description above and display list example for
+  implementation.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
 <h3><a name="_DMA_Functions"></a>DMA Functions</h3>
 
 <table border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
@@ -2223,11 +2550,11 @@ style="mso-spacerun: yes">       </span>(*(vuint8*)0x04000246)<o:p></o:p></span>
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
 style='font-size:10.0pt;font-family:"Courier New"'> VRAM_H_CR<span
-style="mso-spacerun: yes">       </span>(*(vuint8*)0x04000247)<o:p></o:p></span></p>
+style="mso-spacerun: yes">       </span>(*(vuint8*)0x04000248)<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New";
 color:blue'>#define</span><span style='font-size:10.0pt;font-family:"Courier New"'>
-VRAM_I_CR<span style="mso-spacerun: yes">       </span>(*(vuint8*)0x04000248)</span><b
+VRAM_I_CR<span style="mso-spacerun: yes">       </span>(*(vuint8*)0x04000249)</span><b
 style='mso-bidi-font-weight:normal'><span style='mso-tab-count:2'>                </span><o:p></o:p></b></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
@@ -2957,13 +3284,8 @@ style="mso-spacerun: yes">      </span>(*(vuint32*)0x040000B4)<o:p></o:p></span>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-style='font-size:10.0pt;font-family:"Courier New"'> DMA0_COUNT<span
-style="mso-spacerun: yes">     </span>(*(vuint16*)0x040000B8)<o:p></o:p></span></p>
-
-<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
 style='font-size:10.0pt;font-family:"Courier New"'> DMA0_CR<span
-style="mso-spacerun: yes">        </span>(*(vuint16*)0x040000BA)<o:p></o:p></span></p>
+style="mso-spacerun: yes">        </span>(*(vuint32*)0x040000B8)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
@@ -2976,18 +3298,12 @@ style="mso-spacerun: yes">       </span>(*(vuint32*)0x040000BC)<o:p></o:p></span
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
 style='font-size:10.0pt;font-family:"Courier New"'> DMA1_DEST<span
-style="mso-spacerun: yes">  </span><span style="mso-spacerun:
-yes">    </span>(*(vuint32*)0x040000C0)<o:p></o:p></span></p>
-
-<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-style='font-size:10.0pt;font-family:"Courier New"'> DMA1_COUNT<span
-style="mso-spacerun: yes">     </span>(*(vuint16*)0x040000C4)<o:p></o:p></span></p>
+style="mso-spacerun: yes">      </span>(*(vuint32*)0x040000C0)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
 style='font-size:10.0pt;font-family:"Courier New"'> DMA1_CR<span
-style="mso-spacerun: yes">        </span>(*(vuint16*)0x040000C6)<o:p></o:p></span></p>
+style="mso-spacerun: yes">        </span>(*(vuint32*)0x040000C4)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
@@ -3004,13 +3320,8 @@ style="mso-spacerun: yes">      </span>(*(vuint32*)0x040000CC)<o:p></o:p></span>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-style='font-size:10.0pt;font-family:"Courier New"'> DMA2_COUNT<span
-style="mso-spacerun: yes">     </span>(*(vuint16*)0x040000D0)<o:p></o:p></span></p>
-
-<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
 style='font-size:10.0pt;font-family:"Courier New"'> DMA2_CR<span
-style="mso-spacerun: yes">        </span>(*(vuint16*)0x040000D2)<o:p></o:p></span></p>
+style="mso-spacerun: yes">        </span>(*(vuint32*)0x040000D0)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
@@ -3027,13 +3338,8 @@ style="mso-spacerun: yes">      </span>(*(vuint32*)0x040000D8)<o:p></o:p></span>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-style='font-size:10.0pt;font-family:"Courier New"'> DMA3_COUNT<span
-style="mso-spacerun: yes">     </span>(*(vuint16*)0x040000DC)<o:p></o:p></span></p>
-
-<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
 style='font-size:10.0pt;font-family:"Courier New"'> DMA3_CR<span
-style="mso-spacerun: yes">        </span>(*(vuint16*)0x040000DE)<o:p></o:p></span></p>
+style="mso-spacerun: yes">        </span>(*(vuint32*)0x040000DC)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
 style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
@@ -3048,19 +3354,10 @@ style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><spa
 style='font-size:10.0pt;font-family:"Courier New"'> DMA_DEST(n)<span
 style="mso-spacerun: yes">    </span>(*(vuint32*)(0x040000B4+(n*12)))<o:p></o:p></span></p>
 
-<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-style='font-size:10.0pt;font-family:"Courier New"'> DMA_COUNT(n)<span
-style="mso-spacerun: yes">   </span>(*(vuint16*)(0x040000B8+(n*12)))<o:p></o:p></span></p>
-
 <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New";
 color:blue'>#define</span><span style='font-size:10.0pt;font-family:"Courier New"'>
 DMA_CR(n)<span style="mso-spacerun: yes">     
-</span>(*(vuint16*)(0x040000BA+(n*12)))<o:p></o:p></span></p>
-
-<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
-
-<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+</span>(*(vuint32*)(0x040000B8+(n*12)))</span></p>
 
 <h3>BIOS</h3>
 
@@ -3605,8 +3902,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
   swiDecompressHuffman(<span style='color:blue'>void</span> * source, <span
-  style='color:blue'>void</span> * destination, uint32 toGetSize, TDecompressionStream
-  * stream);<o:p></o:p></span></p>
+  style='color:blue'>void</span> * destination, uint32 toGetSize,
+  TDecompressionStream * stream);<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -3725,8 +4022,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
   swiDecompressRLEVram(<span style='color:blue'>void</span> * source, <span
-  style='color:blue'>void</span> * destination, uint32 toGetSize, TDecompressionStream
-  * stream);<o:p></o:p></span></p>
+  style='color:blue'>void</span> * destination, uint32 toGetSize,
+  TDecompressionStream * stream);<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -3767,8 +4064,8 @@ DMA_CR(n)<span style="mso-spacerun: yes">     
   style="mso-spacerun: yes">        </span>word(31..8) = size of data (in
   bytes)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
-  style="mso-spacerun: yes">        </span>word(7..0) = ignored<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// <span
+  style="mso-spacerun: yes">       </span>word(7..0) = ignored<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
   style="mso-spacerun: yes">   </span>r1 - destination address<o:p></o:p></span></p>
@@ -3982,8 +4279,8 @@ SOUND51C<span style="mso-spacerun: yes">         
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New";color:green'>//
-  WaitForVBlank (swi 0x05)<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// WaitForVBlank
+  (swi 0x05)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
   style="mso-spacerun: yes">  </span>Identical to calling IntrWait(1, 1)<o:p></o:p></span></p>
@@ -4098,16 +4395,16 @@ SOUND51C<span style="mso-spacerun: yes">         
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New";color:green'>// int
-  Remainder(int numerator, int divisor);<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// int Remainder(int
+  numerator, int divisor);<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
   style="mso-spacerun: yes">   </span>returns numerator % divisor<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New";color:green'>// void DivMod(int
-  numerator, int divisor, int * result, int * remainder);<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// void
+  DivMod(int numerator, int divisor, int * result, int * remainder);<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
   style="mso-spacerun: yes">   </span>sets *result = numerator / divisor and
@@ -4363,8 +4660,8 @@ SOUND51C<span style="mso-spacerun: yes">         
   by compressed data<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
-  style="mso-spacerun: yes">        </span>word(31..8) = size of uncompressed
-  data (in bytes)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">       </span><span style="mso-spacerun:
+  yes"> </span>word(31..8) = size of uncompressed data (in bytes)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
   style="mso-spacerun: yes">        </span>word(7..0) = ignored<o:p></o:p></span></p>
@@ -4400,8 +4697,8 @@ SOUND51C<span style="mso-spacerun: yes">         
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>extern</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:blue'>int</span>
   swiDecompressLZSSVram(<span style='color:blue'>void</span> * source, <span
-  style='color:blue'>void</span> * destination, uint32 toGetSize,
-  TDecompressionStream * stream);<o:p></o:p></span></p>
+  style='color:blue'>void</span> * destination, uint32 toGetSize, TDecompressionStream
+  * stream);<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -4459,8 +4756,8 @@ SOUND51C<span style="mso-spacerun: yes">         
   DecompressRLEVram (swi 0x15)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
-  style="mso-spacerun: yes">   </span>r0 - pointer to compressed source data, maybe!
-  (always goes through<o:p></o:p></span></p>
+  style="mso-spacerun: yes">   </span>r0 - pointer to compressed source data,
+  maybe! (always goes through<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
   style="mso-spacerun: yes">        </span>the function pointers, so could just
@@ -4506,8 +4803,8 @@ SOUND51C<span style="mso-spacerun: yes">         
   style='font-size:10.0pt;font-family:"Courier New";color:green'>// if
   negative, otherwise the typical result is used, so it is likely<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New";color:green'>// some sort of
-  error-checking procedure<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// some sort
+  of error-checking procedure<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -4556,9 +4853,9 @@ SOUND51C<span style="mso-spacerun: yes">         
   style='font-size:10.0pt;font-family:"Courier New";color:green'>//
   swiGetSineTable(int index)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
-  style='font-size:10.0pt;font-family:"Courier New";color:green'>//<span
-  style="mso-spacerun: yes">  </span>Returns an entry in the sine table (index
-  = 0..63)<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// <span
+  style="mso-spacerun: yes"> </span>Returns an entry in the sine table (index =
+  0..63)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:green'>//<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -4723,8 +5020,7 @@ SOUND51C<span style="mso-spacerun: yes">         
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DISPLAY_WIN1_ON<span
-  style="mso-spacerun: yes">   </span><span style="mso-spacerun:
-  yes">    </span>(1 &lt;&lt; 14)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">       </span>(1 &lt;&lt; 14)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DISPLAY_SPR_WIN_ON<span
@@ -4746,8 +5042,8 @@ SOUND51C<span style="mso-spacerun: yes">         
   ENABLE_3D)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-  style='font-size:10.0pt;font-family:"Courier New"'> MODE_2_3D<span
-  style="mso-spacerun: yes">    </span>(MODE_2_2D | DISPLAY_BG0_ACTIVE |
+  style='font-size:10.0pt;font-family:"Courier New"'> MODE_2_3D <span
+  style="mso-spacerun: yes">   </span>(MODE_2_2D | DISPLAY_BG0_ACTIVE |
   ENABLE_3D)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
@@ -4861,8 +5157,7 @@ SOUND51C<span style="mso-spacerun: yes">         
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> ATTR0_COLOR_256<span
-  style="mso-spacerun: yes">    </span><span style="mso-spacerun:
-  yes">   </span>(1&lt;&lt;13)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">       </span>(1&lt;&lt;13)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -4887,8 +5182,8 @@ SOUND51C<span style="mso-spacerun: yes">         
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> ATTR1_ROTDATA(n)<span
   style="mso-spacerun: yes">      </span>((n)&lt;&lt;9)<span
-  style="mso-spacerun: yes">  </span><span style='color:green'>note: overlaps with
-  flip flags<o:p></o:p></span></span></p>
+  style="mso-spacerun: yes">  </span><span style='color:green'>note: overlaps
+  with flip flags<o:p></o:p></span></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> ATTR1_FLIP_X<span
@@ -4912,7 +5207,8 @@ SOUND51C<span style="mso-spacerun: yes">         
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> ATTR1_SIZE_64<span
-  style="mso-spacerun: yes">         </span>(3&lt;&lt;14)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">    </span><span style="mso-spacerun:
+  yes">     </span>(3&lt;&lt;14)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -5040,8 +5336,8 @@ SOUND51C<span style="mso-spacerun: yes">         
   Control<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-  style='font-size:10.0pt;font-family:"Courier New"'> BG_TILE_BASE(base)
-  ((base) &lt;&lt; 2)<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'> BG_TILE_BASE(base) ((base)
+  &lt;&lt; 2)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> BG_MAP_BASE(base)<span
@@ -5066,8 +5362,8 @@ SOUND51C<span style="mso-spacerun: yes">         
   Control Sub<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-  style='font-size:10.0pt;font-family:"Courier New"'> BG_TILE_BASE(base) ((base)
-  &lt;&lt; 2)<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'> BG_TILE_BASE(base)
+  ((base) &lt;&lt; 2)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> BG_MAP_BASE(base)<span
@@ -5089,7 +5385,7 @@ SOUND51C<span style="mso-spacerun: yes">         
 
 <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
 
-<h3>3D and GL Defines and Macros</h3>
+<h3><a name="_3D_and_GL"></a>3D and GL Defines and Macros</h3>
 
 <table border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
  border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
@@ -5137,11 +5433,12 @@ SOUND51C<span style="mso-spacerun: yes">         
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> GL_DIFFUSE<span
-  style="mso-spacerun: yes">              </span>2<o:p></o:p></span></p>
+  style="mso-spacerun: yes">       </span><span style="mso-spacerun:
+  yes">       </span>2<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-  style='font-size:10.0pt;font-family:"Courier New"'> GL_AMBIENT_AND_DIFFUSE<span
-  style="mso-spacerun: yes">  </span>3<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'>
+  GL_AMBIENT_AND_DIFFUSE<span style="mso-spacerun: yes">  </span>3<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> GL_SPECULAR<span
@@ -5167,8 +5464,7 @@ SOUND51C<span style="mso-spacerun: yes">         
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> POLY_CULL_BACK<span
-  style="mso-spacerun: yes">       </span><span style="mso-spacerun:
-  yes"> </span>0x80<o:p></o:p></span></p>
+  style="mso-spacerun: yes">        </span>0x80<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> POLY_CULL_FRONT<span
@@ -5273,6 +5569,29 @@ SOUND51C<span style="mso-spacerun: yes">         
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> TEXGEN_OFF<span
+  style='mso-tab-count:2'>            </span>(0&lt;&lt;30)<span
+  style="mso-spacerun: yes">     </span><span style='color:green'>//unmodified
+  texcoord<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> TEXGEN_TEXCOORD<span
+  style='mso-tab-count:2'>       </span>(1&lt;&lt;30)<span style='mso-tab-count:
+  1'>     </span>/<span style='color:green'>/texcoord * texture-matrix<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> TEXGEN_NORMAL<span
+  style='mso-tab-count:2'>         </span>(2&lt;&lt;30)<span style='mso-tab-count:
+  1'>     </span><span style='color:green'>//normal * texture-matrix<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> TEXGEN_POSITION<span
+  style='mso-tab-count:2'>       </span>(3&lt;&lt;30)<span style='mso-tab-count:
+  1'>     </span><span style='color:green'>//vertex * texture-matrix</span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:gray'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
@@ -5293,12 +5612,12 @@ SOUND51C<span style="mso-spacerun: yes">         
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> GL_RGB256<span
-  style='mso-tab-count:1'> </span>3<span style='mso-tab-count:1'>     </span><span
+  style='mso-tab-count:1'> </span>4<span style='mso-tab-count:1'>     </span><span
   style='color:green'>//256 color palette<o:p></o:p></span></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> GL_RGB16<span
-  style='mso-tab-count:1'>  </span>4<span style='mso-tab-count:1'>     </span><span
+  style='mso-tab-count:1'>  </span>3<span style='mso-tab-count:1'>     </span><span
   style='color:green'>//16 color palette<o:p></o:p></span></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
@@ -5306,6 +5625,133 @@ SOUND51C<span style="mso-spacerun: yes">         
   style='mso-tab-count:1'>   </span>5 <span style='color:green'>//compressed
   texture<o:p></o:p></span></span></p>
   <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>//////////////////////////////////////////////////////////////////////<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>//Fifo
+  commands<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> REG2ID(r)<span
+  style='mso-tab-count:6'>                               </span>(u8)( (
+  ((u32)(&amp;(r)))-0x04000400 ) &gt;&gt; 2 )<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_NOP<span
+  style='mso-tab-count:4'>                    </span>REG2ID(GFX_FIFO)<span
+  style="mso-spacerun: yes">  </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_STATUS<span
+  style='mso-tab-count:3'>                 </span>REG2ID(GFX_STATUS)<span
+  style="mso-spacerun: yes">            </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_COLOR<span
+  style='mso-tab-count:3'>                  </span>REG2ID(GFX_COLOR)<span
+  style="mso-spacerun: yes">            </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_VERTEX16<span
+  style='mso-tab-count:3'>               </span>REG2ID(GFX_VERTEX16)<span
+  style="mso-spacerun: yes">          </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_TEX_COORD<span
+  style='mso-tab-count:3'>              </span>REG2ID(GFX_TEX_COORD)<span
+  style="mso-spacerun: yes">         </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_TEX_FORMAT<span
+  style='mso-tab-count:3'>             </span>REG2ID(GFX_TEX_FORMAT)<span
+  style="mso-spacerun: yes">        </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_CLEAR_COLOR<span
+  style='mso-tab-count:2'>            </span>REG2ID(GFX_CLEAR_COLOR)<span
+  style="mso-spacerun: yes">       </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_CLEAR_DEPTH<span
+  style='mso-tab-count:2'>            </span>REG2ID(GFX_CLEAR_DEPTH)<span
+  style="mso-spacerun: yes">       </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_LIGHT_VECTOR<span
+  style='mso-tab-count:2'>           </span>REG2ID(GFX_LIGHT_VECTOR)<span
+  style="mso-spacerun: yes">      </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_LIGHT_COLOR<span
+  style='mso-tab-count:2'>            </span>REG2ID(GFX_LIGHT_COLOR)<span
+  style="mso-spacerun: yes">       </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_NORMAL<span
+  style='mso-tab-count:3'>                 </span>REG2ID(GFX_NORMAL)<span
+  style="mso-spacerun: yes">            </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_DIFFUSE_AMBIENT<span
+  style='mso-tab-count:1'>  </span><span style="mso-spacerun: yes">     
+  </span>REG2ID(GFX_DIFFUSE_AMBIENT)<span style="mso-spacerun: yes">   </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_SPECULAR_EMISSION<span
+  style='mso-tab-count:1'>      </span>REG2ID(GFX_SPECULAR_EMISSION) <o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_SHININESS<span
+  style='mso-tab-count:3'>              </span>REG2ID(GFX_SHININESS)<span
+  style="mso-spacerun: yes">  </span><span style="mso-spacerun:
+  yes">      </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_POLY_FORMAT<span
+  style='mso-tab-count:2'>            </span>REG2ID(GFX_POLY_FORMAT)<span
+  style="mso-spacerun: yes">       </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_BEGIN<span
+  style='mso-tab-count:3'>                  </span>REG2ID(GFX_BEGIN)<span
+  style="mso-spacerun: yes">             </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_END<span
+  style='mso-tab-count:4'>                    </span>REG2ID(GFX_END)<span
+  style="mso-spacerun: yes">               </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> FIFO_FLUSH<span
+  style='mso-tab-count:3'>                  </span>REG2ID(GFX_FLUSH)<span
+  style="mso-spacerun: yes">             </span><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New";
+  color:blue'>#define</span><span style='font-size:10.0pt;font-family:"Courier New"'>
+  FIFO_VIEWPORT<span style='mso-tab-count:3'>               </span>REG2ID(GFX_VIEWPORT)<span
+  style="mso-spacerun: yes">     </span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=590 valign=top style='width:6.15in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'><o:p></o:p></span></p>
   </td>
  </tr>
 </table>
@@ -5364,7 +5810,7 @@ SOUND51C<span style="mso-spacerun: yes">         
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> TEXTURE_PACK(u,v)<span
-  style="mso-spacerun: yes">    </span>((intot16(u)&lt;&lt;16) | intot16(v))<o:p></o:p></span></p>
+  style="mso-spacerun: yes">    </span>( ((u)&lt;&lt;16) | ((v) &amp; 0xFFFF))<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -5475,24 +5921,32 @@ SOUND51C<span style="mso-spacerun: yes">         
   <td width=590 valign=top style='width:6.15in;border:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// DMA control
+  register contents<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:green'>// The
+  defaults are 16-bit, increment source/dest addresses, no irq<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_ENABLE<span
-  style="mso-spacerun: yes">      </span>(1&lt;&lt;15)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">      </span>BIT(31)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_BUSY<span
   style='mso-tab-count:1'>  </span><span style="mso-spacerun: yes">   
-  </span>(1&lt;&lt;15)<o:p></o:p></span></p>
+  </span>BIT(31)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_IRQ_REQ<span
-  style="mso-spacerun: yes">     </span>(1&lt;&lt;14)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">     </span>BIT(30)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_START_NOW<span
-  style="mso-spacerun: yes">   </span>(0&lt;&lt;12)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">   </span>0<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -5501,13 +5955,13 @@ SOUND51C<span style="mso-spacerun: yes">         
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_START_CARD<span
-  style="mso-spacerun: yes">  </span>(2&lt;&lt;12)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">  </span>0<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#ifdef</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> ARM7<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:gray'>#define
-  DMA_START_VBL<span style="mso-spacerun: yes">   </span>(1&lt;&lt;12)<o:p></o:p></span></p>
+  DMA_START_VBL<span style="mso-spacerun: yes">   </span>BIT(27)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#endif<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -5517,22 +5971,25 @@ SOUND51C<span style="mso-spacerun: yes">         
   style='font-size:10.0pt;font-family:"Courier New"'> ARM9<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:gray'>#define
-  DMA_START_HBL<span style="mso-spacerun: yes">   </span>(2&lt;&lt;12)<o:p></o:p></span></p>
+  DMA_START_HBL<span style="mso-spacerun: yes">   </span>BIT(28)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:gray'>#define
-  DMA_START_VBL<span style="mso-spacerun: yes">   </span>(1&lt;&lt;12)<o:p></o:p></span></p>
+  DMA_START_VBL<span style="mso-spacerun: yes">   </span>BIT(27)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:gray'>#define
+  DMA_START_FIFO (7&lt;&lt;27)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#endif<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
-  style='font-size:10.0pt;font-family:"Courier New"'> DMA_16_BIT <span
-  style="mso-spacerun: yes">     </span>(0&lt;&lt;10)<o:p></o:p></span></p>
+  style='font-size:10.0pt;font-family:"Courier New"'> DMA_16_BIT<span
+  style="mso-spacerun: yes">      </span>0<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_32_BIT<span
-  style="mso-spacerun: yes">      </span>(1&lt;&lt;10)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">      </span>BIT(26)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -5540,40 +5997,39 @@ SOUND51C<span style="mso-spacerun: yes">         
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_REPEAT<span
-  style="mso-spacerun: yes">      </span>(1&lt;&lt;9)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">      </span>BIT(25)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_SRC_INC<span
-  style="mso-spacerun: yes">     </span>(0&lt;&lt;7)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">     </span>(0)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_SRC_DEC<span
-  style="mso-spacerun: yes">     </span>(1&lt;&lt;7)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">     </span>BIT(23)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_SRC_FIX<span
-  style="mso-spacerun: yes">     </span>(2&lt;&lt;7)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">     </span>BIT(24)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_DST_INC<span
-  style="mso-spacerun: yes">     </span>(0&lt;&lt;5)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">     </span>(0)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_DST_DEC<span
-  style="mso-spacerun: yes">     </span>(1&lt;&lt;5)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">     </span>BIT(21)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_DST_FIX<span
-  style="mso-spacerun: yes">  </span><span style="mso-spacerun:
-  yes">   </span>(2&lt;&lt;5)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">     </span>BIT(22)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_DST_RESET<span
-  style="mso-spacerun: yes">   </span>(3&lt;&lt;5)<o:p></o:p></span></p>
+  style="mso-spacerun: yes">   </span>(3&lt;&lt;21)<o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
   style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -5581,9 +6037,14 @@ SOUND51C<span style="mso-spacerun: yes">         
   style='font-size:10.0pt;font-family:"Courier New"'> DMA_COPY_WORDS<span
   style="mso-spacerun: yes">     </span>(DMA_ENABLE | DMA_32_BIT |
   DMA_START_NOW)<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:blue'>#define</span><span
+  style='font-size:10.0pt;font-family:"Courier New"'> DMA_COPY_HALFWORDS
+  (DMA_ENABLE | DMA_16_BIT | DMA_START_NOW)<o:p></o:p></span></p>
   <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New";
   color:blue'>#define</span><span style='font-size:10.0pt;font-family:"Courier New"'>
-  DMA_COPY_HALFWORDS (DMA_ENABLE | DMA_16_BIT | DMA_START_NOW)</span></p>
+  DMA_FIFO<span style='mso-tab-count:1'>  </span>(DMA_ENABLE | DMA_32_BIT<span
+  style="mso-spacerun: yes">  </span>| DMA_DST_FIX | DMA_START_FIFO)</span></p>
   </td>
  </tr>
 </table>
@@ -5591,6 +6052,20 @@ SOUND51C<span style="mso-spacerun: yes">         
 <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
 
 <h3><a name="_Changes:"></a>Changes:</h3>
+
+<p class=MsoNormal>April 19, 2005</p>
+
+<p class=MsoNormal>-fixed/added VRAM definitions</p>
+
+<p class=MsoNormal>-expanded VRAM description</p>
+
+<p class=MsoNormal>-updated DMA defines</p>
+
+<p class=MsoNormal>-added display list functions, and toon shading</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
 
 <p class=MsoNormal>April 7, 2005:<span style="mso-spacerun: yes">  </span></p>
 
