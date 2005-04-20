@@ -67,21 +67,15 @@ typedef short int v16;       // vertex 1.3.12 fixed format
 #define intov16(n)           ((n) << 12)
 #define v16toint(n)          ((n) >> 12)
 #define floatov16(n)         ((v16)((n) * (1 << 12)))
-<<<<<<< videoGL.h
 #define VERTEX_PACK(x,y)		(((y) << 16) | ((x) & 0xFFFF))
-=======
-#define VERTEX_PACK(x, y)	 ((y) << 16) | ((x) & 0xFFFF)
->>>>>>> 1.14
+
 
 typedef short int v10;       // vertex 1.0.9 fixed point
 #define intov10(n)           ((n) << 9)
 #define v10toint(n)          ((n) >> 9)
 #define floatov10(n)         ((v10)((n) * (1 << 9)))
-<<<<<<< videoGL.h
-#define NORMAL_PACK(x,y,z)   ((x) | ((y) << 10) | ((z) << 20))
-=======
 #define NORMAL_PACK(x,y,z)   (((x) & 0x3FF) | (((y) & 0x3FF) << 10) | ((z) << 20))
->>>>>>> 1.14
+
 
 typedef unsigned short rgb;
 
