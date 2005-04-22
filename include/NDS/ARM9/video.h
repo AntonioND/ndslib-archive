@@ -153,6 +153,7 @@ typedef enum
 typedef enum
 {
 	VRAM_E_LCD			=0,
+	VRAM_E_MAIN_BG  = 1,
 	VRAM_E_MAIN_SPRITE = 2,
 	VRAM_E_TEX_PALETTE = 3,
 	VRAM_E_BG_EXT_PALETTE = 4,
@@ -163,6 +164,7 @@ typedef enum
 typedef enum
 {
 	VRAM_F_LCD			=0,
+	VRAM_F_MAIN_BG  = 1,
 	VRAM_F_MAIN_SPRITE = 2,
 	VRAM_F_TEX_PALETTE = 3,
 	VRAM_F_BG_EXT_PALETTE = 4,
@@ -173,6 +175,7 @@ typedef enum
 typedef enum
 {
 	VRAM_G_LCD			=0,
+	VRAM_G_MAIN_BG  = 1,
 	VRAM_G_MAIN_SPRITE = 2,
 	VRAM_G_TEX_PALETTE = 3,
 	VRAM_G_BG_EXT_PALETTE = 4,
@@ -184,6 +187,7 @@ typedef enum
 {
 	VRAM_H_LCD			=0,
 	VRAM_H_SUB_BG = 1,
+	VRAM_H_SUB_SPRITE = 2,
 	VRAM_H_SUB_BG_EXT_PALETTE = 5,
 
 }VRAM_H_TYPE;
@@ -193,7 +197,7 @@ typedef enum
 	VRAM_I_LCD			=0,
 	VRAM_I_SUB_BG	= 1,
 	VRAM_I_SUB_SPRITE = 2,
-	VRAM_I_SUB_SPRITE_EXT_PALETTE = 3,
+	VRAM_I_SUB_SPRITE_EXT_PALETTE = 5,
 
 }VRAM_I_TYPE;
 //////////////////////////////////////////////////
