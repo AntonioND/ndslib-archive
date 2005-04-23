@@ -8,12 +8,13 @@
 # SOURCES is a list of directories containing source code
 # INCLUDES is a list of directories containing extra header files
 #---------------------------------------------------------------------------------
+TOOLDIR := $(NDSLIBPATH)/examples/tools
 TARGET	:=	demo
 BUILD		:=	build
 SOURCES	:=	gfx source data  
 INCLUDES	:=	include build
 ICON		:=    default_icon.bin
- 
+ARM7BIN	:=    $(TOOLDIR)/arm7.bin
 #---------------------------------------------------------------------------------
 # options for code generation
 #---------------------------------------------------------------------------------
@@ -31,7 +32,7 @@ CFLAGS	+=	$(INCLUDE) -DARM9
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	:=	-g $(ARCH) -mno-fpu
 
-TOOLDIR := $(NDSLIBPATH)/examples/tools
+
 
 #---------------------------------------------------------------------------------
 # path to tools - this can be deleted if you set the path in windows
@@ -137,7 +138,7 @@ $(OUTPUT).elf	:	$(OFILES)
 #---------------------------------------------------------------------------------
 %.nds: %.bin
 	@echo built ... $(notdir $@)
-	$(TOOLDIR)/ndstool -c $@ -9 $(TARGET).bin -7 $(TOOLDIR)/arm7.bin -t $(TOOLDIR)/$(ICON)
+	$(TOOLDIR)/ndstool -c $@ -9 $(TARGET).bin -7 $(ARM7BIN) -t $(TOOLDIR)/$(ICON)
 
 
 #---------------------------------------------------------------------------------
