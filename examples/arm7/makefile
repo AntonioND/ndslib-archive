@@ -1,4 +1,4 @@
-SUBDIRS:= arm7 arm9
+SUBDIRS:= `ls`
 all:
 	for i in $(SUBDIRS); do if test -d $$i; then make -C $$i; fi; done;
 clean:
