@@ -9,7 +9,7 @@
 # INCLUDES is a list of directories containing extra header files
 #---------------------------------------------------------------------------------
 TOOLDIR := $(NDSLIBPATH)/examples/tools
-TARGET	:=	demo
+TARGET	:=	Display_List_2
 BUILD		:=	build
 SOURCES	:=	gfx source data  
 INCLUDES	:=	include build
@@ -110,7 +110,7 @@ $(BUILD):
  
 #---------------------------------------------------------------------------------
 clean:
-	@echo clean ...
+	@echo clean ...$(TARGET)
 	@rm -fr $(BUILD) *.elf *.nds*
  
  
@@ -133,22 +133,22 @@ $(OUTPUT).elf	:	$(OFILES)
 #---------------------------------------------------------------------------------
 %.nds.gba: %.nds
 	@echo built ... $(notdir $@)
-	$(TOOLDIR)/dsbuild $(OUTPUT).nds  $@ $(TOOLDIR)/loader.bin
+	@$(TOOLDIR)/dsbuild $(OUTPUT).nds  $@ $(TOOLDIR)/loader.bin
 
 #---------------------------------------------------------------------------------
 %.nds: %.bin
-	@echo built ... $(notdir $@)
-	$(TOOLDIR)/ndstool -c $@ -9 $(TARGET).bin -7 $(ARM7BIN) -t $(TOOLDIR)/$(ICON)
+	
+	@$(TOOLDIR)/ndstool -c $@ -9 $(TARGET).bin -7 $(ARM7BIN) -t $(TOOLDIR)/$(ICON)
 
 
 #---------------------------------------------------------------------------------
 %.bin: %.elf
-	@echo built ... $(notdir $@)
+	
 	@$(OBJCOPY) -O binary $(TARGET).elf $(TARGET).bin
  
 #---------------------------------------------------------------------------------
 %.elf:
-	@echo linking binary
+	
 	@$(LD)  $(LDFLAGS) -specs=ds_arm9.specs $(OFILES) $(LIBPATHS) $(LIBS) -o $(TARGET).elf
  
  

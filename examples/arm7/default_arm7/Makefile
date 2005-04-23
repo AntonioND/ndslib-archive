@@ -106,7 +106,7 @@ $(BUILD):
  
 #---------------------------------------------------------------------------------
 clean:
-	@echo clean ...
+	@echo clean ...$(TARGET)
 	@rm -fr $(BUILD) *.bin
  
  
@@ -132,7 +132,6 @@ $(OUTPUT).elf	:	$(OFILES)
  
 #---------------------------------------------------------------------------------
 %.elf:
-	@echo linking binary
 	@$(LD)  $(LDFLAGS) -specs=ds_arm7.specs $(OFILES) $(LIBPATHS) $(LIBS) -o $(TARGET).elf
  
  

@@ -8,12 +8,13 @@
 # SOURCES is a list of directories containing source code
 # INCLUDES is a list of directories containing extra header files
 #---------------------------------------------------------------------------------
-TARGET	:=	demo
+TOOLDIR := $(NDSLIBPATH)/examples/tools
+TARGET	:=	Complex_2D
 BUILD		:=	build
 SOURCES	:=	gfx source data  
 INCLUDES	:=	include build
 ICON		:=    default_icon.bin
- 
+ARM7BIN	:=    $(TOOLDIR)/arm7.bin
 #---------------------------------------------------------------------------------
 # options for code generation
 #---------------------------------------------------------------------------------
@@ -31,7 +32,7 @@ CFLAGS	+=	$(INCLUDE) -DARM9
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	:=	-g $(ARCH) -mno-fpu
 
-TOOLDIR := $(NDSLIBPATH)/examples/tools
+
 
 #---------------------------------------------------------------------------------
 # path to tools - this can be deleted if you set the path in windows
@@ -109,7 +110,7 @@ $(BUILD):
  
 #---------------------------------------------------------------------------------
 clean:
-	@echo clean ...
+	@echo clean ...$(TARGET)
 	@rm -fr $(BUILD) *.elf *.nds*
  
  
@@ -132,22 +133,22 @@ $(OUTPUT).elf	:	$(OFILES)
 #---------------------------------------------------------------------------------
 %.nds.gba: %.nds
 	@echo built ... $(notdir $@)
-	$(TOOLDIR)/dsbuild $(OUTPUT).nds  $@ $(TOOLDIR)/loader.bin
+	@$(TOOLDIR)/dsbuild $(OUTPUT).nds  $@ $(TOOLDIR)/loader.bin
 
 #---------------------------------------------------------------------------------
 %.nds: %.bin
-	@echo built ... $(notdir $@)
-	$(TOOLDIR)/ndstool -c $@ -9 $(TARGET).bin -7 $(TOOLDIR)/arm7.bin -t $(TOOLDIR)/$(ICON)
+	
+	@$(TOOLDIR)/ndstool -c $@ -9 $(TARGET).bin -7 $(ARM7BIN) -t $(TOOLDIR)/$(ICON)
 
 
 #---------------------------------------------------------------------------------
 %.bin: %.elf
-	@echo built ... $(notdir $@)
+	
 	@$(OBJCOPY) -O binary $(TARGET).elf $(TARGET).bin
  
 #---------------------------------------------------------------------------------
 %.elf:
-	@echo linking binary
+	
 	@$(LD)  $(LDFLAGS) -specs=ds_arm9.specs $(OFILES) $(LIBPATHS) $(LIBS) -o $(TARGET).elf
  
  
