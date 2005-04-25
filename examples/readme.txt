@@ -1,5 +1,5 @@
 
-Example makefiles assume that you have NDSLIBPATH defined as a system variable as well as devkitarm/bin included in your path.  You can explicitly define these in each makefile if you choose.
+Example makefiles assume that you have NDSLIBPATH defined as a system variable as well as devkitarm/bin included in your path.  You can explicitly define these in each makefile if you choose.  It is best to follow the instructions bellow to create these variables to avoid haveing to repeatedly edit your makefiles.
 
 The tools directory contains the tools required to build the .nds file (ndstool by darkfader www.darkfader.net/ds) and the tool that appends a loader to the nds file (dsbuild by dovoto which will hopefully soon be replaced by costis's loader).  There is also a tool by Natrium (www.natrium42.com) for building an icon.  My loader does not display any graphics so at the moment including your own icon is sort of pointless.
 

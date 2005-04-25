@@ -78,6 +78,7 @@ extern "C" {
 #define TIMER_DIV_256   (TIMER_ENABLE|2)
 #define TIMER_DIV_1024  (TIMER_ENABLE|3)
 
+
 //////////////////////////////////////////////////////////////////////
 
 #ifdef __cplusplus
