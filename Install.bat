@@ -1,30 +1,28 @@
-SET DEVDIR=C:\devkitARM
-
 @echo off
-echo building the library
-make clean
 
+if "%DEVDIR%"=="" set DEVDIR=C:\devkitARM
+echo Using %DEVDIR% as devkit directory.
+
+echo Building the library...
+make clean
 make
 
-echo building devkit arm update and copying files
+echo Building devkit ARM update and copying files...
 cd startup
 make clean
-
 make
 
 echo *************************
-echo *                       *
 echo *       WARNING         *
-echo *                       *
 echo *************************
+echo Copy crt files and linkerscript to devkit ARM library directory now?
 
-echo copy crt files and linkerscript 
-echo to devkit arm lib directory? 
-echo (must be done manualy if not)
-
-set /p choice=yes or no?
-
-if not (%choice%==yes or %choice%==y)exit
+if not "%UNATTENDED%"=="" goto yes
+set /p CHOICE="yes or no?"
+if (%CHOICE%==yes) goto yes
+if (%CHOICE%==y) goto yes
+goto end
+:yes
 
 copy *.o %DEVDIR%\arm-elf\lib\
 copy *.ld %DEVDIR%\arm-elf\lib\
@@ -33,4 +31,8 @@ copy thumb\*.o %DEVDIR%\arm-elf\lib\thumb\
 copy interwork\*.o %DEVDIR%\arm-elf\lib\interwork\
 copy thumb\interwork\*.o %DEVDIR%\arm-elf\lib\thumb\interwork\
 
-pause
+if "%UNATTENDED%"=="" pause
+
+:end
+
+cd ..
