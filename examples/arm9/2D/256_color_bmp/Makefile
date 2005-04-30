@@ -9,12 +9,12 @@
 # INCLUDES is a list of directories containing extra header files
 #---------------------------------------------------------------------------------
 TOOLDIR := $(NDSLIBPATH)/examples/tools
-TARGET	:=	Hello_World
+TARGET	:=	256_color_bmp
 BUILD		:=	build
 SOURCES	:=	gfx source data  
 INCLUDES	:=	include build
 ICON		:=    default_icon.bin
-ARM7BIN	:=    $(TOOLDIR)/arm7.bin 
+ARM7BIN	:=    $(TOOLDIR)/arm7.bin
 #---------------------------------------------------------------------------------
 # options for code generation
 #---------------------------------------------------------------------------------

@@ -8,13 +8,11 @@
 # SOURCES is a list of directories containing source code
 # INCLUDES is a list of directories containing extra header files
 #---------------------------------------------------------------------------------
-TOOLDIR := $(NDSLIBPATH)/examples/tools
-TARGET	:=	Hello_World
+TARGET	:=	arm7
 BUILD		:=	build
 SOURCES	:=	gfx source data  
 INCLUDES	:=	include build
-ICON		:=    default_icon.bin
-ARM7BIN	:=    $(TOOLDIR)/arm7.bin 
+ 
 #---------------------------------------------------------------------------------
 # options for code generation
 #---------------------------------------------------------------------------------
@@ -23,16 +21,14 @@ ARCH	:=	-mthumb-interwork
 # note: arm9tdmi isn't the correct CPU arch, but anything newer and LD
 # *insists* it has a FPU or VFP, and it won't take no for an answer!
 CFLAGS	:=	-g -Wall -O2\
- 		-mcpu=arm9tdmi -mtune=arm9tdmi -fomit-frame-pointer\
+ 		-mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer\
 		-ffast-math \
 		$(ARCH)
 
-CFLAGS	+=	$(INCLUDE) -DARM9
+CFLAGS	+=	$(INCLUDE) -DARM7
 
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	:=	-g $(ARCH) -mno-fpu
-
-
 
 #---------------------------------------------------------------------------------
 # path to tools - this can be deleted if you set the path in windows
@@ -51,7 +47,7 @@ PREFIX			:=	arm-elf-
 #---------------------------------------------------------------------------------
 # any extra libraries we wish to link with the project
 #---------------------------------------------------------------------------------
-LIBS	:= -lnds9
+LIBS	:= -lnds7
  
  
 #---------------------------------------------------------------------------------
@@ -111,7 +107,7 @@ $(BUILD):
 #---------------------------------------------------------------------------------
 clean:
 	@echo clean ...$(TARGET)
-	@rm -fr $(BUILD) *.elf *.nds*
+	@rm -fr $(BUILD) *.bin
  
  
 #---------------------------------------------------------------------------------
@@ -122,34 +118,21 @@ DEPENDS	:=	$(OFILES:.o=.d)
 #---------------------------------------------------------------------------------
 # main targets
 #---------------------------------------------------------------------------------
-$(OUTPUT).nds.gba	: 	$(OUTPUT).nds
-
-$(OUTPUT).nds	: 	$(OUTPUT).bin
 
 $(OUTPUT).bin	:	$(OUTPUT).elf
  
 $(OUTPUT).elf	:	$(OFILES)
  
-#---------------------------------------------------------------------------------
-%.nds.gba: %.nds
-	@echo built ... $(notdir $@)
-	@$(TOOLDIR)/dsbuild $(OUTPUT).nds  $@ $(TOOLDIR)/loader.bin
-
-#---------------------------------------------------------------------------------
-%.nds: %.bin
-	
-	@$(TOOLDIR)/ndstool -c $@ -9 $(TARGET).bin -7 $(ARM7BIN) -t $(TOOLDIR)/$(ICON)
 
 
 #---------------------------------------------------------------------------------
 %.bin: %.elf
-	
-	@$(OBJCOPY) -O binary $(TARGET).elf $(TARGET).bin
+	@echo built ... $(notdir $@)
+	@$(OBJCOPY) -O binary  $(TARGET).elf $@
  
 #---------------------------------------------------------------------------------
 %.elf:
-	
-	@$(LD)  $(LDFLAGS) -specs=ds_arm9.specs $(OFILES) $(LIBPATHS) $(LIBS) -o $(TARGET).elf
+	@$(LD)  $(LDFLAGS) -specs=ds_arm7.specs $(OFILES) $(LIBPATHS) $(LIBS) -o $(TARGET).elf
  
  
  
