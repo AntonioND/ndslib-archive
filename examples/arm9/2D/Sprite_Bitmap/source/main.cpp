@@ -18,7 +18,12 @@ void WaitForVblank()
 void initSprites(void)
 {
 	for(int i = 0; i < 128; i++)
+	{
 	   sprites[i].attribute[0] = ATTR0_DISABLED;
+	   sprites[i].attribute[1] = 0;
+	   sprites[i].attribute[2] = 0;
+	   sprites[i].attribute[3] = 0;
+    }
 }
 //copy our sprite to object attribute memory
 void updateOAM(void)

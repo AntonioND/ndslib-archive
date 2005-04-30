@@ -6,7 +6,7 @@ MEMORY {
 
 	rom		: ORIGIN = 0x08000000, LENGTH = 32M
 	iwram	: ORIGIN = 0x037f8000, LENGTH = 32K
-	ewram	: ORIGIN = 0x02004000, LENGTH = (4M - 16K)
+	ewram	: ORIGIN = 0x02004000, LENGTH = 4M -32k
 	dtcm	: ORIGIN = 0x00800000, LENGTH = 16K
 	itcm	: ORIGIN = 0x01000000, LENGTH = 32K
 }
@@ -17,8 +17,9 @@ __iwram_end		=	0x03800000;
 __ewram_end		=	0x02400000;
 __eheap_end		=	0x02400000;
 __dtcm_start	=	0x00800000;
+__dtcm_end		=	0x00804000;
 
-__sp_svc	=	__iwram_end - 0x60;
+__sp_svc	=	__iwram_end - 0x100;
 __sp_irq	=	__sp_svc - 0x100;
 __sp_usr	=	__sp_irq - 0x100;
 
