@@ -14,13 +14,12 @@
 
 #include "drunkenlogo.h"
 
-void WaitForVblank()
-{
-	while(DISP_Y!=192);
-	while(DISP_Y==192);
-}
 int main(void)
 {
+	//irqs are nice
+	irqInitHandler(irqDefaultHandler);
+	irqSet(IRQ_VBLANK, 0);
+	
     //set the mode for 2 text layers and two extended background layers
 	videoSetMode(MODE_5_2D | DISPLAY_BG3_ACTIVE); 
 	
@@ -71,7 +70,7 @@ int main(void)
 	for(int i = 0; i < 256*256; i++)
 	   BG_GFX[i] = ((u16*)drunkenlogo)[i] | BIT(15); //need the cast since drunkelogo is 
 	                                                   //8 bit data 
-    while(1)WaitForVblank();
+    while(1)swiWaitForVBlank();
     
 	return 0;
 }

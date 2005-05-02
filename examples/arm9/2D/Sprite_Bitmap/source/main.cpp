@@ -8,12 +8,7 @@ SpriteEntry sprites[128];
 //rotation attributes overlap so assign then to the same location
 pSpriteRotation spriteRotations = (pSpriteRotation)sprites;
 
-//a cheezy but effective way to wait for vblank
-void WaitForVblank()
-{
-	while(DISP_Y!=192);
-	while(DISP_Y==192);
-}
+
 //turn off all the sprites
 void initSprites(void)
 {
@@ -33,12 +28,15 @@ void updateOAM(void)
 
 int main()
 {
-	WaitForVblank();
 
 //////////////////////////// INIT ////////////////////////////////////////
 	//turn everything on
     powerON(POWER_ALL_2D);
 
+    //irqs are nice
+	irqInitHandler(irqDefaultHandler);
+	irqSet(IRQ_VBLANK, 0);
+    
     //enable vram and map it to the right places
     vramSetMainBanks(   VRAM_A_MAIN_SPRITE,        //A and B maped consecutivly as sprite memory
                         VRAM_B_MAIN_SPRITE,        //this gives us 256KB which is the max
@@ -128,7 +126,7 @@ int main()
 		spriteRotations[0].vdx = -spriteRotations[0].hdy;
 		spriteRotations[0].vdy = spriteRotations[0].hdx;
 		
-		WaitForVblank();
+		swiWaitForVBlank();
 		
 		updateOAM();
 	}

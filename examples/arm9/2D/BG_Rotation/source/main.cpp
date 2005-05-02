@@ -15,14 +15,13 @@
 #include "drunkenlogo.h"
 #include "palette.h"
 
-void WaitForVblank()
-{
-	while(DISP_Y!=192);
-	while(DISP_Y==192);
-}
 
 int main(void)
 {
+    //irqs are nice
+	irqInitHandler(irqDefaultHandler);
+	irqSet(IRQ_VBLANK, 0);
+	
     //set the mode for 2 text layers and two extended background layers
 	videoSetMode(MODE_5_2D | DISPLAY_BG3_ACTIVE); 
 	
@@ -110,7 +109,7 @@ int main(void)
         s16 s = SIN[angle & 0x1FF] >> 4;
         s16 c = COS[angle & 0x1FF] >> 4;
         
-        WaitForVblank();	
+        swiWaitForVBlank();	
 	
     ////////Set the background registers////    
         BG3_XDX = ( c * scaleX ) >> 8;

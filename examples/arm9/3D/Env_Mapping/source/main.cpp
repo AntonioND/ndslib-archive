@@ -106,8 +106,7 @@ int main()
 
 		glFlush();
 
-		//swi seems to be broken, will let you know when i get this POS figured out	
-		//swiWaitForVBlank();
+		swiWaitForVBlank();
 	}
 
 	return 0;

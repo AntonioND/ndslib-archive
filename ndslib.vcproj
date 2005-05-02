@@ -154,6 +154,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\lib\ARM9\CP15.S"
+				>
+			</File>
+			<File
 				RelativePath=".\lib\ARM9\interrupts.c"
 				>
 			</File>

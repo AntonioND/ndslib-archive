@@ -231,7 +231,7 @@ int main(void)
 		
 		}
 
-//		swiWaitForVBlank();
+		swiWaitForVBlank();
 		
 		updateOAM();
 
