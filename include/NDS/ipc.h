@@ -36,13 +36,15 @@
 #include "jtypes.h"
 
 //////////////////////////////////////////////////////////////////////
+
 typedef struct sTransferSoundData {
   const void *data;
   u32 len;
   u32 rate;
   u8 vol;
   u8 pan;
-  u8 PADDING[2];
+  u8 format;
+  u8 PADDING[1];
 } TransferSoundData, * pTransferSoundData;
  
  

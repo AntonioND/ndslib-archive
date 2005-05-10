@@ -30,11 +30,11 @@ s32 TOUCH_OFFSET_Y = ( ((SCREEN_HEIGHT-60) * TOUCH_CAL_Y1) / TOUCH_HEIGHT ) - 28
 //////////////////////////////////////////////////////////////////////
 
 
-void startSound(int sampleRate, const void* data, uint32 bytes, u8 channel=0, u8 vol=0x7F,  u8 pan=63) {
+void startSound(int sampleRate, const void* data, uint32 bytes, u8 channel=0, u8 vol=0x7F,  u8 pan=63, u8 format=0) {
   SCHANNEL_TIMER(channel)  = SOUND_FREQ(sampleRate);
   SCHANNEL_SOURCE(channel) = (uint32)data;
   SCHANNEL_LENGTH(channel) = bytes;
-  SCHANNEL_CR(channel)     = SOUND_ENABLE | SOUND_ONE_SHOT | SOUND_VOL(vol) | SOUND_PAN(pan) | SOUND_16BIT;
+  SCHANNEL_CR(channel)     = SOUND_ENABLE | SOUND_ONE_SHOT | SOUND_VOL(vol) | SOUND_PAN(pan) | (format==1?SOUND_8BIT:SOUND_16BIT);
 }
 
 
@@ -112,7 +112,7 @@ void InterruptHandler(void) {
       for (int i=0; i<snd->count; i++) {
         s8 chan = getFreeSoundChannel();
         if (chan >= 0) {
-          startSound(snd->data[i].rate, snd->data[i].data, snd->data[i].len, chan, snd->data[i].vol, snd->data[i].pan);
+          startSound(snd->data[i].rate, snd->data[i].data, snd->data[i].len, chan, snd->data[i].vol, snd->data[i].pan, snd->data[i].format);
         }
       }
     }
