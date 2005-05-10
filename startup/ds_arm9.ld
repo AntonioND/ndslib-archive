@@ -6,7 +6,7 @@ MEMORY {
 
 	rom		: ORIGIN = 0x08000000, LENGTH = 32M
 	iwram	: ORIGIN = 0x037f8000, LENGTH = 32K
-	ewram	: ORIGIN = 0x02004000, LENGTH = 4M -32k
+	ewram	: ORIGIN = 0x02000000, LENGTH = 4M - 4k
 	dtcm	: ORIGIN = 0x00800000, LENGTH = 16K
 	itcm	: ORIGIN = 0x01000000, LENGTH = 32K
 }
@@ -15,11 +15,11 @@ __itcm_start	=	0x01000000;
 __iwram_start	=	0x037f8000;
 __iwram_end		=	0x03800000;
 __ewram_end		=	0x02400000;
-__eheap_end		=	0x02400000;
+__eheap_end		=	0x023ff000;
 __dtcm_start	=	0x00800000;
 __dtcm_end		=	0x00804000;
 
-__sp_svc	=	__iwram_end - 0x100;
+__sp_svc	=	__dtcm_end - 0x100;
 __sp_irq	=	__sp_svc - 0x100;
 __sp_usr	=	__sp_irq - 0x100;
 
@@ -125,7 +125,19 @@ SECTIONS
 	} >iwram = 0xff
 
 	__iwram_end = . ;
-	__data_lma = __iwram_lma + SIZEOF(.iwram) ;
+
+	__dtcm_lma = __iwram_lma + SIZEOF(.iwram);
+
+	.dtcm __dtcm_start : AT (__dtcm_lma)
+	{
+		__dtcm_start = ABSOLUTE(.);
+		*(.dtcm)
+		*(.dtcm.*)
+		. = ALIGN(4);
+	} >dtcm = 0xff
+	__dtcm_end = . ;
+
+	__data_lma = __dtcm_lma + SIZEOF(.dtcm) ;
 
 	.data ALIGN(4) : AT (__data_lma)
 	{
@@ -135,7 +147,7 @@ SECTIONS
 		*(.gnu.linkonce.d*)
 		CONSTRUCTORS
 		. = ALIGN(4);
-	} >iwram = 0xff
+	} >dtcm = 0xff
 
 	__data_end = . ;
 
@@ -152,18 +164,7 @@ SECTIONS
 	__bss_end = . ;
 	__bss_end__ = . ;
 
-	__dtcm_lma = __data_lma + SIZEOF(.data);
-
-	.dtcm __dtcm_start : AT (__dtcm_lma)
-	{
-		__dtcm_start = ABSOLUTE(.);
-		*(.dtcm)
-		*(.dtcm.*)
-		. = ALIGN(4);
-	} >dtcm = 0xff
-	__dtcm_end = . ;
-
-	__itcm_lma = __dtcm_lma + SIZEOF(.data);
+	__itcm_lma = __data_lma + SIZEOF(.data);
 
 	.itcm __itcm_start : AT (__itcm_lma)
 	{
