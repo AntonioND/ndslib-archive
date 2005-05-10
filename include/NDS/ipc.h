@@ -65,8 +65,10 @@ typedef struct sTransferRegion {
     };
   };
 
+/*                          //we arent implementing these just yet
   uint16 battery;           // battery life ??  hopefully.  :)
   uint16 aux;               // i have no idea...
+*/
 
   // Don't rely on these below, will change or be removed in the future
   vuint32 mailAddr;
