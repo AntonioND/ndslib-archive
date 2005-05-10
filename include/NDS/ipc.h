@@ -38,6 +38,7 @@
 
 //////////////////////////////////////////////////////////////////////
 
+
 // It tastes like a monkey.  A monkey that's past it's prime!
 typedef struct sTransferRegion {
   uint32 heartbeat;         // counts frames
@@ -65,10 +66,10 @@ typedef struct sTransferRegion {
     };
   };
 
-/*                          //we arent implementing these just yet
   uint16 battery;           // battery life ??  hopefully.  :)
   uint16 aux;               // i have no idea...
-*/
+
+  void *soundData;
 
   // Don't rely on these below, will change or be removed in the future
   vuint32 mailAddr;
