@@ -220,6 +220,7 @@ CP15_SetRegion7:
 .global CP15_FlushDCache
 .global CP15_FlushDCacheEntry
 .global CP15_CleanDCacheEntry
+.global CP15_CleanAndFlushDCache
 .global CP15_CleanAndFlushDCacheEntry
 .global CP15_CleanDCacheEntryByIndex
 .global CP15_CleanAndFlushDCacheEntryByIndex
@@ -248,6 +249,21 @@ CP15_FlushDCacheEntry:
 
 CP15_CleanDCacheEntry:
 		mcr	p15, 0, r0, c7, c10, 1
+		bx	lr
+
+CP15_CleanAndFlushDCache:
+		mov	r1, #0
+	outer_loop:
+		mov	r0, #0
+	inner_loop:
+		orr	r2, r1, r0
+		mcr	p15, 0, r2, c7, c14, 2
+		add	r0, r0, #0x20
+		cmp	r0, #0x400
+		bne	inner_loop
+		add	r1, r1, #0x40000000
+		cmp	r1, #0x0
+		bne	outer_loop
 		bx	lr
 
 CP15_CleanAndFlushDCacheEntry:

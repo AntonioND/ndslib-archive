@@ -24,6 +24,7 @@
 //     distribution.
 //
 // Changelog:
+//   0.2: added date/time union (DarkainMX)
 //   0.1: First version
 //
 //////////////////////////////////////////////////////////////////////
@@ -41,13 +42,31 @@
 typedef struct sTransferRegion {
   uint32 heartbeat;         // counts frames
 
-  uint16 touchX, touchY;    // TSC X, Y
-  uint16 touchZ1, touchZ2;  // TSC x-panel measurements
+   int16 touchX,  touchY;   // TSC X, Y
+   int16 touchZ1, touchZ2;  // TSC x-panel measurements
   uint16 tdiode1, tdiode2;  // TSC temperature diodes
   uint32 temperature;       // TSC computed temperature
 
   uint16 buttons;           // X, Y, /PENIRQ buttons
-  uint8 curtime[8];         // current time response from RTC
+
+  union {
+    uint8 curtime[8];       // current time response from RTC
+
+    struct {
+      u8 rtc_command;
+      u8 rtc_year;          //add 2000 to get 4 digit year
+      u8 rtc_month;         //1 to 12
+      u8 rtc_day;           //1 to (days in month)
+
+      u8 rtc_incr;
+      u8 rtc_hours;         //0 to 11 for AM, 52 to 63 for PM
+      u8 rtc_minutes;       //0 to 59
+      u8 rtc_seconds;       //0 to 59
+    };
+  };
+
+  uint16 battery;           // battery life ??  hopefully.  :)
+  uint16 aux;               // i have no idea...
 
   // Don't rely on these below, will change or be removed in the future
   vuint32 mailAddr;
@@ -56,6 +75,8 @@ typedef struct sTransferRegion {
   vuint8 mailBusy;
   vuint8 mailSize;
 } TransferRegion, * pTransferRegion;
+
+
 
 //////////////////////////////////////////////////////////////////////
 

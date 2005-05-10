@@ -468,10 +468,24 @@ typedef enum
 #define SUB_BLEND_AB   (*(vuint16*)0x04001052)
 #define SUB_BLEND_Y    (*(vuint16*)0x04001054)
 
-#define BLEND_NONE       (0<<6)
-#define BLEND_ALPHA      (1<<6)
-#define BLEND_FADE_WHITE (2<<6)
-#define BLEND_FADE_BLACK (3<<6)
+#define BLEND_NONE         (0<<6)
+#define BLEND_ALPHA        (1<<6)
+#define BLEND_FADE_WHITE   (2<<6)
+#define BLEND_FADE_BLACK   (3<<6)
+
+#define BLEND_SRC_BG0      (1<<0)
+#define BLEND_SRC_BG1      (1<<1)
+#define BLEND_SRC_BG2      (1<<2)
+#define BLEND_SRC_BG3      (1<<3)
+#define BLEND_SRC_SPRITE   (1<<4)
+#define BLEND_SRC_BACKDROP (1<<5)
+
+#define BLEND_DST_BG0      (1<<8)
+#define BLEND_DST_BG1      (1<<9)
+#define BLEND_DST_BG2      (1<<10)
+#define BLEND_DST_BG3      (1<<11)
+#define BLEND_DST_SPRITE   (1<<12)
+#define BLEND_DST_BACKDROP (1<<13)
 
 //////////////////////////////////////////////////////////////////////
 // Background control defines

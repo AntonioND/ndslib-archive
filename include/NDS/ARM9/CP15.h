@@ -112,6 +112,7 @@ extern void CP15_PrefetchICacheLine(uint32 address);
 extern void CP15_FlushDCache(void);
 extern void CP15_FlushDCacheEntry(uint32 address);
 extern void CP15_CleanDCacheEntry(uint32 address);
+extern void CP15_CleanAndFlushDCache();
 extern void CP15_CleanAndFlushDCacheEntry(uint32 address);
 extern void CP15_CleanDCacheEntryByIndex(uint32 index);
 extern void CP15_CleanAndFlushDCacheEntryByIndex(uint32 index);
