@@ -49,7 +49,7 @@ extern "C" {
 
 #ifdef ARM9
 #include <NDS/ARM9/video.h>
-#include <NDS/ARM9/CP15.h>
+#include <NDS/ARM9/cache.h>
 #include <NDS/ARM9/BIOS.h>
 #include <NDS/ARM9/trig_lut.h>
 #include <NDS/ARM9/math.h>

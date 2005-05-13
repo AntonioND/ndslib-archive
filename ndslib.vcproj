@@ -162,6 +162,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\lib\ARM9\Makefile"
+				>
+			</File>
+			<File
 				RelativePath=".\lib\ARM9\rand.c"
 				>
 			</File>

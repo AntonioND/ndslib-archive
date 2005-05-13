@@ -82,7 +82,8 @@ CFLAGS	:=	-g -Wall -O0\
 
 CFLAGS	+=	$(INCLUDE) -DARM9
 
-ASFLAGS	:=	-g $(ARCH)
+ASFLAGS	:=	-x assembler-with-cpp -g $(ARCH)
+
 LDFLAGS	:=	-g $(ARCH) -Wl,-Map,$(notdir $@).map -mno-fpu
 
 
@@ -183,13 +184,13 @@ libnds9.a	:	$(OFILES)
 
 %.o : %.s
 	@echo $(notdir $<)
-	@$(CC) -MMD $(ASFLAGS) -o $@ -c $<
+	@$(CC)  $(ASFLAGS) -o $@ -c $<
 
 #---------------------------------------------------------------------------------
 
 %.o : %.S
 	@echo $(notdir $<)
-	@$(CC) -MMD $(ASFLAGS) -o $@ -c $<
+	@$(CC)  $(ASFLAGS) -o $@ -c $<
 
 #---------------------------------------------------------------------------------
 
