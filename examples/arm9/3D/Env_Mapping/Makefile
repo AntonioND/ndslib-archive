@@ -8,13 +8,23 @@
 # SOURCES is a list of directories containing source code
 # INCLUDES is a list of directories containing extra header files
 #---------------------------------------------------------------------------------
-TOOLDIR := $(NDSLIBPATH)/examples/tools
-TARGET	:=	Env_Mapping
+TARGET	:=	$(shell basename $(CURDIR))
 BUILD		:=	build
 SOURCES	:=	gfx source data  
 INCLUDES	:=	include build
-ICON		:=    default_icon.bin
-ARM7BIN	:=    $(TOOLDIR)/arm7.bin
+
+#---------------------------------------------------------------------------------
+# ARM7BIN is the path to an arm7 binary other than the default
+#	usage: ARM7BIN := -7 binaryName.bin
+#
+# ICON is the path to an icon to be used int the header plus text
+#	usage: ICON := -t iconName.bmp "text line one; text line 2; text line 3"
+# 
+#---------------------------------------------------------------------------------
+
+ARM7BIN	:=  
+ICON 		:= -b $(NDSLIBPATH)/examples/logo.bmp "$@;By Dovoto;www.drunkencoders.com"
+
 #---------------------------------------------------------------------------------
 # options for code generation
 #---------------------------------------------------------------------------------
@@ -111,7 +121,7 @@ $(BUILD):
 #---------------------------------------------------------------------------------
 clean:
 	@echo clean ...$(TARGET)
-	@rm -fr $(BUILD) *.elf *.nds*
+	@rm -fr $(BUILD) *.elf *.*ds*
  
  
 #---------------------------------------------------------------------------------
@@ -122,7 +132,7 @@ DEPENDS	:=	$(OFILES:.o=.d)
 #---------------------------------------------------------------------------------
 # main targets
 #---------------------------------------------------------------------------------
-$(OUTPUT).nds.gba	: 	$(OUTPUT).nds
+$(OUTPUT).ds.gba	: 	$(OUTPUT).nds
 
 $(OUTPUT).nds	: 	$(OUTPUT).bin
 
@@ -131,14 +141,15 @@ $(OUTPUT).bin	:	$(OUTPUT).elf
 $(OUTPUT).elf	:	$(OFILES)
  
 #---------------------------------------------------------------------------------
-%.nds.gba: %.nds
+%.ds.gba: %.nds
 	@echo built ... $(notdir $@)
-	@$(TOOLDIR)/dsbuild $(OUTPUT).nds  $@ $(TOOLDIR)/loader.bin
+	@dsbuild $<  
 
 #---------------------------------------------------------------------------------
 %.nds: %.bin
 	
-	@$(TOOLDIR)/ndstool -c $@ -9 $(TARGET).bin -7 $(ARM7BIN) -t $(TOOLDIR)/$(ICON)
+	@ndstool -c $@ -9 $(TARGET).bin $(ARM7BIN) -b $(NDSLIBPATH)/examples/logo.bmp "$(shell basename $@);By Dovoto;www.drunkencoders.com"
+
 
 
 #---------------------------------------------------------------------------------

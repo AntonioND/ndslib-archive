@@ -8,12 +8,23 @@
 # SOURCES is a list of directories containing source code
 # INCLUDES is a list of directories containing extra header files
 #---------------------------------------------------------------------------------
-TARGET	:=	demo
+TARGET	:=	$(shell basename $(CURDIR))
 BUILD		:=	build
 SOURCES	:=	gfx source data  
 INCLUDES	:=	include build
-ICON		:=    default_icon.bin
- 
+
+#---------------------------------------------------------------------------------
+# ARM7BIN is the path to an arm7 binary other than the default
+#	usage: ARM7BIN := -7 binaryName.bin
+#
+# ICON is the path to an icon to be used int the header plus text
+#	usage: ICON := -t iconName.bmp "text line one; text line 2; text line 3"
+# 
+#---------------------------------------------------------------------------------
+
+ARM7BIN	:=  
+ICON 		:= -b $(NDSLIBPATH)/examples/logo.bmp "$@;By Dovoto;www.drunkencoders.com"
+
 #---------------------------------------------------------------------------------
 # options for code generation
 #---------------------------------------------------------------------------------
@@ -31,7 +42,7 @@ CFLAGS	+=	$(INCLUDE) -DARM9
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	:=	-g $(ARCH) -mno-fpu
 
-TOOLDIR := $(NDSLIBPATH)/examples/tools
+
 
 #---------------------------------------------------------------------------------
 # path to tools - this can be deleted if you set the path in windows
@@ -109,8 +120,8 @@ $(BUILD):
  
 #---------------------------------------------------------------------------------
 clean:
-	@echo clean ...
-	@rm -fr $(BUILD) *.elf *.nds*
+	@echo clean ...$(TARGET)
+	@rm -fr $(BUILD) *.elf *.*ds*
  
  
 #---------------------------------------------------------------------------------
@@ -121,7 +132,7 @@ DEPENDS	:=	$(OFILES:.o=.d)
 #---------------------------------------------------------------------------------
 # main targets
 #---------------------------------------------------------------------------------
-$(OUTPUT).nds.gba	: 	$(OUTPUT).nds
+$(OUTPUT).ds.gba	: 	$(OUTPUT).nds
 
 $(OUTPUT).nds	: 	$(OUTPUT).bin
 
@@ -130,24 +141,25 @@ $(OUTPUT).bin	:	$(OUTPUT).elf
 $(OUTPUT).elf	:	$(OFILES)
  
 #---------------------------------------------------------------------------------
-%.nds.gba: %.nds
+%.ds.gba: %.nds
 	@echo built ... $(notdir $@)
-	$(TOOLDIR)/dsbuild $(OUTPUT).nds  $@ $(TOOLDIR)/loader.bin
+	@dsbuild $<  
 
 #---------------------------------------------------------------------------------
 %.nds: %.bin
-	@echo built ... $(notdir $@)
-	$(TOOLDIR)/ndstool -c $@ -9 $(TARGET).bin -7 $(TOOLDIR)/arm7.bin -t $(TOOLDIR)/$(ICON)
+	
+	@ndstool -c $@ -9 $(TARGET).bin $(ARM7BIN) -b $(NDSLIBPATH)/examples/logo.bmp "$(shell basename $@);By Dovoto;www.drunkencoders.com"
+
 
 
 #---------------------------------------------------------------------------------
 %.bin: %.elf
-	@echo built ... $(notdir $@)
+	
 	@$(OBJCOPY) -O binary $(TARGET).elf $(TARGET).bin
  
 #---------------------------------------------------------------------------------
 %.elf:
-	@echo linking binary
+	
 	@$(LD)  $(LDFLAGS) -specs=ds_arm9.specs $(OFILES) $(LIBPATHS) $(LIBS) -o $(TARGET).elf
  
  
