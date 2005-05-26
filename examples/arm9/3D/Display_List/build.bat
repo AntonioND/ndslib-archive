@@ -1,2 +1,2 @@
-make    
+make    export
 pause

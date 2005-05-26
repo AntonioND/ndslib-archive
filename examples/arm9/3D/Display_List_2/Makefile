@@ -13,6 +13,7 @@ BUILD		:=	build
 SOURCES	:=	gfx source data  
 INCLUDES	:=	include build
 
+EXPORT_DIR := /c/ndsexamples/
 #---------------------------------------------------------------------------------
 # ARM7BIN is the path to an arm7 binary other than the default
 #	usage: ARM7BIN := -7 binaryName.bin
@@ -111,7 +112,7 @@ export INCLUDE	:=	$(foreach dir,$(INCLUDES),-I$(CURDIR)/$(dir)) \
  
 export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib)
  
-.PHONY: $(BUILD) clean
+.PHONY: $(BUILD) clean export
  
 #---------------------------------------------------------------------------------
 $(BUILD):
@@ -123,7 +124,10 @@ clean:
 	@echo clean ...$(TARGET)
 	@rm -fr $(BUILD) *.elf *.*ds*
  
- 
+export:
+	@echo exporting ...$(TARGET)
+	@cp *.nds $(EXPORT_DIR)/$(TARGET).nds
+
 #---------------------------------------------------------------------------------
 else
  
