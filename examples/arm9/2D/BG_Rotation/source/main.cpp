@@ -102,7 +102,7 @@ int main(void)
         if(!(KEYS & KEY_B)) scaleX--;
         if(!(KEYS & KEY_START)) rcX ++;
         if(!(KEYS & KEY_SELECT)) rcY++;
-        if(!(IPC->buttons & IPC_X)) scaleX++;
+        if(!(IPC->buttons & IPC_X)) scaleY++;
         if(!(IPC->buttons & IPC_Y)) scaleY--;
      
     ////////Compute sin and cos///////////// 
