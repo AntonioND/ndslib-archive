@@ -53,7 +53,7 @@ extern "C" {
 #include <NDS/ARM9/BIOS.h>
 #include <NDS/ARM9/trig_lut.h>
 #include <NDS/ARM9/math.h>
-
+#include <NDS/ARM9/keys.h>
 #endif
 
 #ifdef ARM7
