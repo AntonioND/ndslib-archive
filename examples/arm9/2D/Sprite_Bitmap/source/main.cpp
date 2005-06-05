@@ -4,7 +4,7 @@
 
 
 //a global copy of sprite attribute memory
-SpriteEntry sprites[128];
+VAR_IN_EXRAM SpriteEntry sprites[128];
 //rotation attributes overlap so assign then to the same location
 pSpriteRotation spriteRotations = (pSpriteRotation)sprites;
 
@@ -23,6 +23,7 @@ void initSprites(void)
 //copy our sprite to object attribute memory
 void updateOAM(void)
 {
+	DC_FlushAll();
     dmaCopy(sprites, OAM, 128 * sizeof(SpriteEntry));
 }
 
