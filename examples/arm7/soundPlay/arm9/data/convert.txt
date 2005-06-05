@@ -1,0 +1,5 @@
+These files were converted to raw signed 8 bit samples using a freeware program called:
+Switch
+
+from
+http://nch.com.au/switch/index.html
