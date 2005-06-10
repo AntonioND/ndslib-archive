@@ -1,3 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //////////////////////////////////////////////////////////////////////
 //
 // interrupts.h -- Interrupt registers and vector pointers
@@ -51,7 +66,7 @@
 #define IRQ_DMA3       (1 << 11)
 #define IRQ_KEYS       (1 << 12)
 #define IRQ_CART       (1 << 13)
-
+#define IRQ_SYNC		(1 << 16)
 #define IRQ_CARD       (1 << 19)
 #define IRQ_CARD_LINE  (1 << 20)
 
@@ -80,6 +95,7 @@
 #define IME_DISABLED   (0)
 #define IME_ENABLED    (1)
 
+
 //////////////////////////////////////////////////////////////////////
 
 #ifdef ARM7
@@ -93,6 +109,8 @@
 //#define IRQ_HANDLER             (*(VoidFunctionPointer *)((CP15_GetDTCM() & ~0xFFF) + 0x3FFC))
 #define VBLANK_INTR_WAIT_FLAGS  (*(vuint32*)0x00803FF8)
 #define IRQ_HANDLER             (*(VoidFunctionPointer *)0x00803FFC)
+#endif
+
 //////////////////////////////////////////////////////////////////////
 #ifdef __cplusplus
 extern "C" {
@@ -107,7 +125,7 @@ void irqDisable(int irq);
 //////////////////////////////////////////////////////////////////////
 #ifdef __cplusplus
 }
-#endif
+
 //////////////////////////////////////////////////////////////////////
 #endif
 //////////////////////////////////////////////////////////////////////

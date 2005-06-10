@@ -8,24 +8,11 @@
 # SOURCES is a list of directories containing source code
 # INCLUDES is a list of directories containing extra header files
 #---------------------------------------------------------------------------------
-TARGET	:=	$(shell basename $(CURDIR))
+TARGET	:=	arm7
 BUILD		:=	build
 SOURCES	:=	gfx source data  
 INCLUDES	:=	include build
-
-
-#---------------------------------------------------------------------------------
-# ARM7BIN is the path to an arm7 binary other than the default
-#	usage: ARM7BIN := -7 binaryName.bin
-#
-# ICON is the path to an icon to be used int the header plus text
-#	usage: ICON := -t iconName.bmp "text line one; text line 2; text line 3"
-# 
-#---------------------------------------------------------------------------------
-
-ARM7BIN	:=  
-ICON 		:= -b $(NDSLIBPATH)/examples/logo.bmp "$@;By Dovoto;www.drunkencoders.com"
-
+ 
 #---------------------------------------------------------------------------------
 # options for code generation
 #---------------------------------------------------------------------------------
@@ -34,16 +21,14 @@ ARCH	:=	-mthumb-interwork
 # note: arm9tdmi isn't the correct CPU arch, but anything newer and LD
 # *insists* it has a FPU or VFP, and it won't take no for an answer!
 CFLAGS	:=	-g -Wall -O2\
- 		-mcpu=arm9tdmi -mtune=arm9tdmi -fomit-frame-pointer\
+ 		-mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer\
 		-ffast-math \
 		$(ARCH)
 
-CFLAGS	+=	$(INCLUDE) -DARM9
+CFLAGS	+=	$(INCLUDE) -DARM7
 
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	:=	-g $(ARCH) -mno-fpu
-
-
 
 #---------------------------------------------------------------------------------
 # path to tools - this can be deleted if you set the path in windows
@@ -62,7 +47,7 @@ PREFIX			:=	arm-elf-
 #---------------------------------------------------------------------------------
 # any extra libraries we wish to link with the project
 #---------------------------------------------------------------------------------
-LIBS	:= -lnds9
+LIBS	:= -lnds7
  
  
 #---------------------------------------------------------------------------------
@@ -112,7 +97,7 @@ export INCLUDE	:=	$(foreach dir,$(INCLUDES),-I$(CURDIR)/$(dir)) \
  
 export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib)
  
-.PHONY: $(BUILD) clean export
+.PHONY: $(BUILD) clean
  
 #---------------------------------------------------------------------------------
 $(BUILD):
@@ -122,12 +107,9 @@ $(BUILD):
 #---------------------------------------------------------------------------------
 clean:
 	@echo clean ...$(TARGET)
-	@rm -fr $(BUILD) *.elf *.*ds*
+	@rm -fr $(BUILD) *.bin
  
-export:
-	@echo exporting ...$(TARGET)
-	@cp *.nds $(EXPORT_DIR)/$(TARGET).nds
-
+ 
 #---------------------------------------------------------------------------------
 else
  
@@ -136,35 +118,21 @@ DEPENDS	:=	$(OFILES:.o=.d)
 #---------------------------------------------------------------------------------
 # main targets
 #---------------------------------------------------------------------------------
-$(OUTPUT).ds.gba	: 	$(OUTPUT).nds
-
-$(OUTPUT).nds	: 	$(OUTPUT).bin
 
 $(OUTPUT).bin	:	$(OUTPUT).elf
  
 $(OUTPUT).elf	:	$(OFILES)
  
-#---------------------------------------------------------------------------------
-%.ds.gba: %.nds
-	@echo built ... $(notdir $@)
-	@dsbuild $<  
-
-#---------------------------------------------------------------------------------
-%.nds: %.bin
-	
-	@ndstool -c $@ -9 $(TARGET).bin $(ARM7BIN) -b $(NDSLIBPATH)/examples/logo.bmp "$(shell basename $@);By Dovoto;www.drunkencoders.com"
-
 
 
 #---------------------------------------------------------------------------------
 %.bin: %.elf
-	
-	@$(OBJCOPY) -O binary $(TARGET).elf $(TARGET).bin
+	@echo built ... $(notdir $@)
+	@$(OBJCOPY) -O binary  $(TARGET).elf $@
  
 #---------------------------------------------------------------------------------
 %.elf:
-	
-	@$(LD)  $(LDFLAGS) -specs=ds_arm9.specs $(OFILES) $(LIBPATHS) $(LIBS) -o $(TARGET).elf
+	@$(LD)  $(LDFLAGS) -specs=ds_arm7.specs $(OFILES) $(LIBPATHS) $(LIBS) -o $(TARGET).elf
  
  
  

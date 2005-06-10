@@ -159,6 +159,7 @@ typedef struct {
 #define GL_ANTIALIAS		(1<<4)			//not fully figured out
 #define GL_OUTLINE			(1<<5)
 
+#define GL_TEXTURE_ALPHA_MASK (1 << 29)
 //////////////////////////////////////////////////////////////////////
 
 #define GL_RGB		8

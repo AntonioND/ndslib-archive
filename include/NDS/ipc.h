@@ -106,9 +106,18 @@ typedef struct sTransferRegion {
 #define IPC_LID_CLOSED BIT(7)
 //////////////////////////////////////////////////////////////////////
 
-// Synchronization register (name *will* change!)
-#define MAGIC180      (*(vuint16*)0x04000180)
+// Synchronization register 
+#define IPC_SYNC				(*(vuint16*)0x04000180)
+#define IPC_SYNC_IRQ_ENABLE		(1<<13)
+#define IPC_SYNC_IRQ_REQUEST	(1<<14)
+#define IPC_SYNC_SEND_COMMAND(n)		((IPC_SYNC & 0xF0FF) | (((n) & 0xF) << 8) | IPC_SYNC_IRQ_REQUEST)
 
+#ifdef ARM7
+#define IPC_SYNC_GET_COMMAND		(IPC_SYNC & 0xF)
+#endif
+#ifdef ARM9
+#define IPC_SYNC_GET_COMMAND		((IPC_SYNC & 0xF0) >> 4)
+#endif
 //////////////////////////////////////////////////////////////////////
 
 #endif

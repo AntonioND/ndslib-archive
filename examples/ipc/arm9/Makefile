@@ -13,7 +13,7 @@ BUILD		:=	build
 SOURCES	:=	gfx source data  
 INCLUDES	:=	include build
 
-
+EXPORT_DIR := /c/ndsexamples/
 #---------------------------------------------------------------------------------
 # ARM7BIN is the path to an arm7 binary other than the default
 #	usage: ARM7BIN := -7 binaryName.bin
@@ -23,7 +23,7 @@ INCLUDES	:=	include build
 # 
 #---------------------------------------------------------------------------------
 
-ARM7BIN	:=  
+ARM7BIN	:= -7 $(CURDIR)/../../arm7/arm7.bin
 ICON 		:= -b $(NDSLIBPATH)/examples/logo.bmp "$@;By Dovoto;www.drunkencoders.com"
 
 #---------------------------------------------------------------------------------

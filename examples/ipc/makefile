@@ -1,7 +1,4 @@
 SUBDIRS:= `ls | egrep -v '^(CVS|tools)$$'`
-
-export EXPORT_DIR := /c/ndsexamples/
-
 all:
 	@for i in $(SUBDIRS); do if test -d $$i; then make -s -C $$i; fi; done;
 clean:
