@@ -120,17 +120,26 @@ void InterruptHandler(void) {
     }
   }
 
-  IPC_SYNC_SEND_COMMAND(heartbeat >> 6);
+  
     	
   // Acknowledge interrupts
-  IF = IF;
+  IF = IRQ_VBLANK;
 }
  
 
 //////////////////////////////////////////////////////////////////////
  
 
-int main(int argc, char ** argv) {
+void irqRecieve(void)
+{
+    
+    //just send it back
+    IPC_SYNC_SEND_COMMAND(IPC_SYNC_GET_COMMAND);
+    IF = IRQ_SYNC;
+}
+
+int main(int argc, char ** argv) 
+{
   // Reset the clock if needed
   rtcReset();
 
@@ -141,15 +150,20 @@ int main(int argc, char ** argv) {
   // Set up the interrupt handler
  
   
-  IME = 0;
+/*  IME = 0;
   IRQ_HANDLER = &InterruptHandler;
   IE = IRQ_VBLANK;
   IF = ~0;
   DISP_SR = DISP_VBLANK_IRQ;
   IME = 1;
-
+*/    
+    irqInitHandler(irqDefaultHandler);
+    irqSet(IRQ_VBLANK, InterruptHandler);
+    irqSet(IRQ_SYNC, irqRecieve);
+	IPC_SYNC = IPC_SYNC_IRQ_ENABLE;
+ 
   // Keep the ARM7 out of main RAM
-  while (1) swiWaitForVBlank();
+  while (1);
   return 0;
 }
 

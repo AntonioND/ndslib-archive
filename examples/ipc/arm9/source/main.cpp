@@ -1,5 +1,6 @@
 //////////////////////////////////////////////////////////////////////
-// Simple consol print demo
+// Simple IPC demo.  It sends a command to the arm7 wich resieves it,
+//  interprets it then sends it back and the result is printed.
 // -- dovoto
 //////////////////////////////////////////////////////////////////////
 
@@ -7,9 +8,20 @@
 
 #include <NDS/ARM9/console.h> //basic print funcionality
 
+void irqVblank(void)
+{
+    static int heartbeat = 0;
+    heartbeat++;
+    
+    IPC_SYNC_SEND_COMMAND(heartbeat >> 6);
+    
+    IF = IRQ_VBLANK;
+}
 void irqRecieve(void)
 {
-	consolePrintf("Command Recieved: %d\n", IPC_SYNC_GET_COMMAND);
+	consolePrintf("Command Recieved: %X\n", IPC_SYNC_GET_COMMAND);
+	
+	IF = IRQ_SYNC;
 }
 int main(void)
 {
@@ -26,7 +38,8 @@ int main(void)
 	consoleInitDefault((u16*)SCREEN_BASE_BLOCK_SUB(31), (u16*)CHAR_BASE_BLOCK_SUB(0), 16);
 	
 	irqInitHandler(irqDefaultHandler);
-	irqSet(IRQ_SYNC, irqRecieve);
+	irqSet(IRQ_VBLANK, irqVblank);
+    irqSet(IRQ_SYNC, irqRecieve);
 	IPC_SYNC = IPC_SYNC_IRQ_ENABLE;
 
 	

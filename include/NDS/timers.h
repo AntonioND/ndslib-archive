@@ -49,6 +49,8 @@ extern "C" {
 // ARM7 timing hasn't been tested yet, but is likely to
 // be the same.
 
+#define TIMER_FREQ(n) (-0x2000000/(n))
+
 // Timer values (16 bit timers)
 #define TIMER0_DATA    (*(vuint16*)0x04000100)
 #define TIMER1_DATA    (*(vuint16*)0x04000104)
