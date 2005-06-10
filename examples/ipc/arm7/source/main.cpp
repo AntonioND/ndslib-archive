@@ -110,7 +110,7 @@ void InterruptHandler(void) {
     IPC->soundData = 0;
     if (snd) 
 	{
-		IPC_SYNC_SEND_COMMAND(5);
+		
       for (int i=0; i<snd->count; i++) {
         s8 chan = getFreeSoundChannel();
         if (chan >= 0) {
@@ -119,7 +119,9 @@ void InterruptHandler(void) {
       }
     }
   }
-	
+
+  IPC_SYNC_SEND_COMMAND(heartbeat >> 6);
+    	
   // Acknowledge interrupts
   IF = IF;
 }
