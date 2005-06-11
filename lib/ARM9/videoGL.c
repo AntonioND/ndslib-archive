@@ -364,7 +364,7 @@ void glMultMatrix4x3(m4x3* m)
   MATRIX_MULT4x3 = m->m[11];
 
   
-}void glMultMatrix3x3(m4x3* m)
+}void glMultMatrix3x3(m3x3* m)
 {
   MATRIX_MULT3x3 = m->m[0];
   MATRIX_MULT3x3 = m->m[1];

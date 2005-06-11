@@ -148,22 +148,13 @@ int main(int argc, char ** argv)
   IPC->soundData = 0;
  
   // Set up the interrupt handler
- 
-  
-/*  IME = 0;
-  IRQ_HANDLER = &InterruptHandler;
-  IE = IRQ_VBLANK;
-  IF = ~0;
-  DISP_SR = DISP_VBLANK_IRQ;
-  IME = 1;
-*/    
-    irqInitHandler(irqDefaultHandler);
-    irqSet(IRQ_VBLANK, InterruptHandler);
-    irqSet(IRQ_SYNC, irqRecieve);
-	IPC_SYNC = IPC_SYNC_IRQ_ENABLE;
+   irqInitHandler(irqDefaultHandler);
+   irqSet(IRQ_VBLANK, InterruptHandler);
+   irqSet(IRQ_SYNC, irqRecieve);
+   IPC_SYNC = IPC_SYNC_IRQ_ENABLE;
  
   // Keep the ARM7 out of main RAM
-  while (1);
+  while (1)swiWaitForVBlank();
   return 0;
 }
 
