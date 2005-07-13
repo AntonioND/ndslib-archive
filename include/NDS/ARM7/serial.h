@@ -66,6 +66,12 @@
 #define SERIAL_ENABLE   0x8000
 #define SERIAL_BUSY     0x80
 
+#define SPI_DEVICE_POWER  (0 << 8)
+#define SPI_DEVICE_TOUCH  (2 << 8)
+#define SPI_BAUDRATE_2Mhz 1
+#define SPI_BAUDRATE_1Mhz 2
+#define SPI_CONTINUOUS    (1<<11)
+
 //////////////////////////////////////////////////////////////////////
 
 #endif

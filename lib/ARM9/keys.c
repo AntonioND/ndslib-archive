@@ -61,7 +61,7 @@ void scanKeys()
 	keysold=keys;
 	keys=KEYS_CUR;
 
-	if(abs(IPC->touchXpx-oldx)>20 || abs(IPC->touchYpx==oldy)>20)
+	if(abs(IPC->touchXpx-oldx)>20 || abs(IPC->touchYpx-oldy)>20)
 		keys&=~KEY_TOUCH;
 
 	oldx=IPC->touchXpx;

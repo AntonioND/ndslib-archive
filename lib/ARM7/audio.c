@@ -29,3 +29,69 @@
 //////////////////////////////////////////////////////////////////////
 
 #include <NDS/ARM7/audio.h>
+#include <NDS/ARM7/serial.h>
+#include <NDS/ARM7/bios.h>
+
+#define PM_AMP_OFFSET     2
+
+//based on neimods code code
+u8 MIC_ReadData(void)
+{
+  u16 result, result2;
+  
+  while(SERIAL_CR & SERIAL_BUSY)
+    swiDelay(1);
+ 
+  SERIAL_CR = SERIAL_ENABLE | SPI_DEVICE_TOUCH | SPI_BAUDRATE_2Mhz | SPI_CONTINUOUS;
+  SERIAL_DATA = 0xEC;  // Touchscreen command format for AUX
+  
+  while(SERIAL_CR & SERIAL_BUSY)
+    swiDelay(1);
+
+  SERIAL_DATA = 0x00;
+
+  while(SERIAL_CR & SERIAL_BUSY)
+    swiDelay(1);
+
+  result = SERIAL_DATA;
+  SERIAL_CR = SERIAL_ENABLE | SPI_DEVICE_TOUCH | SPI_BAUDRATE_2Mhz;
+  SERIAL_DATA = 0x00; 
+
+  while(SERIAL_CR & SERIAL_BUSY)
+    swiDelay(1);
+
+  result2 = SERIAL_DATA;
+
+  return (((result & 0x7F) << 1) | ((result2>>7)&1));
+}
+void MIC_On(void)
+{
+  while(SERIAL_CR & SERIAL_BUSY)
+  swiDelay(1);
+
+  SERIAL_CR = SERIAL_ENABLE | SPI_DEVICE_POWER | SPI_BAUDRATE_1Mhz | SPI_CONTINUOUS;
+  SERIAL_DATA = PM_AMP_OFFSET;
+
+  while(SERIAL_CR & SERIAL_BUSY)
+    swiDelay(1);
+
+  SERIAL_CR = SERIAL_ENABLE | SPI_DEVICE_POWER | SPI_BAUDRATE_1Mhz;
+  SERIAL_DATA = 1;
+}
+void MIC_Off(void)
+{
+  while(SERIAL_CR & SERIAL_BUSY)
+  swiDelay(1);
+
+  SERIAL_CR = SERIAL_ENABLE | SPI_DEVICE_POWER | SPI_BAUDRATE_1Mhz | SPI_CONTINUOUS;
+  SERIAL_DATA = PM_AMP_OFFSET;
+
+  while(SERIAL_CR & SERIAL_BUSY)
+    swiDelay(1);
+
+  SERIAL_CR = SERIAL_ENABLE | SPI_DEVICE_POWER | SPI_BAUDRATE_1Mhz;
+  SERIAL_DATA = 0;
+}
+
+
+

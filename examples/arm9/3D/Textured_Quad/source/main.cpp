@@ -1,15 +1,20 @@
 #include <NDS/NDS.h>
+#include <NDS/ARM9/rand.h>
 
 //texture_bin.h is created automagicaly from the texture.bin placed in arm9/resources
 //texture.bin is a raw 128x128 16 bit image.  I will release a tool for texture conversion 
 //later
 #include "texture.h"
 
+
+
+
+
 int main()
 {	
 	
 	int textureID;
-	
+
 	float rotateX = 0.0;
 	float rotateY = 0.0;
 
@@ -45,6 +50,9 @@ int main()
 		gluLookAt(	0.0, 0.0, 1.0,		//camera possition 
 					0.0, 0.0, 0.0,		//look at
 					0.0, 1.0, 0.0);		//up
+		
+		
+
 
 		glPushMatrix();
 
@@ -59,8 +67,16 @@ int main()
 		
 		glMatrixMode(GL_MODELVIEW);
 
+		glMaterialf(GL_AMBIENT, RGB15(16,16,16));
+		glMaterialf(GL_DIFFUSE, RGB15(16,16,16));
+		glMaterialf(GL_SPECULAR, BIT(15) | RGB15(8,8,8));
+		glMaterialf(GL_EMISSION, RGB15(16,16,16));
+
+		//ds uses a table for shinyness..this generates a half-ass one
+		glMaterialShinnyness();
+
 		//not a real gl function and will likely change
-		glPolyFmt(POLY_ALPHA(31) | POLY_CULL_NONE);
+		glPolyFmt(POLY_ALPHA(31) | POLY_CULL_BACK);
 
 		if(!(KEYS & KEY_UP)) rotateX += 3;
 		if(!(KEYS & KEY_DOWN)) rotateX -= 3;
@@ -71,18 +87,19 @@ int main()
 
 		//draw the obj
 		glBegin(GL_QUAD);
-			
-			glTexCoord2t16(intot16(128),0);
-			glVertex3v16(intov16(-1),intov16(-1),0);
-			
-			glTexCoord2t16(intot16(128), intot16(128));
-			glVertex3v16(intov16(1), intov16(-1), 0);
+			glNormal(NORMAL_PACK(0,intov10(-1),0));
 
-			glTexCoord2t16(0,intot16(128));
-			glVertex3v16(intov16(1), intov16(1), 0);
+			glTexCoord1i(TEXTURE_PACK(intot16(128), 0));
+			glVertex3v16(floatov16(-0.5),	floatov16(-0.5), 0 );
+	
+			glTexCoord1i(TEXTURE_PACK(intot16(128),intot16(128)));
+			glVertex3v16(floatov16(0.5),	floatov16(-0.5), 0 );
+	
+			glTexCoord1i(TEXTURE_PACK(0, intot16(128)));
+			glVertex3v16(floatov16(0.5),	floatov16(0.5), 0 );
 
-			glTexCoord2t16(0,0);
-			glVertex3v16(intov16(-1), intov16(1), 0);
+			glTexCoord1i(TEXTURE_PACK(0,0));
+			glVertex3v16(floatov16(-0.5),	floatov16(0.5), 0 );
 		
 		glEnd();
 		

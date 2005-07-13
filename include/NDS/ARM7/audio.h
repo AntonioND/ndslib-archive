@@ -52,7 +52,11 @@ extern "C" {
 #define SOUND_ENABLE	BIT(15)
 #define SOUND_REPEAT    BIT(27)
 #define SOUND_ONE_SHOT  BIT(28)
-#define SOUND_16BIT      BIT(29)
+#define SOUND_FORMAT_16BIT (1<<29)
+#define SOUND_FORMAT_8BIT	(0<<29)
+#define SOUND_FORMAT_PSG    (3<<29)
+#define SOUND_FORMAT_ADPCM  (2<<29)
+#define SOUND_16BIT      (1<<29)
 #define SOUND_8BIT       (0)
 
 #define SOUND_PAN(n)	((n) << 16)
@@ -79,6 +83,11 @@ extern "C" {
 #define SOUND51C          (*(vuint16*)0x0400051C)
 
 //////////////////////////////////////////////////////////////////////
+
+///////////some microphone functions/////////////////////////////////////////////
+u8 MIC_ReadData(void);
+void MIC_On(void);
+void MIC_Off(void);
 
 #ifdef __cplusplus
 }

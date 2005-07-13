@@ -174,7 +174,9 @@ void consolePrintChar(char c)
 		for(i = CONSOLE_WIDTH; i < CONSOLE_HEIGHT * CONSOLE_WIDTH; i++)
 			fontMap[i - CONSOLE_WIDTH] = fontMap[i];
 		for(i = 0; i < CONSOLE_WIDTH; i++)
-			fontMap[i] = fontPal | (u16)(' ' + fontOffset - fontStart);
+			fontMap[i + (CONSOLE_HEIGHT-1)*CONSOLE_WIDTH] = fontPal | (u16)(' ' + fontOffset - fontStart);
+
+
 	}
 	
 	switch(c)

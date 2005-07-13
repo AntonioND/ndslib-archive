@@ -32,10 +32,7 @@
 
 #include <NDS/NDS.h>
 
-//lut resolution for trig functions (must be power of two and must be the same as LUT resolution)
-//in other words dont change unless you also change your LUTs
-#define LUT_SIZE (512)
-#define LUT_MASK (0x1FF)
+
 
 
 #ifdef NO_GL_INLINE
@@ -323,25 +320,25 @@ void glLoadMatrix4x3(m4x3* m)
 
 void glMultMatrix4x4(m4x4* m)
 {
-  MATRIX_LOAD4x4 = m->m[0];
-  MATRIX_LOAD4x4 = m->m[1];
-  MATRIX_LOAD4x4 = m->m[2];
-  MATRIX_LOAD4x4 = m->m[3];
+  MATRIX_MULT4x4 = m->m[0];
+  MATRIX_MULT4x4 = m->m[1];
+  MATRIX_MULT4x4 = m->m[2];
+  MATRIX_MULT4x4 = m->m[3];
 
-  MATRIX_LOAD4x4 = m->m[4];
-  MATRIX_LOAD4x4 = m->m[5];
-  MATRIX_LOAD4x4 = m->m[6];
-  MATRIX_LOAD4x4 = m->m[7];
+  MATRIX_MULT4x4 = m->m[4];
+  MATRIX_MULT4x4 = m->m[5];
+  MATRIX_MULT4x4 = m->m[6];
+  MATRIX_MULT4x4 = m->m[7];
 
-  MATRIX_LOAD4x4 = m->m[8];
-  MATRIX_LOAD4x4 = m->m[9];
-  MATRIX_LOAD4x4 = m->m[10];
-  MATRIX_LOAD4x4 = m->m[11];
+  MATRIX_MULT4x4 = m->m[8];
+  MATRIX_MULT4x4 = m->m[9];
+  MATRIX_MULT4x4 = m->m[10];
+  MATRIX_MULT4x4 = m->m[11];
 
-  MATRIX_LOAD4x4 = m->m[12];
-  MATRIX_LOAD4x4 = m->m[13];
-  MATRIX_LOAD4x4 = m->m[14];
-  MATRIX_LOAD4x4 = m->m[15];
+  MATRIX_MULT4x4 = m->m[12];
+  MATRIX_MULT4x4 = m->m[13];
+  MATRIX_MULT4x4 = m->m[14];
+  MATRIX_MULT4x4 = m->m[15];
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -440,6 +437,66 @@ void glRotateXi(int angle)
   MATRIX_MULT3x3 = -sine;
   MATRIX_MULT3x3 = cosine;
 }
+
+//////////////////////////////////////////////////////////////////////
+ 
+
+void glRotatef32i(int angle, f32 x, f32 y, f32 z)
+
+{
+
+  f32 axis[3];
+
+  f32 sine = SIN[angle &  LUT_MASK];
+
+  f32 cosine = COS[angle & LUT_MASK];
+
+  f32 one_minus_cosine = intof32(1) - cosine;
+
+  axis[0]=x;
+
+  axis[1]=y;
+
+  axis[2]=z;
+
+  normalizef32(axis);   // should require passed in normalized?
+
+ 
+
+  MATRIX_MULT3x3 = cosine + mulf32(one_minus_cosine, mulf32(axis[0], axis[0]));
+
+  MATRIX_MULT3x3 = mulf32(one_minus_cosine, mulf32(axis[0], axis[1])) - mulf32(axis[2], sine);
+
+  MATRIX_MULT3x3 = mulf32(mulf32(one_minus_cosine, axis[0]), axis[2]) + mulf32(axis[1], sine);
+
+ 
+
+  MATRIX_MULT3x3 = mulf32(mulf32(one_minus_cosine, axis[0]),  axis[1]) + mulf32(axis[2], sine);
+
+  MATRIX_MULT3x3 = cosine + mulf32(mulf32(one_minus_cosine, axis[1]), axis[1]);
+
+  MATRIX_MULT3x3 = mulf32(mulf32(one_minus_cosine, axis[1]), axis[2]) - mulf32(axis[0], sine);
+
+ 
+
+  MATRIX_MULT3x3 = mulf32(mulf32(one_minus_cosine, axis[0]), axis[2]) - mulf32(axis[1], sine);
+
+  MATRIX_MULT3x3 = mulf32(mulf32(one_minus_cosine, axis[1]), axis[2]) + mulf32(axis[0], sine);
+
+  MATRIX_MULT3x3 = cosine + mulf32(mulf32(one_minus_cosine, axis[2]), axis[2]);
+
+}
+
+ 
+
+void glRotatef32(float angle, f32 x, f32 y, f32 z)
+
+{
+
+  glRotatef32i((int)(angle * LUT_SIZE / 360.0), x, y, z);
+
+}
+
 //////////////////////////////////////////////////////////////////////
 //	rotations wrapped in float...mainly for testing
 void glRotateX(float angle)
@@ -461,46 +518,83 @@ void glRotateZ(float angle)
 //////////////////////////////////////////////////////////////////////
 // Fixed point look at function, it appears to work as expected although 
 //	testing is recomended
-void gluLookAtf32(f32 eyex, f32 eyey, f32 eyez, f32 lookAtx, f32 lookAty, f32 lookAtz, f32 upx, f32 upy, f32 upz)
-{
-	f32 x[3], y[3], z[3], up[3];
+void gluLookAtf32(f32 eyex, f32 eyey, f32 eyez, f32 lookAtx, f32 lookAty, f32 lookAtz, f32 upx, f32 upy, f32 upz) 
 
-	z[0] = eyex - lookAtx;
-	z[1] = eyey - lookAty;
-	z[2] = eyez - lookAtz;
+{ 
 
-	up[0] = upx;
-	up[1] = upy;
-	up[2] = upz;
+  f32 side[3], forward[3], up[3]; 
 
-	normalizef32(z);
+ 
 
-	crossf32(up, z, x);
-	crossf32(z, x, y);
+  forward[0] = lookAtx - eyex; 
 
-	normalizef32(x);
-	normalizef32(y);
-	
-	glMatrixMode(GL_MODELVIEW);
+  forward[1] = lookAty - eyey; 
 
-	MATRIX_LOAD4x3 = x[0];
-	MATRIX_LOAD4x3 = x[1];
-	MATRIX_LOAD4x3 = x[2];
+  forward[2] = lookAtz - eyez; 
 
-	MATRIX_LOAD4x3 = y[0];
-	MATRIX_LOAD4x3 = y[1];
-	MATRIX_LOAD4x3 = y[2];
+ 
 
-	MATRIX_LOAD4x3 = z[0];
-	MATRIX_LOAD4x3 = z[1];
-	MATRIX_LOAD4x3 = z[2];
+  normalizef32(forward); 
 
-	MATRIX_LOAD4x3 = 0;
-	MATRIX_LOAD4x3 = 0;
-	MATRIX_LOAD4x3 = floatof32(-1.0);
+ 
 
-	glTranslate3f32(-eyex, -eyey, -eyez);
+  up[0] = upx; 
+
+  up[1] = upy; 
+
+  up[2] = upz; 
+
+ 
+
+  crossf32(forward, up, side); 
+
+  normalizef32(side); 
+
+  crossf32(side, forward, up); 
+
+ 
+
+  glMatrixMode(GL_MODELVIEW); 
+
+ 
+
+  // should we use MATRIX_MULT4x3 as in ogl|es?? 
+
+  MATRIX_LOAD4x3 =  side[0]; 
+
+  MATRIX_LOAD4x3 =  up[0]; 
+
+  MATRIX_LOAD4x3 = -forward[0]; 
+
+ 
+
+  MATRIX_LOAD4x3 =  side[1]; 
+
+  MATRIX_LOAD4x3 =  up[1]; 
+
+  MATRIX_LOAD4x3 = -forward[1]; 
+
+ 
+
+  MATRIX_LOAD4x3 =  side[2]; 
+
+  MATRIX_LOAD4x3 =  up[2]; 
+
+  MATRIX_LOAD4x3 = -forward[2]; 
+
+ 
+
+  MATRIX_LOAD4x3 = -eyex; 
+
+  MATRIX_LOAD4x3 = -eyey; 
+
+  MATRIX_LOAD4x3 = -eyez; 
+
 }
+
+ 
+
+
 ///////////////////////////////////////
 //  glu wrapper for standard float call
 void gluLookAt(float eyex, float eyey, float eyez, float lookAtx, float lookAty, float lookAtz, float upx, float upy, float upz)

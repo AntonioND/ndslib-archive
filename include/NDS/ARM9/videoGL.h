@@ -50,6 +50,12 @@
 #include <NDS/ARM9/video.h>
 #include <NDS/DMA.h>
 //////////////////////////////////////////////////////////////////////
+//lut resolution for trig functions (must be power of two and must be the same as LUT resolution)
+//in other words dont change unless you also change your LUTs
+#define LUT_SIZE (512)
+#define LUT_MASK (0x1FF)
+
+
 
 typedef int f32;             // 1.19.12 fixed point for matricies
 #define intof32(n)           ((n) << 12)
