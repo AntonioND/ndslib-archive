@@ -93,7 +93,7 @@ typedef struct sTransferRegion {
   vuint32 mailData;
   vuint8 mailRead;
   vuint8 mailBusy;
-  vuint8 mailSize;
+  vuint32 mailSize;
 } TransferRegion, * pTransferRegion;
 
 //////////////////////////////////////////////////////////////////////
@@ -119,13 +119,20 @@ typedef struct sTransferRegion {
 //fifo
 
 
-#define IPC_FIFO_SEND              (*(vu16*)0x4000188)                   
-#define IPC_FIFO_RECIEVE           (*(vu16*)0x4010000)                                      
+#define IPC_FIFO_SEND              (*(vu32*)0x4000188)
+#define IPC_FIFO_RECIEVE           (*(vu32*)0x4100000)
 #define IPC_FIFO_CR                (*(vu16*)0x4000184)
-#define IPC_FIFO_ENABLE            (1<<15)
 
-#define IPC_FIFO_IRQ_FULL			(1<<17)
-#define IPC_FIFO_IRQ_EMPTY			(1<<18)
+#define IPC_FIFO_SEND_EMPTY (1<<0)
+#define IPC_FIFO_SEND_FULL  (1<<1)
+#define IPC_FIFO_SEND_IRQ   (1<<2)
+#define IPC_FIFO_SEND_CLEAR (1<<3)
+#define IPC_FIFO_RECV_EMPTY (1<<8)
+#define IPC_FIFO_RECV_FULL  (1<<9)
+#define IPC_FIFO_RECV_IRQ   (1<<10)
+#define IPC_FIFO_ERROR      (1<<14)
+#define IPC_FIFO_ENABLE     (1<<15)
+
 
 //////////////////////////////////////////////////////////////////////
 
