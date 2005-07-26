@@ -74,6 +74,7 @@ extern "C" {
 #include <NDS/interrupts.h>
 #include <NDS/ipc.h>
 
+
 // print a string to dualis's output window
 static inline void dPrint(char *s)
 {

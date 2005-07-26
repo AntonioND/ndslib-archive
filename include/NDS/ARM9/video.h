@@ -609,6 +609,7 @@ typedef struct sSpriteRotation {
 #define GFX_SHININESS         (*(vuint32*) 0x040004D0)
 
 #define GFX_POLY_FORMAT       (*(vuint32*) 0x040004A4)
+#define GFX_ALPHA             (*(vuint16*) 0x04000340)
 
 #define GFX_BEGIN             (*(vuint32*) 0x04000500)
 #define GFX_END               (*(vuint32*) 0x04000504)

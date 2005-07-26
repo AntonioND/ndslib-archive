@@ -33,6 +33,9 @@
 #define NDS_JTYPES_INCLUDE
 
 //////////////////////////////////////////////////////////////////////
+#define TRUE 1
+#define FALSE 0
+
 
 #define CODE_IN_IWRAM __attribute__ ((section (".iwram"), long_call))
 #define VAR_IN_IWRAM __attribute__ ((section (".iwram")))
