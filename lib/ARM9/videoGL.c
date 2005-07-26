@@ -511,7 +511,7 @@ void glTexCoord2f(float s, float t)
 
 void glColor3f(float r, float g, float b)
 {
-	glColor3b((uint8)(r*31), (uint8)(g*31), (uint8)(b*31));
+	glColor3b((uint8)(r*255), (uint8)(g*255), (uint8)(b*255));
 }
 void glScalef(float x, float y, float z)
 {
