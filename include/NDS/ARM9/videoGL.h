@@ -258,6 +258,7 @@ void glTexLoadPal(u16* pal, u8 count);
 void glBindTexture(int target, int name);
 int glGenTextures(int n, int *names);
 void glResetTextures(void);
+void glTexCoord2f32(f32 u, f32 v);
 
 void glMaterialf(int mode, rgb color);
 void glResetMatrixStack(void);
@@ -416,14 +417,7 @@ static inline void glVertex3v16(v16 x, v16 y, v16 z)
 }
 
 //////////////////////////////////////////////////////////////////////
-void glTexCoord2f32(f32 u, f32 v) { 
-   int x=0,y=0; 
-    
-   x = ((0x00700000) & textures[activeTexture]) >> 20; 
-   y = ((0x03800000) & textures[activeTexture]) >> 23; 
-       
-   glTexCoord2t16(f32tot16 (mulf32(u,intof32(1<<(3+x)))), f32tot16 (mulf32(v,intof32(1<<(3+y))))); 
-}
+
 //////////////////////////////////////////////////////////////////////
 
   static inline void glPushMatrix(void)

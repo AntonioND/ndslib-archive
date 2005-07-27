@@ -788,7 +788,7 @@ int glGenTextures(int n, int *names)
 //	is ignored as all DS textures are 2D
 void glBindTexture(int target, int name)
 {
-	if (name = 0) 
+	if (name == 0) 
       GFX_TEX_FORMAT = 0; 
    else 
       GFX_TEX_FORMAT = textures[name]; 
@@ -796,7 +796,16 @@ void glBindTexture(int target, int name)
 	
 	activeTexture = name;
 }
-
+////////////////////////////////////
+void glTexCoord2f32(f32 u, f32 v)
+{ 
+   int x=0,y=0; 
+    
+   x = ((0x00700000) & textures[activeTexture]) >> 20; 
+   y = ((0x03800000) & textures[activeTexture]) >> 23; 
+       
+   glTexCoord2t16(f32tot16 (mulf32(u,intof32(1<<(3+x)))), f32tot16 (mulf32(v,intof32(1<<(3+y))))); 
+}
 ///////////////////////////////////////
 // glTexParameter although named the same 
 //	as its gl counterpart it is not compatible
