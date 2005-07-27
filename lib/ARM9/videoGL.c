@@ -766,9 +766,10 @@ void glResetTextures(void)
 //  Returns 1 if succesful and 0 if out of texture names
 int glGenTextures(int n, int *names)
 {
-	static int name = 0;
+	static int name = 1;
 
 	int index = 0;
+
 
 	for(index = 0; index < n; index++)
 	{
@@ -787,8 +788,11 @@ int glGenTextures(int n, int *names)
 //	is ignored as all DS textures are 2D
 void glBindTexture(int target, int name)
 {
-	
-	GFX_TEX_FORMAT = textures[name];
+	if (name = 0) 
+      GFX_TEX_FORMAT = 0; 
+   else 
+      GFX_TEX_FORMAT = textures[name]; 
+
 	
 	activeTexture = name;
 }

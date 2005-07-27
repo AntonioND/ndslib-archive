@@ -66,7 +66,7 @@ typedef int f32;             // 1.19.12 fixed point for matricies
 
 typedef short int t16;       // text coordinate 1.11.4 fixed point
 
-#define f32tot16(n)             ((v10)(n >> 8))
+#define f32tot16(n)             ((t16)(n >> 8))
 #define intot16(n)           ((n) << 4)
 #define t16toint(n)          ((n) >> 4)
 #define floatot16(n)         ((t16)((n) * (1 << 4)))
@@ -415,6 +415,15 @@ static inline void glVertex3v16(v16 x, v16 y, v16 z)
   GFX_TEX_COORD = uv;
 }
 
+//////////////////////////////////////////////////////////////////////
+void glTexCoord2f32(f32 u, f32 v) { 
+   int x=0,y=0; 
+    
+   x = ((0x00700000) & textures[activeTexture]) >> 20; 
+   y = ((0x03800000) & textures[activeTexture]) >> 23; 
+       
+   glTexCoord2t16(f32tot16 (mulf32(u,intof32(1<<(3+x)))), f32tot16 (mulf32(v,intof32(1<<(3+y))))); 
+}
 //////////////////////////////////////////////////////////////////////
 
   static inline void glPushMatrix(void)
