@@ -1,18 +1,18 @@
 /****************************************
- * 		NDS NeHe Lesson 10    			*
+ * 		NDS NeHe Lesson 11    			*
  * 		Author: Dovoto					*
  ****************************************/
 
 // include your ndslib
-#include <NDS/NDS.h>
+#include <nds.h>
 #include <malloc.h>
 #include <stdio.h>
 
 //needed to load pcx files
-#include <NDS/ARM9/image.h>
+#include <nds/arm9/image.h>
 
 
-#include "drunkenlogo.h"
+#include "drunkenlogo_pcx.h"
 
 
 
@@ -50,7 +50,7 @@ int LoadGLTextures()									// Load PCX files And Convert To Textures
 	sImage pcx;                //////////////(NEW) and different from nehe.
 
 	//load our texture
-	loadPCX((u8*)drunkenlogo, &pcx);
+	loadPCX((u8*)drunkenlogo_pcx, &pcx);
 	
 	image8to16(&pcx);
 
