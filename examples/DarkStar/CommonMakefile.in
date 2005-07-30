@@ -1,0 +1,40 @@
+# path to tools - this can be deleted if you set the path in windows
+#export PATH		:=	/c/prog/devkitARM_r8/bin:/bin
+
+# path to library - this can be deleted if you set the path in windows
+#export NDSLIBPATH	:=	/d/Programming/C++/ARM/ndslib
+
+# Name stuck in the GBA header of the DS booter ROM
+#export GBAHEADERNAME	:=	dsPaint
+
+#---------------------------------------------------------------------------------
+# Clear the implicit built in rules
+#---------------------------------------------------------------------------------
+.SUFFIXES:
+
+#---------------------------------------------------------------------------------
+# the prefix on the compiler executables
+#---------------------------------------------------------------------------------
+PREFIX		:=	arm-elf-
+
+#---------------------------------------------------------------------------------
+# source directories
+#---------------------------------------------------------------------------------
+SOURCES		:= .
+
+#---------------------------------------------------------------------------------
+# include directories
+#---------------------------------------------------------------------------------
+INCLUDES	:= .
+
+#---------------------------------------------------------------------------------
+# list of directories containing libraries, this must be the top level containing
+# include and lib
+#---------------------------------------------------------------------------------
+LIBDIRS	:=	$(NDSLIBPATH)
+#LIBDIRS +=
+
+#---------------------------------------------------------------------------------
+# any extra libraries we wish to link with the project (do not include -l or lib)
+#---------------------------------------------------------------------------------
+#LIBS	:=	

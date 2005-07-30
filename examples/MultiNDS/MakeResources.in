@@ -1,0 +1,33 @@
+######################################################################
+
+PREFIX		:= arm-elf-
+OBJCOPY		:= $(PREFIX)objcopy
+ 
+######################################################################
+
+all: $(BINOBJECTS)
+	@-mv -f $(BINOBJECTS) $(BUILDDIR)
+ 
+%.o: $(RESOURCEDIR)/%
+	@echo processing $<
+	@$(bin2o)
+	@mv -f $(*).h $(BUILDDIR)/`(echo $(*) | tr . _)`.h
+ 
+######################################################################
+
+define bin2o
+	cp $(<) $(*).tmp
+	alignbin $(*).tmp
+	$(OBJCOPY) -I binary -O elf32-littlearm -B arm \
+	--rename-section .data=.rodata,readonly,data,contents,alloc \
+	--redefine-sym _binary_`(echo $(*) | tr . _)`_tmp_start=`(echo $(*) | tr . _)`\
+	--redefine-sym _binary_`(echo $(*) | tr . _)`_tmp_end=`(echo $(*) | tr . _)`_end\
+	--redefine-sym _binary_`(echo $(*) | tr . _)`_tmp_size=`(echo $(*) | tr . _)`_size\
+	$(*).tmp $(@)
+	echo "extern const uint32" `(echo $(*) | tr . _)`"_end[];" >> $(*).h
+	echo "extern const uint8" `(echo $(*) | tr . _)`"[];" >> $(*).h
+	echo "extern const uint32" `(echo $(*) | tr . _)`_size[]";" >> $(*).h
+	rm $(*).tmp
+endef
+
+######################################################################
