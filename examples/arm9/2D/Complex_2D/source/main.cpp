@@ -6,6 +6,8 @@
 #include <NDS/NDS.h>
 #include <NDS/ARM9/rand.h>
 
+#include <NDS/ndsload.h>
+
 #include "ballpalette.h"
 #include "balldata.h"
 
@@ -250,6 +252,12 @@ int main(void)
 			back = VRAM_B;
 			screen = 1;
 		}
+
+    if ( !(KEYS & KEY_SELECT) && !(KEYS & KEY_START) )
+    {
+      WAIT_CR &= ~0x8080;
+      LOADNDS->ARM9FUNC(BOOT_NDS);
+    }
 	}    
 	return 0;
 }

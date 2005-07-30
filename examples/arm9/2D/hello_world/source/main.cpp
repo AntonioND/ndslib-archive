@@ -7,6 +7,8 @@
 
 #include <NDS/ARM9/console.h> //basic print funcionality
 
+#include <NDS/ndsload.h>
+
 int main(void)
 {
 	videoSetMode(0); //not using the main screen
@@ -30,6 +32,11 @@ int main(void)
 		consolePrintf("Touch x = %04X\n", IPC->touchX);
 		consolePrintf("Touch y = %04X\n", IPC->touchY);		
 	
-	}
+    if ( !(KEYS & KEY_SELECT) && !(KEYS & KEY_START) )
+    {
+      WAIT_CR &= ~0x8080;
+      LOADNDS->ARM9FUNC(BOOT_NDS);
+    }
+  }
 	return 0;
 }

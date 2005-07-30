@@ -8,6 +8,8 @@
 #include <NDS/ARM9/console.h> //basic print funcionality
 #include <NDS/ARM9/rand.h>
 
+#include <NDS/ndsload.h>
+
 
 
 void WaitForVblank()
@@ -87,6 +89,12 @@ int main(void)
         //this will cause red or green bits only to be set and swap each
         //frame
         colorMask ^= 0x3FF;
+
+        if ( !(KEYS & KEY_SELECT) && !(KEYS & KEY_START) )
+        {
+          WAIT_CR &= ~0x8080;
+          LOADNDS->ARM9FUNC(BOOT_NDS);
+        }
     }
 	return 0;
 }

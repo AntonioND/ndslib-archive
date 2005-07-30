@@ -1,5 +1,7 @@
 #include <NDS/NDS.h>
 
+#include <NDS/ndsload.h>
+
 //teapot display list provided by Mike260, as well as the display list gl code.
 #include "teapot.h"
 
@@ -76,7 +78,12 @@ int main()
 		glFlush();
 
 		swiWaitForVBlank();
-	}
+    if ( !(KEYS & KEY_SELECT) && !(KEYS & KEY_START) )
+    {
+      WAIT_CR &= ~0x8080;
+      LOADNDS->ARM9FUNC(BOOT_NDS);
+    }
+  }
 
 	return 0;
 }//end main 

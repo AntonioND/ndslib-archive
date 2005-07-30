@@ -5,6 +5,8 @@
 
 #include <NDS/NDS.h>
 
+#include <NDS/ndsload.h>
+
 #include <NDS/ARM9/console.h> //basic print funcionality
 
 
@@ -66,7 +68,14 @@ int main(void)
 	dmaCopy(palette, BG_PALETTE, 256*2);
 	
 	
-    while(1)swiWaitForVBlank();
-
+    while(1) 
+    {
+      swiWaitForVBlank();
+      if ( !(KEYS & KEY_SELECT) && !(KEYS & KEY_START) )
+      {
+        WAIT_CR &= ~0x8080;
+        LOADNDS->ARM9FUNC(BOOT_NDS);
+      }
+    }
 	return 0;
 }

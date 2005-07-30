@@ -23,7 +23,7 @@ INCLUDES	:=	include build
 # 
 #---------------------------------------------------------------------------------
 
-ARM7BIN	:=  
+ARM7BIN	:=  -7 /c/devkitarm/bin/arm7.bin
 ICON 		:= -b $(NDSLIBPATH)/examples/logo.bmp "$@;By Dovoto;www.drunkencoders.com"
 
 #---------------------------------------------------------------------------------

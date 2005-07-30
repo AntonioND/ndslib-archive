@@ -5,6 +5,8 @@
 
 #include <NDS/NDS.h>
 
+#include <NDS/ndsload.h>
+
 #include <NDS/ARM9/console.h> //basic print funcionality
 
 
@@ -70,7 +72,15 @@ int main(void)
 	for(int i = 0; i < 256*256; i++)
 	   BG_GFX[i] = ((u16*)drunkenlogo)[i] | BIT(15); //need the cast since drunkelogo is 
 	                                                   //8 bit data 
-    while(1)swiWaitForVBlank();
+  while(1)
+  {
+    swiWaitForVBlank();
+    if ( !(KEYS & KEY_SELECT) && !(KEYS & KEY_START) )
+    {
+      WAIT_CR &= ~0x8080;
+      LOADNDS->ARM9FUNC(BOOT_NDS);
+    }
+  }
     
 	return 0;
 }

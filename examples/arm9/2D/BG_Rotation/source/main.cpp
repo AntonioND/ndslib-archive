@@ -5,6 +5,8 @@
 
 #include <NDS/NDS.h>
 
+#include <NDS/ndsload.h>
+
 #include <NDS/ARM9/console.h> //basic print funcionality
 
 
@@ -121,6 +123,12 @@ int main(void)
         BG3_CY = (scrollY<<8) - rcY * (s + c);
  
         consoleClear();
+
+        if ( !(KEYS & KEY_SELECT) && !(KEYS & KEY_START) )
+        {
+            WAIT_CR &= ~0x8080;
+            LOADNDS->ARM9FUNC(BOOT_NDS);
+        }
  
     }
 	return 0;

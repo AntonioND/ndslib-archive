@@ -2,6 +2,8 @@
 #include <NDS/ARM9/math.h>
 #include <NDS/ARM9/console.h>
 
+#include <NDS/ndsload.h>
+
 
 //a global copy of sprite attribute memory
 VAR_IN_EXRAM SpriteEntry sprites[128];
@@ -130,5 +132,11 @@ int main()
 		swiWaitForVBlank();
 		
 		updateOAM();
-	}
+
+    if ( !(KEYS & KEY_SELECT) && !(KEYS & KEY_START) )
+    {
+      WAIT_CR &= ~0x8080;
+      LOADNDS->ARM9FUNC(BOOT_NDS);
+    }
+  }
 }
