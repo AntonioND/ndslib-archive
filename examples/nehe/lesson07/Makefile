@@ -13,7 +13,7 @@ BUILD		:=	build
 SOURCES	:=	gfx source data  
 INCLUDES	:=	include build
 
-EXPORT_DIR := /c/ndsexamples/
+#EXPORT_DIR := /c/ndsexamples/
 #---------------------------------------------------------------------------------
 # ARM7BIN is the path to an arm7 binary other than the default
 #	usage: ARM7BIN := -7 binaryName.bin

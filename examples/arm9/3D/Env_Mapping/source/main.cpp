@@ -1,5 +1,7 @@
 #include <NDS/NDS.h>
 
+#include <NDS/ndsload.h>
+
 
 #include "teapot.h"
 #include "cafe.h"
@@ -107,7 +109,12 @@ int main()
 		glFlush();
 
 		swiWaitForVBlank();
-	}
+    if ( !(KEYS & KEY_SELECT) && !(KEYS & KEY_START) )
+    {
+      WAIT_CR &= ~0x8080;
+      LOADNDS->ARM9FUNC(BOOT_NDS);
+    }
+  }
 
 	return 0;
 }//end main 

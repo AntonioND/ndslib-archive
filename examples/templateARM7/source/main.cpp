@@ -11,6 +11,8 @@
 #include <NDS/ARM7/touch.h>
 #include <NDS/ARM7/clock.h>
 
+#include <NDS/ndsload.h>
+
 
 //////////////////////////////////////////////////////////////////////
 

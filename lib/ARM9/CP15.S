@@ -224,6 +224,7 @@ CP15_SetRegion7:
 .global CP15_CleanAndFlushDCacheEntry
 .global CP15_CleanDCacheEntryByIndex
 .global CP15_CleanAndFlushDCacheEntryByIndex
+.global CP15_NoCache
 
 CP15_FlushICache:
 		mov	r0, #0
@@ -278,6 +279,29 @@ CP15_CleanAndFlushDCacheEntryByIndex:
 		mcr	p15, 0, r0, c7, c14, 2
 		bx	lr
 
+
+CP15_NoCache:
+		mov	r0, #0x04000000			@ IME = 0;
+		add	r0, r0, #0x208
+		strh	r0, [r0]
+
+@		mov	r1,#0				@ enable arm9 iwram
+@		strb	r1,[r0, #(0x247 - 0x208)]
+
+@		ldr	r1, =0x00002078			@ disable DTCM and protection unit
+@		mcr	p15, 0, r1, c1, c0
+
+		@ Disable cache
+		mov	r0, #0
+		mcr	p15, 0, r0, c7, c5, 0		@ Instruction cache
+		mcr	p15, 0, r0, c7, c6, 0		@ Data cache
+
+		@ Wait for write buffer to empty 
+		mcr	p15, 0, r0, c7, c10, 4
+
+		@return
+		bx lr
+		  
 //////////////////////////////////////////////////////////////////////
 // See DDI0155 page 2-24
 //////////////////////////////////////////////////////////////////////

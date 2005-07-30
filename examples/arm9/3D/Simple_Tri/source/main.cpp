@@ -1,5 +1,7 @@
 #include <NDS/NDS.h>
 
+#include <NDS/ndsload.h>
+
 
 int main()
 {	
@@ -77,7 +79,12 @@ int main()
 
 		//swi seems to be broken, will let you know when i get this POS figured out	
 		//swiWaitForVBlank();
-	}
+    if ( !(KEYS & KEY_SELECT) && !(KEYS & KEY_START) )
+    {
+      WAIT_CR &= ~0x8080;
+      LOADNDS->ARM9FUNC(BOOT_NDS);
+    }
+  }
 
 	return 0;
 }//end main 

@@ -1,6 +1,8 @@
 #include <NDS/NDS.h>
 #include <NDS/ARM9/rand.h>
 
+#include <NDS/ndsload.h>
+
 //texture_bin.h is created automagicaly from the texture.bin placed in arm9/resources
 //texture.bin is a raw 128x128 16 bit image.  I will release a tool for texture conversion 
 //later
@@ -109,7 +111,12 @@ int main()
 
 		//swi seems to be broken, will let you know when i get this POS figured out	
 		//swiWaitForVBlank();
-	}
+    if ( !(KEYS & KEY_SELECT) && !(KEYS & KEY_START) )
+    {
+      WAIT_CR &= ~0x8080;
+      LOADNDS->ARM9FUNC(BOOT_NDS);
+    }
+  }
 
 	return 0;
 }//end main 

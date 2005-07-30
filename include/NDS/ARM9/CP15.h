@@ -117,6 +117,7 @@ extern void CP15_CleanAndFlushDCacheEntry(uint32 address);
 extern void CP15_CleanDCacheEntryByIndex(uint32 index);
 extern void CP15_CleanAndFlushDCacheEntryByIndex(uint32 index);
 extern void CP15_DrainWriteBuffer(void);
+extern void CP15_NoCache(void);
 
 //////////////////////////////////////////////////////////////////////
 
